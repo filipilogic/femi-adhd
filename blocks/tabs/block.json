@@ -1,0 +1,16 @@
+{
+    "name": "acf/tabs",
+    "title": "iLogic Tabs",
+    "description": "Tabbed content with simple text areas",
+    "category": "ilogic-category",
+    "icon": "table-row-after",
+    "keywords": ["tabs", "ilogic"],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "tabs.php"
+    },
+    "supports": {
+		"align": false,
+        "anchor": true
+	}
+}

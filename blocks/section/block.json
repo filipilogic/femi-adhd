@@ -1,0 +1,16 @@
+{
+    "name": "acf/section",
+    "title": "iLogic Section",
+    "description": "A Section Block containing the Info Box and the Image",
+    "category": "ilogic-category",
+    "icon": "welcome-widgets-menus",
+    "keywords": ["section", "ilogic"],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "section.php"
+    },
+    "supports": {
+		"align": false,
+        "anchor": true
+	}
+}

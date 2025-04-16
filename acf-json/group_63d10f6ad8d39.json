@@ -1,0 +1,152 @@
+{
+    "key": "group_63d10f6ad8d39",
+    "title": "Block: fullPage Section",
+    "fields": [
+        {
+            "key": "field_63d248e71a19f",
+            "label": "Full Screen Section",
+            "name": "full_screen_section",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Only one instance of this block is allowed.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 2,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Section",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_63d250cd1ae47",
+                    "label": "Content",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "top",
+                    "endpoint": 0,
+                    "parent_repeater": "field_63d248e71a19f"
+                },
+                {
+                    "key": "field_63d24c6add18a",
+                    "label": "Content",
+                    "name": "content",
+                    "aria-label": "",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "group_6346f6d3b3fa8"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0,
+                    "parent_repeater": "field_63d248e71a19f"
+                },
+                {
+                    "key": "field_63d27161e9b20",
+                    "label": "Secondary Text",
+                    "name": "secondary_text",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "Text in this field will be hidden on Mobile devices.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "text",
+                    "media_upload": 0,
+                    "toolbar": "full",
+                    "delay": 0,
+                    "parent_repeater": "field_63d248e71a19f"
+                },
+                {
+                    "key": "field_63d250d51ae48",
+                    "label": "Settings",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "top",
+                    "endpoint": 0,
+                    "parent_repeater": "field_63d248e71a19f"
+                },
+                {
+                    "key": "field_63d24fa852153",
+                    "label": "Background",
+                    "name": "fp_background",
+                    "aria-label": "",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "group_634949d802e36"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0,
+                    "parent_repeater": "field_63d248e71a19f"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/fp-section"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1674736056
+}

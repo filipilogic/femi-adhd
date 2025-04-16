@@ -1,0 +1,384 @@
+.blog-main-container {
+    .blog-main-container-inner {
+        padding-top: 8rem;
+        padding-bottom: 4.5rem;
+        background: url('/wp-content/uploads/2023/10/Bg-10.svg');
+        background-size: cover;
+        .blog-main-container-top-posts {
+            margin-bottom: 6rem;
+            position: relative;
+            @include limbo-max {
+                margin-bottom: 10rem;
+            }
+            article {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                width: 100%;
+                height: 50rem;
+                @include limbo-max {
+                    height: 60rem;
+                }
+                @include mob-only {
+                    height: 50rem;
+                }
+                a {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    text-decoration: none;
+                    padding: 4rem 2.4rem;
+                    @include limbo-max {
+                        padding: 5rem 3rem;
+                    }
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        position: absolute;
+                        border-radius: 20px;
+                        top: 0;
+                        left: 0;
+                    }
+                    .article-container {
+                        margin-top: auto;
+                        margin-bottom: 0;
+                        width: 100%;
+                        z-index: 2;
+                        .entry-header {
+                            .entry-title {
+                                color: #fff;
+                                font-size: 3.6rem;
+                                font-weight: 600;
+                                margin-bottom: 1.6rem;
+                                line-height: 1.2;
+                                @include limbo-max {
+                                    font-size: 24px;
+                                }
+                            }
+                        }
+                        .entry-date {
+                            font-weight: 500;
+                            @include mob-only {
+                                font-size: 16px;
+                            }
+                        }
+                        .entry-content {
+                            margin-top: 1rem;
+                            @include mob-only {
+                                display: none;
+                            }
+                            p {
+                                font-size: 18px;
+                                @include limbo-max {
+                                    font-size: 16px;
+                                }
+                                @include lg-desk-min {
+                                    font-size: 20px;
+                                }
+                                &:last-child {
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        border-radius: 20px;
+                        background: linear-gradient(0deg, #2B2C6C 0%, rgba(0, 0, 0, 0.00) 100%);
+                    }
+                    &:hover:after {
+                        background: linear-gradient(0deg, rgba(43, 44, 108, 0.80) 0%, rgba(43, 44, 108, 0.56) 100%);
+                    }
+                }
+            }
+        }
+    
+        .blog-main-container-middle-posts {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            @include limbo-max {
+                margin-bottom: 2rem;
+            }
+            @include mob-only{
+                flex-direction: column;
+            }
+            .buttons-after-blog {
+              margin-top: 5.5rem;
+              text-align: center;
+              @include limbo-max {
+                margin-top: 36px;
+                width: 100%;
+              }
+            }
+            article {
+                width: 30.5%;
+                background: #FFFFFF;
+                border-radius: 20px;
+                box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.16);
+                overflow: hidden;
+                @include mob-only {
+                    width: 100%;
+                }
+                @include limbo-only {
+                    width: 47%;
+                    &:nth-child(odd) {
+                        margin-right: 6%;
+                    }
+                }
+                @include tab-only {
+                    width: 47%;
+                    &:nth-child(odd) {
+                        margin-right: 6%;
+                    }
+                }
+                @include limbo-max{
+                    &:not(:last-of-type) {
+                        margin-bottom: 5rem;
+                    }
+                }
+                @include desk-min {
+                    &:not(:last-of-type) {
+                        margin-right: 4%;
+                    }
+                }
+                .article-container {
+                    padding: 18px 24px 36px 24px;
+                    @include limbo-max {
+                        padding: 16px 24px 28px 24px;
+                    }
+                }
+                a {
+                    text-decoration: none;
+                    display: block;
+                    img{
+                        width: 100%;
+                        height: 25rem;
+                        object-fit: cover;
+                        @include tab-max {
+                            height: 35rem;
+                        }
+                    }
+                    .entry-date {
+                        font-size: 18px;
+                        color: var(--color-3);
+                        margin-bottom: 14px;
+                        @include limbo-max {
+                            font-size: 17px;
+                            margin-bottom: 12px;
+                        }
+                    }
+                    .entry-title{
+                        color: var(--color-1);
+                        margin-bottom: 20px;
+                        font-size: 20px;
+                        font-weight: 600;
+                        @include limbo-max {
+                            font-size: 21px;
+                            margin-bottom: 18px;
+                        }
+                    }
+                    .entry-content{
+                        p {
+                            color: var(--color-text);
+                            font-size: 16px;
+                            margin-bottom: 3rem;
+                            @include limbo-max {
+                                margin-bottom: 30px;
+                            }
+                        }
+                    }
+    
+                    .entry_btn{
+                        color: var(--color-2);
+                        font-size: 20px;
+                        @include limbo-max {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+            .pagination {
+                margin: 3.6rem 0;
+                width: 100%;
+                text-align: right;
+                @include limbo-max {
+                    margin: 36px 0;
+                    text-align: center;
+                }
+                .page-numbers {
+                    color: #000;
+                    font-size: 18px;
+                    text-decoration: none;
+                    border: 1px solid var(--color-2);
+                    border-radius: 100%;
+                    width: 4.5rem;
+                    height: 4.5rem;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    @include limbo-max {
+                        width: 8rem;
+                        height: 8rem;
+                    }
+                    &:not(:last-child) {
+                        margin-right: 8px;
+                    }
+                    &.prev, &.next {
+                        font-size: 20px;
+                        color: var(--color-2);
+                    }
+                    &.current {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    
+        .blog-main-container-bottom-posts {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            @include mob-only{
+                flex-direction: column;
+            }
+            .buttons-after-blog {
+              margin-top: 5.5rem;
+              text-align: center;
+              @include limbo-max {
+                margin-top: 36px;
+                width: 100%;
+              }
+            }
+            article {
+                width: 30.5%;
+                background: #FFFFFF;
+                border-radius: 20px;
+                box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.16);
+                overflow: hidden;
+                @include mob-only {
+                    width: 100%;
+                }
+                @include limbo-only {
+                    width: 47%;
+                    &:nth-child(odd) {
+                        margin-right: 6%;
+                    }
+                }
+                @include tab-only {
+                    width: 47%;
+                    &:nth-child(odd) {
+                        margin-right: 6%;
+                    }
+                }
+                @include limbo-max{
+                    &:not(:last-of-type) {
+                        margin-bottom: 5rem;
+                    }
+                }
+                @include desk-min {
+                    &:not(:last-of-type) {
+                        margin-right: 4%;
+                    }
+                }
+                .article-container {
+                    padding: 18px 24px 36px 24px;
+                    @include limbo-max {
+                        padding: 16px 24px 28px 24px;
+                    }
+                }
+                a {
+                    text-decoration: none;
+                    display: block;
+                    img{
+                        width: 100%;
+                        height: 25rem;
+                        object-fit: cover;
+                        @include tab-max {
+                            height: 35rem;
+                        }
+                    }
+                    .entry-date {
+                        font-size: 18px;
+                        color: var(--color-3);
+                        margin-bottom: 14px;
+                        @include limbo-max {
+                            font-size: 17px;
+                            margin-bottom: 12px;
+                        }
+                    }
+                    .entry-title{
+                        color: var(--color-1);
+                        margin-bottom: 20px;
+                        font-size: 20px;
+                        font-weight: 600;
+                        @include limbo-max {
+                            font-size: 21px;
+                            margin-bottom: 18px;
+                        }
+                    }
+                    .entry-content{
+                        p {
+                            color: var(--color-text);
+                            font-size: 16px;
+                            margin-bottom: 3rem;
+                            @include limbo-max {
+                                margin-bottom: 30px;
+                            }
+                        }
+                    }
+    
+                    .entry_btn{
+                        color: var(--color-2);
+                        font-size: 20px;
+                        @include limbo-max {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+            .pagination {
+                margin: 5rem 0 3.6rem 0;
+                width: 100%;
+                text-align: right;
+                @include limbo-max {
+                    margin: 45px 0 25px 0;
+                    text-align: center;
+                }
+                .page-numbers {
+                    color: #000;
+                    font-size: 18px;
+                    text-decoration: none;
+                    border: 1px solid var(--color-2);
+                    border-radius: 100%;
+                    width: 4.5rem;
+                    height: 4.5rem;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    @include limbo-max {
+                        width: 8rem;
+                        height: 8rem;
+                    }
+                    &:not(:last-child) {
+                        margin-right: 8px;
+                    }
+                    &.prev, &.next {
+                        font-size: 20px;
+                        color: var(--color-2);
+                    }
+                    &.current {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}

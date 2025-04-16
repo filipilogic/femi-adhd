@@ -1,0 +1,15 @@
+{
+    "name": "acf/inner-hero-1",
+    "title": "iLogic Inner Hero v1",
+    "description": "A Hero Block used on inner pages",
+    "category": "ilogic-category",
+    "icon": "image-rotate-right",
+    "keywords": ["inner", "hero", "ilogic"],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "inner-hero-1.php"
+    },
+    "supports": {
+		"align": false
+	}
+}

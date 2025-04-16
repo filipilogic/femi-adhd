@@ -1,0 +1,105 @@
+{
+    "key": "group_634fd64c175f9",
+    "title": "Component: Columns",
+    "fields": [
+        {
+            "key": "field_634bf66c6e4e1",
+            "label": "Desktop",
+            "name": "columns",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "cols-2": "Two",
+                "cols-3": "Three",
+                "cols-4": "Four",
+                "cols-5": "Five"
+            },
+            "default_value": "cols-4",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_634bfa7a07e68",
+            "label": "Tablet",
+            "name": "tab_columns",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "tab-cols-1": "One",
+                "tab-cols-2": "Two",
+                "tab-cols-3": "Three",
+                "tab-cols-4": "Four"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_634bfabd07e6a",
+            "label": "Mobile",
+            "name": "mob_columns",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "mob-cols-1": "One",
+                "mob-cols-2": "Two",
+                "mob-cols-3": "Three"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1666181219
+}

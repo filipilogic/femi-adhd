@@ -1,0 +1,16 @@
+{
+    "name": "acf/related-posts",
+    "title": "iLogic Related Posts",
+    "description": "A Block for displaying last three related posts",
+    "category": "ilogic-category",
+    "icon": "welcome-widgets-menus",
+    "keywords": ["related-posts", "blog block", "ilogic"],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "related-posts.php"
+    },
+    "supports": {
+		"align": false,
+		"anchor": true
+	}
+}

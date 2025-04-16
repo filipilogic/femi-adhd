@@ -1,0 +1,182 @@
+.footer_main {
+    padding-top: var(--b-footer-space-top-ld);
+    padding-bottom: var(--b-footer-space-bottom-ld);
+    @include limbo-max {
+      padding-top: var(--b-footer-space-top-mt);
+      padding-bottom: var(--b-footer-space-bottom-mt);
+    }
+    img {
+        width: fit-content;
+    }
+    * {
+        color: #858585;
+    }
+    .wp-block-social-links svg path {
+        fill: #2fb297;
+    }
+    .cols-3 .column {
+        margin-top: 0;
+        .footer-last-col-socials {
+            .footer-last-col-single {
+                display: flex;
+                align-items: flex-start;
+                margin-bottom: 10px;
+                img {
+                    width: 20px;
+                    height: auto;
+                    margin-right: 20px;
+                }
+                a {
+                    text-decoration: none;
+                    text-align: left;
+                }
+                @include mob-only {
+                    max-width: 75%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+    h4 {
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--color-1);
+        @include limbo-max {
+            font-size: 20px;
+        }
+    }
+    p, a {
+        @include limbo-max {
+            font-size: 16px;
+        }
+    }
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+        line-height: 29px;
+        li {
+            a {
+                text-decoration: none;
+            }
+        }
+        @include limbo-max {
+            line-height: 26px;
+        }
+    }
+    @include tab-only {
+        .footer_col_1.column {
+            width: 55%;
+            margin-right: 10%;
+        }
+        .footer_col_2.column {
+            width: 35%;
+        }
+    }
+    @include limbo-min {
+        .cols-3 .column.footer_col_1 {
+            width: 46%;
+            p {
+                max-width: 50rem;
+            }
+        }
+        .cols-3 .column {
+            width: 25%;
+        }
+        .footer_col_2 {
+            padding-left: 2.4rem;
+            height: fit-content;
+            position: relative;
+            &:before {
+                content: '';
+                width: 1px;
+                height: 21.5rem;
+                position: absolute;
+                background-color: var(--color-1);
+                left: 0;
+            }
+        }
+        .footer_col_3 {
+            padding-left: 2.4rem;
+            height: fit-content;
+            position: relative;
+            &:before {
+                content: '';
+                width: 1px;
+                height: 15rem;
+                position: absolute;
+                background-color: var(--color-1);
+                left: 0;
+            }
+        }
+    }
+    @include mob-only {
+        text-align: center;
+        background: #fff;
+        .wp-block-social-links {
+            justify-content: center;
+        }
+        .footer_col_2 {
+            &:before {
+                content: '';
+                width: 164px;
+                height: 1px;
+                position: relative;
+                background-color: #eceef1;
+                display: block;
+                margin-bottom: 20px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            &:after {
+                content: '';
+                width: 164px;
+                height: 1px;
+                position: relative;
+                background-color: #eceef1;
+                display: block;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
+.footer_main_inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer_bottom_above {
+    p, a {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding-top: 19px;
+        padding-bottom: 19px;
+        color: #fff;
+        font-size: 15px;
+        text-decoration: none;
+        @include tab-max {
+            font-size: 14px;
+        }
+    }
+    background-color: var(--color-2);
+    text-align: center;
+}
+
+.footer_bottom {
+    p, a {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding-top: 19px;
+        padding-bottom: 19px;
+        color: #151515;
+        font-size: 15px;
+        @include tab-max {
+            font-size: 14px;
+        }
+    }
+    background-color: #FFFFFF;
+    text-align: center;
+}

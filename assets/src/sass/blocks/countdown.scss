@@ -1,0 +1,91 @@
+.il_block.il-countdown {
+    padding-top: var(--b-countdown-top-ld);
+    padding-bottom: var(--b-countdown-bottom-ld);
+    padding-left: var(--b-countdown-left-ld);
+    padding-right: var(--b-countdown-right-ld);
+    @include limbo-max {
+      padding-top: var(--b-countdown-top-mt);
+      padding-bottom: var(--b-countdown-bottom-mt);
+      padding-left: var(--b-countdown-left-mt);
+      padding-right: var(--b-countdown-right-mt);
+    }
+    z-index: 5;
+    .container {
+        .il-countdown-ticker {
+            max-width: 110rem;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 3.6rem;
+            @include tab-max {
+                justify-content: space-around;
+                margin-bottom: 10px;
+            }
+            .countdown-box {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                width: 23rem;
+                height: 20rem;
+                text-align: center;
+                border-radius: 10px;
+                border: 1px solid var(--color-2);
+                color: #fff;
+                @include tab-max {
+                    width: 34%;
+                    border-color: var(--color-1);
+                    margin-bottom: 30px;
+                }
+                .countdown-value {
+                    font-size: 6rem;
+                    font-weight: 600;
+                }
+                .countdown-label {
+                    font-size: 3.6rem;
+                }
+            }
+        }
+        .text-after-countdown {
+            p {
+                @include tab-max {
+                    max-width: 62rem;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                font-size: 2.4rem;
+                font-weight: 600;
+                @include tab-max {
+                    font-size: 14px;
+                    justify-content: flex-start;
+                }
+                img {
+                    margin-right: 20px;
+                    @include limbo-max {
+                        width: 30px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    &.bring-them-hope-countdown {
+        .container {
+            .text-after-countdown {
+                p {
+                    @include tab-max {
+                        max-width: 68rem;
+                    }
+                }
+            }
+        }
+    }
+}

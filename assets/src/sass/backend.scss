@@ -1,0 +1,13 @@
+/**
+* Importing by glob example
+* https://github.com/maoberlehner/node-sass-magic-importer/tree/master/packages/node-sass-magic-importer#globbing
+ */
+.settings-logos .acf-input {
+    display: flex;
+    align-items: center
+}
+@import 'template-style/**/*.scss';
+@import 'components/**/*.scss';
+@import 'blocks/**/*.scss';
+@import 'styles/general.scss';
+@import 'styles/admin-styles.scss';

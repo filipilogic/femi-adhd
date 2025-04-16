@@ -1,0 +1,52 @@
+.mc4wp-form-fields {
+    input:not(.mc4wp_submit), input:not(.mc4wp_submit)::placeholder {
+        font-size: 18px;
+        font-weight: 500;
+        @include limbo-max {
+            font-size: 16px;
+        }
+        @include mob-only {
+            font-size: 15px;
+        }
+    }
+    input:not(.mc4wp_submit)::placeholder {
+        color: var(--color-text);
+    }
+    input.mc4wp_submit {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        text-decoration: none;
+        padding: 1.6rem 3.6rem;
+        background-color: var(--color-2);
+        display: inline-flex;
+        border: none;
+        border-radius: 10px;
+        transition: var(--theme-transition);
+        cursor: pointer;
+        @include limbo-max {
+            padding: 2.2rem 4.8rem;
+        }
+        @include mob-only {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    input.mc4wp_submit:hover {
+        background-color: var(--color-3);
+    }
+    input:not(.mc4wp_submit) {
+        color: var(--color-1);
+        border: 0px;
+        border-radius: 10px;
+        width: 100%;
+        appearance: none;
+        background-color: #F1F2F2;
+        padding: 1.8rem 2rem;
+        @include tab-max {
+            background-position: center left 2.2rem;
+            padding: 2rem 4rem 2rem 7rem;
+        }
+    }
+}

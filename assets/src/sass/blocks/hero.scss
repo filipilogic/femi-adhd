@@ -1,0 +1,78 @@
+.il_hero {
+  padding-top: var(--b-hero-space-top-ld);
+  padding-bottom: var(--b-hero-space-bottom-ld);
+  padding-left: var(--b-hero-space-left-ld);
+  padding-right: var(--b-hero-space-right-ld);
+  @include limbo-max {
+    padding-top: var(--b-hero-space-top-mt);
+    padding-bottom: var(--b-hero-space-bottom-mt);
+    padding-left: var(--b-hero-space-left-mt);
+    padding-right: var(--b-hero-space-right-mt);
+  }
+  background-size: cover;
+  display: flex;
+  @include limbo-max {
+    .il_block_bg .desk_bg.hide_desk_bg_mob {
+      display: none;
+    }
+    .il_block_bg .mob_bg {
+      display: block;
+    }
+  }
+  .il_hero_inner {
+    display: flex;
+    flex-wrap: wrap;
+    > div {
+      position: relative;
+      @include limbo-max {
+        flex-basis: 100% !important;
+      }
+    }
+    @include desk-min {
+      .image-before-content {
+        margin-bottom: 2.5em;
+      }
+    }
+    @include lg-desk-min {
+      .intro_text {
+        max-width: 59rem;
+      }
+    }
+    @include desk-min {
+      width: 85%;
+      &.content-align-left {
+        justify-content: flex-start;
+      }
+      &.content-align-center {
+        justify-content: center;
+      }
+      &.content-align-right {
+        justify-content: flex-end;
+      }
+      .il_block_intro {
+        max-width: 62.2rem;
+        margin-left: auto;
+        .image-before-content {
+          img {
+            width: 61rem;
+          }
+        }
+        .intro_text {
+          max-width: 61rem;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+  // make full height toggle in the future
+  &.full-screen {
+    min-height: calc(100vh - 16.5rem); // With top bar
+    /* min-height: calc(100vh - 10.5rem); */ // Without top bar
+    @include limbo-max {
+      min-height: calc(100vh - 13rem);
+    }
+    .hero_inner {
+      justify-content: center;
+    }
+  }
+}

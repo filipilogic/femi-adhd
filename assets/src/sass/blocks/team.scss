@@ -1,0 +1,272 @@
+.il_block.team {
+  padding-top: 10rem;
+  overflow: hidden;
+  .container {
+    width: 90%;
+    max-width: 1440px;
+  }
+  .il_team_row {
+    display: grid;
+    margin: auto;
+    width: 90%;
+    max-width: 1440px;
+    @include desk-min {
+      grid-template-columns: repeat(4, calc(25% - 22.5px));
+      grid-template-rows: repeat(2, auto);
+    }
+    @include limbo-only {
+      grid-template-columns: repeat(2, calc(50% - 15px));
+      grid-template-rows: repeat(3, auto);
+    }
+    @include tab-only {
+      grid-template-columns: repeat(2, calc(50% - 15px));
+      grid-template-rows: repeat(3, auto);
+    }
+    column-gap: 30px;
+    .il_team_member {
+      margin-bottom: 3.6rem;
+      text-align: center;
+      padding: 0 10%;
+      @include limbo-max {
+        margin-bottom: 36px;
+      }
+      @include desk-min {
+        .il_member_1 {
+          grid-column: 1 / 2;
+        }
+        .il_member_2 {
+          grid-column: 2 / 3;
+        }
+        .il_member_1 {
+          grid-column: 3 / 4;
+        }
+        .il_member_4 {
+          grid-column: 4 / 5;
+        }
+      }
+      @include limbo-only {
+        .il_member_1 {
+          grid-column: 1 / 2;
+          grid-row: 1 / 2;
+        }
+        .il_member_2 {
+          grid-column: 2 / 3;
+          grid-row: 1 / 2;
+        }
+        .il_member_3 {
+          grid-column: 1 / 2;
+          grid-row: 3 / 4;
+        }
+        .il_member_4 {
+          grid-column: 2 / 3;
+          grid-row: 3 / 4;
+        }
+      }
+      @include tab-only {
+        .il_member_1 {
+          grid-column: 1 / 2;
+          grid-row: 1 / 2;
+        }
+        .il_member_2 {
+          grid-column: 2 / 3;
+          grid-row: 1 / 2;
+        }
+        .il_member_3 {
+          grid-column: 1 / 2;
+          grid-row: 3 / 4;
+        }
+        .il_member_4 {
+          grid-column: 2 / 3;
+          grid-row: 3 / 4;
+        }
+      }
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+      .member_image {
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 30rem;
+        height: 30rem;
+        margin-bottom: 2.5rem;
+        img {
+          object-fit: contain;
+        }
+        @include limbo-max {
+          width: 45rem;
+          height: 45rem;
+          margin-bottom: 20px;
+        }
+      }
+      &.il_member_has_learn_more {
+        .member_image {
+          cursor: pointer;
+          img {
+            &.learn-more-plus-icon {
+              display: none;
+            }
+          }
+          &:hover {
+            .learn-more-plus-icon {
+              z-index: 5;
+              display: block;
+              position: absolute;
+              top: auto;
+              bottom: 10px;
+            }
+            &:after {
+              content: '';
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              background: linear-gradient(180deg, rgba(43, 44, 108, 0.00) 0%, #2B2C6C 100%);
+            }
+          }
+        }
+      }
+      @include mob-only {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .member_name {
+        color: var(--color-1);
+        font-size: 2.4rem;
+        margin-bottom: 1.5rem;
+        align-items: flex-start;
+        @include limbo-max {
+          font-size: 20px;
+        }
+      }
+      .member_position {
+        color: var(--color-text);
+        font-size: 1.8rem;
+        @include desk-min {
+          margin-bottom: 1rem;
+        }
+        @include limbo-max {
+          font-size: 16px;
+          margin-bottom: 6.8rem;
+        }
+      }
+      .custom-social-icons {
+        margin-top: 0;
+        justify-content: center;
+      }
+      .il_btn {
+        margin: auto auto 0 auto;
+        font-size: 14px;
+        display: block;
+        max-width: 171px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .member_text {
+      position: relative;
+      display: none;
+      background: url('/wp-content/uploads/2023/07/Bg-5-1.jpg');
+      padding-top: 3.6rem;
+      padding-bottom: 3.6rem;
+      @include tab-max {
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 2rem;
+        margin-bottom: 6rem;
+      }
+      .close {
+        position: absolute;
+        cursor: pointer;
+        @include desk-min {
+          top: 6rem;
+          right: 5rem;
+        }
+        @include limbo-only {
+          top: 6rem;
+          right: 5rem;
+        }
+        @include tab-max {
+          top: 6rem;
+          right: 5rem;
+        }
+      }
+      .member_text_inner {
+        background: linear-gradient(96deg, #053279 0%, #030B27 99.13%);
+        padding: 5.6rem 5%;
+        position: relative;
+        @include tab-max {
+          padding: 7rem 10% 5.6rem 10%;
+        }
+        .member_box_name {
+          color: var(--color-2);
+          margin-bottom: 8px;
+          font-size: 24px;
+          @include limbo-max {
+            font-size: 22px;
+          }
+        }
+        .member_position {
+          display: block;
+          margin-bottom: 24px;
+          font-size: 18px;
+          font-weight: 600;
+          @include limbo-max {
+            font-size: 18px;
+          }
+        }
+      }
+
+      @include limbo-max {
+        width: 112%;
+        left: -6%;
+      }
+      @include desk-min {
+        grid-row: 2 / 3;
+        grid-column: 1 / 5;
+      }
+      @include limbo-only {
+        grid-row: 2 / 3;
+        grid-column: 1 / 3;
+        &.member_text_3, &.member_text_4 {
+          grid-row: 4 / 5;
+        }
+      }
+      @include tab-only {
+        grid-row: 2 / 3;
+        grid-column: 1 / 3;
+        &.member_text_3, &.member_text_4 {
+          grid-row: 4 / 5;
+        }
+      }
+      transition: var(--theme-transiton);
+      color: #fff;
+    }
+
+    @include tab-max {
+      &:last-child {
+        .member_text {
+          &:last-child {
+            margin-bottom: 0rem;
+          }
+        }
+      }
+    }
+
+    @include limbo-min {
+      &:not(:last-child) {
+        .member_text {
+          margin-bottom: 6rem;
+        }
+      }
+    }
+  }
+}

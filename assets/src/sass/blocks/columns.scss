@@ -1,0 +1,309 @@
+.il_block.il_columns {
+  padding-top: var(--b-columns-space-top-ld);
+  padding-bottom: var(--b-columns-space-bottom-ld);
+  padding-left: var(--b-columns-space-left-ld);
+  padding-right: var(--b-columns-space-right-ld);
+  @include limbo-max {
+    padding-top: var(--b-columns-space-top-mt);
+    padding-bottom: var(--b-columns-space-bottom-mt);
+    padding-left: var(--b-columns-space-left-mt);
+    padding-right: var(--b-columns-space-right-mt);
+  }
+  .il_columns_inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &.align-left {
+        text-align: left;
+    }
+    &.align-center {
+        text-align: center;
+    }
+    &.align-right {
+        text-align: right;
+    }
+    &.text-400 {
+      .il_col_text {
+        font-weight: 400;
+      }
+    }
+    &.text-600 {
+      .il_col_text {
+        font-weight: 600;
+      }
+    }
+    &.text-700 {
+      .il_col_text {
+        font-weight: 700;
+      }
+    }
+    .column {
+      // insert code for columns here
+    }
+  }
+  &.flickity-on-smaller {
+    overflow: hidden;
+    .container {
+      @include limbo-max {
+        width: 100%;
+        .il_block_intro {
+          width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+    .il_columns_inner {
+      .column {
+        @include limbo-max {
+          left: 5% !important;
+          margin: 0 25px 25px 0;
+          min-height: calc(100% - 20px);
+        }
+        @include limbo-max {
+          width: 40%;
+        }
+        @include mob-only {
+          width: 80%;
+        }
+      }
+      // enable flickity on limbo-max
+      @include limbo-max {
+          &:after {
+              content: 'flickity';
+              display: none;
+          }
+      }
+    }
+    }
+}
+
+.il_columns_container {
+  padding-top: var(--b-col-inner-cont-space-top-ld);
+  padding-bottom: var(--b-col-inner-cont-space-bottom-ld);
+  padding-left: var(--b-col-inner-cont-space-left-ld);
+  padding-right: var(--b-col-inner-cont-space-right-ld);
+  @include limbo-max {
+    padding-top: var(--b-col-inner-cont-space-top-mt);
+    padding-bottom: var(--b-col-inner-cont-space-bottom-mt);
+    padding-left: var(--b-col-inner-cont-space-left-mt);
+    padding-right: var(--b-col-inner-cont-space-right-mt);
+  }
+  position: relative;
+  @include desk-min {
+    width: var(--custom-max-width-ld);
+  }
+  .il_block_bg {
+    z-index: -1;
+    overflow: hidden;
+    @include ab-bg;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+    }
+    .desk_bg {
+      z-index: -1;
+      @include tab-max {
+        &.hide_desk_bg_mob {
+          display: none;
+        }
+      }
+    }
+    .mob_bg {
+      z-index: -1;
+      @include limbo-min {
+        display: none;
+      }
+    }
+    .bg_element {
+      position: absolute;
+      z-index: -1;
+      width: var(--bg-e-width-lg);
+      height: var(--bg-e-height-lg);
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin-left: var(--bg-e-left-lg);
+      margin-right: var(--bg-e-right-lg);
+      margin-top: var(--bg-e-top-lg);
+      margin-bottom: var(--bg-e-bottom-lg);
+      @include limbo-max {
+        width: var(--bg-e-width-mt);
+        height: var(--bg-e-height-mt);
+        margin-left: var(--bg-e-left-mt);
+        margin-right: var(--bg-e-right-mt);
+        margin-top: var(--bg-e-top-mt);
+        margin-bottom: var(--bg-e-bottom-mt);
+        display: var(--bg-e-display-mobile);
+      }
+      @include desk-min {
+        display: var(--bg-e-display-desktop);
+      }
+    }
+  }
+}
+
+.buttons-after-columns {
+  text-align: center;
+  margin-top: 5rem;
+  @include limbo-max {
+    margin-top: 60px;
+  }
+}
+
+.hp-logos-columns {
+  .il_columns_inner {
+    .column {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        max-width: 250px;
+      }
+    }
+  }
+}
+
+.il_block.hp-participants-carousel {
+  overflow: hidden;
+  .il_columns_inner {
+    .column {
+      @include desk-min {
+        width: 100%;
+        left: 0% !important;
+        margin: 0 25px 25px 0;
+        min-height: calc(100% - 20px);
+      }
+    }
+    &:after {
+      content: 'flickity';
+      display: none;
+    }
+  }
+  &.flickity-on-smaller {
+    @include limbo-max {
+      .il_columns_inner {
+        width: 80%;
+        margin: 0 auto;
+        .column {
+            left: 0% !important;
+            margin: 0 25px 25px 0;
+            min-height: calc(100% - 20px);
+            width: 100% !important;
+        }
+      }
+    }
+  }
+  @include desk-min {
+    &:before {
+      content: '';
+      position: absolute;
+      background-image: url('/wp-content/uploads/2025/04/quote-2-1.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 12.8rem;
+      height: 9.3rem;
+      left: calc(50% - 50rem - 12.8rem);
+      top: auto;
+      bottom: 18rem;
+    }
+    &:after {
+      content: '';
+      position: absolute; 
+      background-image: url('/wp-content/uploads/2025/04/quote-1-1.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 12.8rem;
+      height: 9.3rem;
+      right: calc(50% - 50rem - 12.8rem);
+      top: auto;
+      bottom: 18rem;
+    }
+  }
+}
+
+.about-three-columns {
+  .il_columns_inner {
+    .column {
+      img {
+        margin-bottom: 14px;
+      }
+    }
+  }
+  .intro_text {
+    p {
+      @include desk-min {
+        font-size: 2rem;
+      }
+      span {
+        font-size: 2.4rem;
+        @include limbo-max {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .buttons-after-columns {
+    margin-top: 35px;
+    @include limbo-max {
+      margin-top: 32px;
+    }
+    .il_btn {
+      color: var(--color-1);
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.event-page-columns {
+  .il_block_intro {
+    .intro_title {
+      @include tab-min {
+        br {
+          display: none;
+        }
+      }
+      @include tab-only {
+        text-align: center;
+      }
+      @include limbo-only {
+        text-align: center;
+      }
+    }
+  }
+  .il_columns_container {
+    @include desk-min {
+      margin-top: -3rem;
+    }
+    .il_columns_inner {
+      .column {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-end;
+        gap: 0px 2rem;
+  
+        img {
+          width: 3.9rem;
+          height: auto;
+          @include limbo-max {
+            width: 33px;
+          }
+        }
+  
+        .intro_title,
+        .il_col_text {
+          width: calc(100% - 6rem);
+          @include limbo-max {
+            width: calc(100% - 3rem - 33px);
+          }
+        }
+      }
+    }
+  }
+}

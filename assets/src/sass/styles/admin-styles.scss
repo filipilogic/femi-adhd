@@ -1,0 +1,52 @@
+.toplevel_page_theme-general-settings {
+  .wp-menu-image {
+    background-size: 18px!important;
+  }
+}
+
+.wp-admin {
+  input[type=checkbox], input[type=radio] {
+    height: 1.6rem;
+    width: 1.6rem;
+    min-width: 1.6rem;
+  }
+  input[type=checkbox]:before {
+    height: 2.1rem;
+    width: 2.1rem;
+    margin-left: -.4rem;
+    margin-top: -.3rem;
+  }
+  input[type=radio]:before {
+    width: .8rem;
+    height: .8rem;
+    margin: .3rem;
+    line-height: 1.6rem;
+  }
+}
+
+// Facts
+
+#facts {
+  float: right;
+  padding: 5px 10px;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.6666;
+}
+.rtl #facts {
+  float: left;
+}
+.block-editor-page #facts {
+  display: none;
+}
+.block-editor-block-list__layout .block-editor-block-list__block {
+  overflow: hidden;
+}
+@media screen and (max-width: 782px) {
+  #facts,
+  .rtl #facts {
+    float: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

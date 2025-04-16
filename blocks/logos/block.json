@@ -1,0 +1,16 @@
+{
+    "name": "acf/logos",
+    "title": "iLogic Logos",
+    "description": "A Client Logos Block",
+    "category": "ilogic-category",
+    "icon": "images-alt",
+    "keywords": ["logos", "ilogic"],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "logos.php"
+    },
+    "supports": {
+		"align": false,
+		"anchor": true
+	}
+}

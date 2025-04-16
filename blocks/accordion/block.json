@@ -1,0 +1,15 @@
+{
+    "name": "acf/accordion",
+    "title": "iLogic Accordion",
+    "description": "A Accordion Block",
+    "category": "ilogic-category",
+    "icon": "editor-kitchensink",
+    "keywords": ["accordion", "ilogic"],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "accordion.php"
+    },
+    "supports": {
+		"align": false
+	}
+}

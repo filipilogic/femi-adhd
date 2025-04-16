@@ -1,0 +1,15 @@
+{
+    "name": "acf/content-and-sidebar",
+    "title": "iLogic Content and Sidebar",
+    "description": "A Block for displaying Content and Sidebar",
+    "category": "ilogic-category",
+    "icon": "welcome-widgets-menus",
+    "keywords": ["content-and-sidebar", "blog block", "ilogic"],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "content-and-sidebar.php"
+    },
+    "supports": {
+		"align": false
+	}
+}

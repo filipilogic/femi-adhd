@@ -1,0 +1,18 @@
+.il_section.il_exec-dir-section {
+  .il_section_inner {
+    border-radius: 30px;
+    box-shadow: 4px 10px 40px 0px rgba(0, 0, 0, 0.10);
+    overflow: hidden;
+    .il_block_intro {
+      @include desk-min {
+        flex: 63% 0 0;
+      }
+    }
+    .right {
+      @include desk-min {
+        flex: 33% 0 0;
+        text-align: center;
+      }
+    }
+  }
+}

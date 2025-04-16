@@ -1,0 +1,16 @@
+{
+    "name": "acf/mini-gallery",
+    "title": "iLogic Mini Gallery",
+    "description": "A Mini Gallery Block",
+    "category": "ilogic-category",
+    "icon": "images-alt",
+    "keywords": ["mini-gallery", "ilogic"],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "mini-gallery.php"
+    },
+    "supports": {
+		"align": false,
+		"anchor": true
+	}
+}

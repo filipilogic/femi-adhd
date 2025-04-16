@@ -1,0 +1,202 @@
+.il_lb_carousel_block {
+    position: relative;
+}
+
+.lb_cb_nav_wrap {
+    .il_lb_triggers {
+        display: flex;
+        flex-wrap: wrap;
+        @include mob-only {
+            flex-direction: column;
+        }
+        a {
+            font-size: 26px;
+            color: #fff;
+            text-transform: uppercase;
+            font-family: Anton;
+            text-decoration: none;
+            display: flex;
+            @include limbo-min {
+                width: 30%;
+                &:not(:nth-child(3n + 3)) {
+                    margin-right: 5%;
+                }
+                &:not(:last-child):not(:nth-last-child(2)):not(:nth-last-child(3)) {
+                    margin-bottom: 5.5rem;
+                }
+            }
+            @include tab-only {
+                width: 48%;
+                &:nth-child(odd) {
+                    margin-right: 4%;
+                }
+                &:not(:last-child):not(:nth-last-child(2)) {
+                    margin-bottom: 4rem;
+                }
+            }
+            @include tab-max {
+                font-size: 20px;
+                svg {
+                    height: 20px;
+                }
+            }
+            @include mob-only {
+                &:not(:last-child) {
+                    margin-bottom: 4rem;
+                }
+            }
+            svg {
+                margin-right: 1.5rem;
+                transition: var(--theme-transition);
+                line-height: 1.2;
+                path {
+                    transition: var(--theme-transition);
+                }
+            }
+            &:hover {
+                svg {
+                    transform: rotate(45deg);
+                    path {
+                        fill: var(--color-2);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.il_lb_carousel_wrap {
+    position: absolute;
+    width: 100%;
+    z-index: 99;
+    top: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--theme-transition);
+    .carousel-main {
+        top: 0;
+        position: fixed;
+        width: 100%;
+        .flickity-viewport {
+            height: 100vh !important;
+        }
+    }
+    &.is-open {
+        opacity: 1;
+        pointer-events: all;
+    }
+    .flickity-button, .close {
+        border-radius: 0;
+        opacity: 1;
+        transition: var(--theme-transition);
+        background-color: var(--color-1);
+        left: auto;
+        top: 9.5rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 4rem;
+        height: 4rem;
+        transform: translateY(0);
+        background-size: 50%;
+        @include tab-max {
+            top: 6rem
+        }
+        &[disabled] {
+            opacity: .4;
+        }
+        svg {
+            display: none;
+        }
+        &:hover {
+            opacity: .8;
+        }
+    }
+    .close {
+        position: fixed;
+        right: 15%;
+        cursor: pointer;
+        z-index: 9;
+        background-image: url('https://taryag.ilogic-dev.net/wp-content/themes/taryag/assets/icons/x.svg');
+        @include sm-desk-max {
+            right: 20rem;
+        }
+    }
+    .flickity-button.previous {
+        right: 12.5%;
+        background-image: url('https://taryag.ilogic-dev.net/wp-content/themes/taryag/assets/icons/left-arrow.svg');
+        @include sm-desk-max {
+            right: 15rem;
+        }
+    }
+    .flickity-button.next {
+        right: 10%;
+        background-image: url('https://taryag.ilogic-dev.net/wp-content/themes/taryag/assets/icons/right-arrow.svg');
+        @include sm-desk-max {
+            right: 10rem;
+        }
+    }
+}
+.il_lb_carousel {
+    .il_lb_carousel_inner {
+        width: 100%;
+        display: flex;
+        background-color: rgba(0, 0, 0, .67);
+        @include tab-max {
+            min-height: 100%;
+            flex-direction: column-reverse;
+        }
+        @include limbo-min {
+            min-height: 100%;
+            .il_lb_left {
+                width: 50%;
+            }
+        }
+        .il_lb_left {
+            @include tab-max {
+                flex: 1;
+            }
+        }
+        .il_lb_right {
+            max-height: 100vh;
+            overflow-y: scroll;
+            &::-webkit-scrollbar {
+                width: 0;
+                height: 0;
+            }
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            @include limbo-min {
+                width: 50%;
+            }
+            background-color: #fff;
+            @include limbo-min {
+                padding: 20rem var(--b-space-1);
+            }
+            @include tab-max {
+                padding: 15rem 10rem 10rem;
+                width: 100%;
+                flex: 0 1 auto;
+            }
+            .tg_text {
+                color: var(--color-1);
+                h3 {
+                    font-family: 'Montserrat';
+                    font-weight: 600;
+                    text-transform: none;
+                    font-size: 3rem;
+                    @include limbo-max {
+                        font-size: 18px;
+                    }
+                    margin: 5rem 0 3rem 0;
+                }
+            }
+            a.il_btn {
+                color: var(--color-3);
+            }
+            a.il_btn svg path {
+                fill: var(--color-3);
+            }
+        }
+    }
+}

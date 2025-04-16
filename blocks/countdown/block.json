@@ -1,0 +1,16 @@
+{
+    "name": "acf/countdown",
+    "title": "iLogic Countdown",
+    "description": "Countdown, with location, add to calendar and waze links",
+    "category": "ilogic-category",
+    "icon": "ellipsis",
+    "keywords": ["countdown", "links", "event", "ilogic"],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "countdown.php"
+    },
+    "supports": {
+		"align": false,
+		"anchor": true
+	}
+}

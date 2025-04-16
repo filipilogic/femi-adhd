@@ -1,0 +1,16 @@
+{
+    "name": "acf/agenda",
+    "title": "iLogic Agenda",
+    "description": "Agenda Tabs",
+    "category": "ilogic-category",
+    "icon": "calendar",
+    "keywords": ["tabs", "ilogic"],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "agenda.php"
+    },
+    "supports": {
+		"align": false,
+        "anchor": true
+	}
+}

@@ -1,0 +1,59 @@
+.il_tabs {
+    .il_tabs_nav {
+        ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        li {
+            display: inline-block;
+            background: var(--color-1);
+            color: #fefefe;
+            border-width: 1px 1px 0 1px;
+            border-style: solid;
+            border-color: #34495E;
+            margin-right: 5px;
+            a {
+                display: block;
+                padding: 10px 15px;
+                font-weight: bold;
+                color: #fff;
+                text-decoration: none;
+            }
+            &.active {
+                background: #FFF;
+                color: #000;
+                a {
+                    color: inherit;
+                }
+            }
+        }
+    }
+    .il_tab {
+        transition: var(--theme-transition);
+    }
+    .il_tabs_content {
+        border: 1px solid var(--color-1);
+        padding: 2rem;
+        background: #FFF;
+        margin-top: -1px;
+        overflow: hidden;
+
+        .il_tab:not(:first-child) {
+            display: none;
+        }
+    }
+    @include mob-only {
+        &.stack_tabs {
+            ul {
+                flex-direction: column;
+                li {
+                    width: 100%;
+                    &.active {
+                        order: 1;
+                    }
+                }
+            }
+        }
+    }
+}

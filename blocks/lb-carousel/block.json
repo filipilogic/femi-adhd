@@ -1,0 +1,16 @@
+{
+    "name": "acf/lb-carousel",
+    "title": "Lightbox Carousel",
+    "description": "Lightbox Carousel with Trigger, Title, Text and Buttons",
+    "category": "ilogic-category",
+    "icon": "slides",
+    "keywords": ["carousel", "slider", "lightbox", "ilogic", "taryag"],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "lb-carousel.php"
+    },
+    "supports": {
+		"align": false,
+		"anchor": true
+	}
+}

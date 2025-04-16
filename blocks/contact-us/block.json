@@ -1,0 +1,16 @@
+{
+    "name": "acf/contact-us",
+    "title": "iLogic Contact Us",
+    "description": "A Contact Us section",
+    "category": "ilogic-category",
+    "icon": "welcome-widgets-menus",
+    "keywords": ["contact us", "ilogic"],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "contact-us.php"
+    },
+    "supports": {
+		"align": false,
+        "anchor": true
+	}
+}

@@ -1,0 +1,15 @@
+{
+    "name": "acf/timeline",
+    "title": "iLogic Timeline",
+    "description": "A Timeline Block",
+    "category": "ilogic-category",
+    "icon": "editor-insertmore",
+    "keywords": ["timeline", "ilogic"],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "timeline.php"
+    },
+    "supports": {
+		"align": false
+	}
+}

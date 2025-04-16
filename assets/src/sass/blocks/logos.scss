@@ -1,0 +1,139 @@
+.il_logos {
+    padding-top: var(--b-logos-space-top-ld);
+    padding-bottom: var(--b-logos-space-bottom-ld);
+    padding-left: var(--b-logos-space-left-ld);
+    padding-right: var(--b-logos-space-right-ld);
+    @include tab-max {
+      padding-top: var(--b-logos-space-top-mt);
+      padding-bottom: var(--b-logos-space-bottom-mt);
+      padding-left: var(--b-logos-space-left-mt);
+      padding-right: var(--b-logos-space-right-mt);
+    }
+    overflow: hidden;
+    .il_logos_inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        .column {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: calc(100% / 7);
+            @include limbo-max {
+                width: calc(100% / 3);
+                &.btn_column {
+                    width: 100%;
+                    justify-content: center!important;
+                    padding-left: 0;
+                }
+            }
+            @include mob-only {
+                width: 50%;
+            }
+            &.btn_column {
+                display: flex;
+                justify-content: end;
+            }
+            height: fit-content;
+        }
+        .il_logo {
+            width: fit-content;
+            height: fit-content;
+            display: block;
+            img {
+                max-width: 100%;
+                object-fit: contain;
+            }
+        }
+        // enable flickity on limbo-max
+        @include limbo-max {
+            &:after {
+                content: 'flickity';
+                display: none;
+            }
+        }
+    }
+
+    .il_btn {
+        color: var(--color-4);
+        line-height: 1;
+        svg {
+            path {
+                fill: var(--color-4);
+            }
+        }
+    }
+
+    &.style-1 {
+        background-color: #F8F8F8;
+        .container {
+            @include limbo-max {
+                .btn_column {
+                    width: fit-content;
+                }
+            }
+            @include desk-min {
+                display: flex;
+                flex-wrap: wrap;
+                .il_block_intro {
+                    width: 100%;
+                }
+                .il_logos_inner {
+                    width: 100%;
+                }
+                .btn_column {
+                    width: 13%;
+                }
+            }
+        }
+        .il_logos_inner {
+            .il_logo {
+                margin: 1rem 1rem 1rem 0;
+                padding: 0 2rem;
+            }
+        }
+        .il_btn {
+            padding: 0 1rem;
+            @include limbo-max {
+                padding: 1rem;
+            }
+            height: 100%;
+        }
+    }
+
+    &.style-2 {
+        background-color: #F5F5F5;
+        .container {
+              @include limbo-min {
+                display: flex;
+                align-items: center;
+                .il_block_intro {
+                    flex-shrink: 0;
+                    .intro_title {
+                        margin-bottom: 0;
+                        margin-right: 6rem;
+                    }
+                  }
+              }
+        }
+        .il_logos_inner {
+            @include desk-min {
+                .column {
+                    flex: 1 0 auto;
+                    max-width: calc(100% / 4);
+                }
+            }
+            .il_logo {
+                margin: 1rem;
+                padding: 0 2rem;
+                @include limbo-max {
+                    height: 50px;
+                }
+            }
+        }
+        .btn_column {
+            display: none;
+        }
+    }
+}

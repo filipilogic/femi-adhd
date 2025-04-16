@@ -1,0 +1,69 @@
+.hp-visitor-form {
+    .frm_repeat_sec {
+        border-bottom: 0;
+        padding-bottom: 0;
+        input::placeholder {
+            color: #021B48 !important;
+        }
+    }
+    .frm_repeat_buttons {
+        text-align: right;
+        .frm_add_form_row, .frm_remove_form_row {
+            background: transparent !important;
+            border: none;
+            font-size: 18px;
+            padding-right: 0;
+            padding-bottom: 0;
+            svg {
+                width: 18px;
+                height: 18px;
+            }
+            &:hover {
+                color: var(--color-1) !important;
+                svg {
+                    fill: var(--color-1) !important;
+                }
+            }
+        }
+    }
+    .price_field {
+        text-align: right;
+        span {
+            color: #fff;
+            font-size: 18px;
+        }
+    }
+    .frm_final_submit {
+        transition: .3s all;
+    }
+    .frm-submit-container {
+        margin-bottom: 0 !important;
+    }
+}
+
+.car-registration-form {
+    .frm_fields_container {
+        input::placeholder {
+            color: #021B48 !important;
+        }
+    }
+    .frm_final_submit {
+        transition: .3s all;
+        display: flex;
+        align-items: center;
+        &:before {
+            content: url("/wp-content/uploads/2024/12/transport-1-1.png");
+            line-height: 0;
+            margin-top: 2px;
+            margin-left: 12px;
+        }
+        &:hover {
+            background: var(--color-1) !important;
+            border-color: var(--color-1) !important;
+            color: #fff !important;
+        }
+    }
+    .frm-submit-container {
+        margin-bottom: 0 !important;
+    }
+}

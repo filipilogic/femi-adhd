@@ -1,0 +1,33 @@
+.il_contact-us {
+    a {
+        display: flex;
+        padding: 4.7rem 0;
+        text-decoration: none;
+    }
+    .intro_title {
+        margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:after {   
+            content: "";
+            background: url("/wp-content/themes/fos/assets/icons/big-right-arrow.svg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: block;
+            position: relative;
+            width: 2.6rem;
+            height: 4.2rem;
+            margin-left: 1rem;
+            transition: var(--theme-transition);
+            @include mob-only {
+                width: 3.12rem;
+                height: 5.04rem;
+            }
+        }
+    }
+    &:hover .intro_title:after {
+        margin-left: 1.5rem;
+        margin-right: -0.5rem;
+    }
+}

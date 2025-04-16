@@ -1,0 +1,16 @@
+{
+    "name": "acf/video-popup-section",
+    "title": "iLogic Video Popup Section",
+    "description": "A Section Block containing the Info Box and the video",
+    "category": "ilogic-category",
+    "icon": "welcome-widgets-menus",
+    "keywords": ["video popup section", "ilogic"],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "video-popup-section.php"
+    },
+    "supports": {
+		"align": false,
+		"anchor": true
+	}
+}

@@ -1,0 +1,15 @@
+{
+    "name": "acf/exec-director-section",
+    "title": "iLogic Executive Director Section",
+    "description": "A Section Block containing the Info Box and the Image",
+    "category": "ilogic-category",
+    "icon": "welcome-widgets-menus",
+    "keywords": ["executive director section", "ilogic"],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "exec-director-section.php"
+    },
+    "supports": {
+		"align": false
+	}
+}

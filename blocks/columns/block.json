@@ -1,0 +1,16 @@
+{
+    "name": "acf/columns",
+    "title": "iLogic Columns",
+    "description": "Columns with the Info Boxes inside. Minimum 2, Maximum 4 Columns",
+    "category": "ilogic-category",
+    "icon": "columns",
+    "keywords": ["columns", "ilogic"],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "columns.php"
+    },
+    "supports": {
+		"align": false,
+		"anchor": true
+	}
+}

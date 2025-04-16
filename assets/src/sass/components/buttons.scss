@@ -1,0 +1,27 @@
+/* Buttons */
+
+.il_btn {
+    padding: 1.2rem 7.5rem;
+    display: inline-flex;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 7px;
+    border: none;
+    transition: var(--theme-transition);
+    font-size: 18px !important;
+    font-weight: 500;
+    @include limbo-max {
+      padding: 2.2rem 4.8rem;
+    }
+    &.button-color-green, &.button-hover-color-green:hover {
+      background-color: #fff;
+      color: var(--color-2);
+    }
+    &.button-color-pink, &.button-hover-color-pink:hover {
+      background-color: var(--color-1);
+      color: #fff;
+    }
+    &:not(:last-child), &:not(:last-child):not(:only-child) {
+      margin-right: 3rem;
+    }
+  }

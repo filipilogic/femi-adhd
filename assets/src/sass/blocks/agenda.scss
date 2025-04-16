@@ -1,0 +1,326 @@
+.il_agenda {
+    padding-top: var(--b-agenda-space-top-ld);
+    padding-bottom: var(--b-agenda-space-bottom-ld);
+    padding-left: var(--b-agenda-space-left-ld);
+    padding-right: var(--b-agenda-space-right-ld);
+    @include limbo-max {
+      padding-top: var(--b-agenda-space-top-mt);
+      padding-bottom: var(--b-agenda-space-bottom-mt);
+      padding-left: var(--b-agenda-space-left-mt);
+      padding-right: var(--b-agenda-space-right-mt);
+    }
+    & > .il_block_bg {
+        .bg_element {
+            @include limbo-min {
+                display: block;
+                position: sticky;
+            }
+            @include limbo-only {
+                top: 15rem;
+            }
+            @media (min-width: 2200px) {
+                width: 58rem;
+            }
+        }
+    }
+    .container {
+        .il_block_intro {
+            @include tab-max {
+                padding: 35rem 25px 8rem 25px;
+                text-align: center;
+            }
+            position: relative;
+            .bg_element {
+              &:nth-child(1) {
+                  @include tab-max {
+                      display: block;
+                      animation: pulsate 10s ease-in-out infinite;
+                      @keyframes pulsate {
+                        0% { transform: scale(0.75); }
+                        18% { transform: scale(1); }
+                        36% { transform: scale(0.9); }
+                        54% { transform: scale(1); }
+                        70% { transform: scale(0.75); }
+                        84% { transform: scale(0.8); }
+                        100% { transform: scale(0.75); }
+                      }
+                  }
+              }
+            }
+            & > .il_block_bg {
+                @include limbo-min {
+                    display: none;
+                }
+            }
+        }
+        position: relative;
+        @include tab-max {
+            width: 100%;
+        }
+        & > .il_block_bg {
+          z-index: -1;
+          overflow: hidden;
+          @include limbo-min {
+            max-width: 65%;
+            margin: 0 auto;
+          }
+          @include ab-bg;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+          }
+          .desk_bg {
+            z-index: -1;
+            @include tab-max {
+              &.hide_desk_bg_mob {
+                display: none;
+              }
+            }
+          }
+          .mob_bg {
+            z-index: -1;
+            @include limbo-min {
+              display: none;
+            }
+          }
+          .bg_element {
+            position: absolute;
+            z-index: -1;
+            width: var(--bg-e-width-lg);
+            height: var(--bg-e-height-lg);
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin-left: var(--bg-e-left-lg);
+            margin-right: var(--bg-e-right-lg);
+            margin-top: var(--bg-e-top-lg);
+            margin-bottom: var(--bg-e-bottom-lg);
+            @include limbo-max {
+              width: var(--bg-e-width-mt);
+              height: var(--bg-e-height-mt);
+              margin-left: var(--bg-e-left-mt);
+              margin-right: var(--bg-e-right-mt);
+              margin-top: var(--bg-e-top-mt);
+              margin-bottom: var(--bg-e-bottom-mt);
+              display: var(--bg-e-display-mobile);
+            }
+            @include desk-min {
+              display: var(--bg-e-display-desktop);
+            }
+            &:nth-child(1) {
+                @include limbo-min {
+                    display: block;
+                    position: sticky;
+                    animation: pulsate 10s ease-in-out infinite;
+                    @keyframes pulsate {
+                      0% { transform: scale(0.75); }
+                      18% { transform: scale(1); }
+                      36% { transform: scale(0.9); }
+                      54% { transform: scale(1); }
+                      70% { transform: scale(0.75); }
+                      84% { transform: scale(0.8); }
+                      100% { transform: scale(0.75); }
+                    }
+                }
+            }
+          }
+        }
+        .il_agenda_wrap {
+            @include limbo-min {
+                max-width: 88rem;
+                margin-left: auto;
+            }
+            p {
+                margin-bottom: 0;
+            }
+            .il_agenda_wrap_inner_top {
+                @include tab-max {
+                    background: var(--color-2);
+                    padding: 7.8rem 25px 10.4rem 25px;
+                }
+                .agenda_content_title {
+                    direction: rtl;
+                    text-align: right;
+                    color: var(--color-2);
+                    @include tab-max {
+                        color: #fff;
+                    }
+                }
+                .agenda_content_text {
+                    direction: rtl;
+                    text-align: right;
+                    margin-bottom: 5.5rem;
+                    @include tab-max {
+                        color: #fff;
+                    }
+                    @include limbo-min {
+                        max-width: 69.5rem;
+                        margin-left: auto;
+                    }
+                }
+            }
+            .il_agenda_wrap_inner_bottom {
+                position: relative;
+                @include tab-max {
+                    padding: 6rem 20px 7rem 20px;
+                    background: linear-gradient(to left, #021B48 calc(20px + 10.5rem), #e9ecef calc(20px + 10.5rem));
+                }
+                .il_agenda_content {
+                    display: flex;
+                    flex-wrap: wrap;
+                    ul {
+                        padding-right: 20px;
+                        li {
+                            b {
+                                @include tab-max {
+                                    font-weight: 400 !important;
+                                }
+                            }
+                        }
+                    }
+                    @include tab-max {
+                        &:not(:last-child) {
+                            margin-bottom: 12rem;
+                        }
+                    }
+                    @include limbo-min {
+                        margin-bottom: 9rem;
+                    }
+                    .il_ac_speaker_image {
+                        @include tab-max {
+                            order: 1;
+                            img {
+                                width: 21rem;
+                            }
+                        }
+                        @include limbo-min {
+                            z-index: 2;
+                            img {
+                                width: 17.6rem;
+                            }
+                        }
+                    }
+                    .il_ac_content_container {
+                        display: flex;
+                        flex-wrap: wrap;
+                        @include tab-max {
+                            width: calc(100% - 21rem);
+                            padding-right: 16px;
+                        }
+                        @include limbo-min {
+                            flex-grow: 1;
+                            width: calc(100% - 17.6rem);
+                        }
+                        .il_ac_content_container_top {
+                            display: flex;
+                            @include tab-max {
+                                width: 100%;
+                                flex-direction: column;
+                            }
+                            @include limbo-min {
+                                height: 50%;
+                                width: 100%;
+                                flex-grow: 1;
+                                background-color: #fff;
+                            }
+                            .il_ac_content_container_top_left {
+                                direction: rtl;
+                                text-align: left;
+                                @include tab-max {
+                                    width: 100%;
+                                }
+                                @include limbo-min {
+                                    width: 45%;
+                                    flex-grow: 1;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    background-color: #021B48;
+                                    clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
+                                    margin-left: -5rem;
+                                    color: #fff;
+                                    padding: 0 4rem 0 6rem;
+                                }
+                                .il_ac_speaker_name {
+                                    font-weight: 700;
+                                    @include tab-max {
+                                        font-size: 18px;
+                                        line-height: 22px;
+                                        text-align: right;
+                                    }
+                                    @include limbo-min {
+                                        font-size: 2.4rem;
+                                    }
+                                }
+                                .il_ac_speaker_title {
+                                    font-weight: 400;
+                                    @include tab-max {
+                                        font-size: 18px;
+                                        text-align: right;
+                                    }
+                                    @include limbo-min {
+                                        font-size: 1.4rem;
+                                    }
+                                }
+                            }
+                            .il_ac_content_container_top_right {
+                                direction: rtl;
+                                text-align: right;
+                                @include tab-max {
+                                    width: 100%;
+                                    margin: 3rem 0 3.2rem 0;
+                                }
+                                @include limbo-min {
+                                    width: 55%;
+                                    flex-grow: 1;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    padding-right: 2.5rem;
+                                }
+                                .il_ac_agenda_time {
+                                    color: var(--color-2);
+                                    @include tab-max {
+                                        font-size: 18px;
+                                        line-height: 22px;
+                                        font-weight: 500;
+                                    }
+                                    @include limbo-min {
+                                        font-size: 2.4rem;
+                                        font-weight: 700;
+                                    }
+                                }
+                                .il_ac_agenda_title {
+                                    font-weight: 500;
+                                    color: var(--color-1);
+                                    @include tab-max {
+                                        font-size: 22px;
+                                        line-height: 26px;
+                                    }
+                                    @include limbo-min {
+                                        font-size: 2.4rem;
+                                    }
+                                }
+                            }
+                        }
+                        .il_ac_content_container_bottom {
+                            direction: rtl;
+                            text-align: right;
+                            @include limbo-min {
+                                height: 50%;
+                                width: 100%;
+                                flex-grow: 1;
+                                padding: 2.5rem 2.5rem 0 2.5rem;
+                                font-size: 1.8rem;
+                                color: var(--color-2);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

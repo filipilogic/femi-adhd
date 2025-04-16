@@ -1,0 +1,16 @@
+{
+    "name": "acf/fp-section",
+    "title": "Full Page Section",
+    "description": "Basic fullPage Section with Title and Text",
+    "category": "ilogic-category",
+    "icon": "welcome-widgets-menus",
+    "keywords": ["full page", "section", "ilogic"],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "fp-section.php"
+    },
+    "supports": {
+		"align": false,
+        "multiple": false
+	}
+}

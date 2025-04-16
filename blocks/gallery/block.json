@@ -1,0 +1,16 @@
+{
+    "name": "acf/gallery",
+    "title": "iLogic Gallery",
+    "description": "A Gallery Block",
+    "category": "ilogic-category",
+    "icon": "images-alt2",
+    "keywords": ["gallery", "ilogic"],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "gallery.php"
+    },
+    "supports": {
+		"align": false,
+		"anchor": true
+	}
+}
