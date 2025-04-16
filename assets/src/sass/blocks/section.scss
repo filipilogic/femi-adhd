@@ -457,7 +457,9 @@
           display: flex;
           align-items: center;
           width: fit-content;
-          margin: 0 auto;
+          @include limbo-max {
+            margin: 0 auto;
+          }
           @include desk-min {
             margin-left: auto;
           }
