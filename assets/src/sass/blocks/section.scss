@@ -481,6 +481,17 @@
   }
 }
 
+.hp-second-section {
+  .buttons {
+    @include mob-only {
+      .il_btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+}
+
 
 .hp-four-boxes-section {
   .il_section_inner {
@@ -647,6 +658,44 @@
 .contact-section-white-bg, .contact-section-event-page, .prof-material-hero, .contact-us-hero {
   .wpcf7-form input:not(.wpcf7-submit), .wpcf7-form select, .wpcf7-form textarea {
     background: #fff;
+  }
+
+  .event-cf-box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @include limbo-max {
+      flex-direction: column;
+      p {
+        width: 100%;
+      }
+    }
+    .wpcf7-list-item, .wpcf7-list-item label {
+      direction: rtl;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      [type="checkbox"] {
+        margin-top: 4px;
+      }
+      @include limbo-max {
+        width: unset !important;
+        height: unset !important;
+        background: none !important;
+        flex-direction: row !important;
+      }
+    }
+    .wpcf7-list-item-label {
+      font-size: 14px;
+      a {
+        font-size: 14px;
+      }
+      @include limbo-max {
+        width: unset !important;
+        height: unset !important;
+        background: none !important;
+      }
+    }
   }
 }
 
