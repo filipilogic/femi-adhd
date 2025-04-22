@@ -8644,6 +8644,7 @@ textarea {
   display: flex;
   align-items: flex-start;
   gap: 8px;
+  margin-left: 0;
 }
 .contact-section-white-bg .event-cf-box .wpcf7-list-item [type=checkbox], .contact-section-white-bg .event-cf-box .wpcf7-list-item label [type=checkbox], .contact-section-event-page .event-cf-box .wpcf7-list-item [type=checkbox], .contact-section-event-page .event-cf-box .wpcf7-list-item label [type=checkbox], .prof-material-hero .event-cf-box .wpcf7-list-item [type=checkbox], .prof-material-hero .event-cf-box .wpcf7-list-item label [type=checkbox], .contact-us-hero .event-cf-box .wpcf7-list-item [type=checkbox], .contact-us-hero .event-cf-box .wpcf7-list-item label [type=checkbox] {
   margin-top: 4px;
