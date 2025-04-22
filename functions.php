@@ -349,12 +349,3 @@ function reverse_menu_items_on_mobile($items, $args) {
     return $items;
 }
 add_filter('wp_nav_menu_objects', 'reverse_menu_items_on_mobile', 10, 2);
-
-// Reverse menu items order on mobile
-function reverse_menu_items_on_mobile($items, $args) {
-    if ($args->theme_location == 'menu-1' && wp_is_mobile()) {
-        $items = array_reverse($items);
-    }
-    return $items;
-}
-add_filter('wp_nav_menu_objects', 'reverse_menu_items_on_mobile', 10, 2);
