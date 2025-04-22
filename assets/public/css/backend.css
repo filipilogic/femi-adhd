@@ -1964,6 +1964,12 @@ div.margin-xl {
     text-align: center;
   }
 }
+@media (max-width: 1199.5px) {
+  .event-page-columns .il_columns_container .il_block_bg {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+  }
+}
 @media (min-width: 1199.6px) {
   .event-page-columns .il_columns_container {
     margin-top: -3rem;
