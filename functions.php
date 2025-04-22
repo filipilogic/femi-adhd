@@ -340,12 +340,3 @@ function load_more_posts_related_block() {
 }
 add_action('wp_ajax_load_more_posts_related_block', 'load_more_posts_related_block');
 add_action('wp_ajax_nopriv_load_more_posts_related_block', 'load_more_posts_related_block');
-
-// Reverse menu items order on mobile
-function reverse_menu_items_on_mobile($items, $args) {
-    if ($args->theme_location == 'menu-1') {
-        $items = array_reverse($items);
-    }
-    return $items;
-}
-add_filter('wp_nav_menu_objects', 'reverse_menu_items_on_mobile', 10, 2);

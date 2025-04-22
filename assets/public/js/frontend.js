@@ -11,7 +11,7 @@ jQuery(document).ready(function ($) {
   // Mobile navigation
 
   $(".menu-toggle").click(function () {
-    $("#primary-menu").fadeToggle();
+    $("#primary-menu").toggleClass('mobile-menu-visible'); // Toggles mobile-menu-visible class and fades the menu in/out
     $(this).toggleClass('menu-open');
   });
   $("#primary-menu li").click(function () {

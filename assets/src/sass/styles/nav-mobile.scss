@@ -39,11 +39,6 @@
             }
         }
     }
-    .main-navigation {
-        ul {
-            display: none;
-        }
-    }
     #primary-menu {
         position: absolute;
         width: 100%;
@@ -53,6 +48,13 @@
         left: 0;
         padding: 80px 25px 25px 25px;
         z-index: -1;
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--theme-transition);
+        direction: rtl;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column-reverse;
         li {
             a {
                 padding: 2.5rem;
@@ -103,6 +105,11 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
+        }
+        &.mobile-menu-visible {
+            opacity: 1;
+            visibility: visible;
+            display: flex;
         }
     }
     .nav-button {
