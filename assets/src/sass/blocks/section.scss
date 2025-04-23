@@ -659,43 +659,43 @@
   .wpcf7-form input:not(.wpcf7-submit), .wpcf7-form select, .wpcf7-form textarea {
     background: #fff;
   }
+}
 
-  .event-cf-box {
+.event-cf-box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  @include limbo-max {
+    flex-direction: column;
+    p {
+      width: 100%;
+    }
+  }
+  .wpcf7-list-item, .wpcf7-list-item label {
+    direction: rtl;
     display: flex;
-    justify-content: space-between;
-    width: 100%;
+    align-items: flex-start;
+    gap: 8px;
+    margin-left: 0;
+    [type="checkbox"] {
+      margin-top: 4px;
+    }
     @include limbo-max {
-      flex-direction: column;
-      p {
-        width: 100%;
-      }
+      width: unset !important;
+      height: unset !important;
+      background: none !important;
+      flex-direction: row !important;
     }
-    .wpcf7-list-item, .wpcf7-list-item label {
-      direction: rtl;
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-      margin-left: 0;
-      [type="checkbox"] {
-        margin-top: 4px;
-      }
-      @include limbo-max {
-        width: unset !important;
-        height: unset !important;
-        background: none !important;
-        flex-direction: row !important;
-      }
-    }
-    .wpcf7-list-item-label {
+  }
+  .wpcf7-list-item-label {
+    font-size: 14px;
+    a {
       font-size: 14px;
-      a {
-        font-size: 14px;
-      }
-      @include limbo-max {
-        width: unset !important;
-        height: unset !important;
-        background: none !important;
-      }
+    }
+    @include limbo-max {
+      width: unset !important;
+      height: unset !important;
+      background: none !important;
     }
   }
 }

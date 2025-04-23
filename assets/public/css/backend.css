@@ -4408,45 +4408,46 @@ div.margin-xl {
 .contact-section-white-bg .wpcf7-form input:not(.wpcf7-submit), .contact-section-white-bg .wpcf7-form select, .contact-section-white-bg .wpcf7-form textarea, .contact-section-event-page .wpcf7-form input:not(.wpcf7-submit), .contact-section-event-page .wpcf7-form select, .contact-section-event-page .wpcf7-form textarea, .prof-material-hero .wpcf7-form input:not(.wpcf7-submit), .prof-material-hero .wpcf7-form select, .prof-material-hero .wpcf7-form textarea, .contact-us-hero .wpcf7-form input:not(.wpcf7-submit), .contact-us-hero .wpcf7-form select, .contact-us-hero .wpcf7-form textarea {
   background: #fff;
 }
-.contact-section-white-bg .event-cf-box, .contact-section-event-page .event-cf-box, .prof-material-hero .event-cf-box, .contact-us-hero .event-cf-box {
+
+.event-cf-box {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 @media (max-width: 1199.5px) {
-  .contact-section-white-bg .event-cf-box, .contact-section-event-page .event-cf-box, .prof-material-hero .event-cf-box, .contact-us-hero .event-cf-box {
+  .event-cf-box {
     flex-direction: column;
   }
-  .contact-section-white-bg .event-cf-box p, .contact-section-event-page .event-cf-box p, .prof-material-hero .event-cf-box p, .contact-us-hero .event-cf-box p {
+  .event-cf-box p {
     width: 100%;
   }
 }
-.contact-section-white-bg .event-cf-box .wpcf7-list-item, .contact-section-white-bg .event-cf-box .wpcf7-list-item label, .contact-section-event-page .event-cf-box .wpcf7-list-item, .contact-section-event-page .event-cf-box .wpcf7-list-item label, .prof-material-hero .event-cf-box .wpcf7-list-item, .prof-material-hero .event-cf-box .wpcf7-list-item label, .contact-us-hero .event-cf-box .wpcf7-list-item, .contact-us-hero .event-cf-box .wpcf7-list-item label {
+.event-cf-box .wpcf7-list-item, .event-cf-box .wpcf7-list-item label {
   direction: rtl;
   display: flex;
   align-items: flex-start;
   gap: 8px;
   margin-left: 0;
 }
-.contact-section-white-bg .event-cf-box .wpcf7-list-item [type=checkbox], .contact-section-white-bg .event-cf-box .wpcf7-list-item label [type=checkbox], .contact-section-event-page .event-cf-box .wpcf7-list-item [type=checkbox], .contact-section-event-page .event-cf-box .wpcf7-list-item label [type=checkbox], .prof-material-hero .event-cf-box .wpcf7-list-item [type=checkbox], .prof-material-hero .event-cf-box .wpcf7-list-item label [type=checkbox], .contact-us-hero .event-cf-box .wpcf7-list-item [type=checkbox], .contact-us-hero .event-cf-box .wpcf7-list-item label [type=checkbox] {
+.event-cf-box .wpcf7-list-item [type=checkbox], .event-cf-box .wpcf7-list-item label [type=checkbox] {
   margin-top: 4px;
 }
 @media (max-width: 1199.5px) {
-  .contact-section-white-bg .event-cf-box .wpcf7-list-item, .contact-section-white-bg .event-cf-box .wpcf7-list-item label, .contact-section-event-page .event-cf-box .wpcf7-list-item, .contact-section-event-page .event-cf-box .wpcf7-list-item label, .prof-material-hero .event-cf-box .wpcf7-list-item, .prof-material-hero .event-cf-box .wpcf7-list-item label, .contact-us-hero .event-cf-box .wpcf7-list-item, .contact-us-hero .event-cf-box .wpcf7-list-item label {
+  .event-cf-box .wpcf7-list-item, .event-cf-box .wpcf7-list-item label {
     width: unset !important;
     height: unset !important;
     background: none !important;
     flex-direction: row !important;
   }
 }
-.contact-section-white-bg .event-cf-box .wpcf7-list-item-label, .contact-section-event-page .event-cf-box .wpcf7-list-item-label, .prof-material-hero .event-cf-box .wpcf7-list-item-label, .contact-us-hero .event-cf-box .wpcf7-list-item-label {
+.event-cf-box .wpcf7-list-item-label {
   font-size: 14px;
 }
-.contact-section-white-bg .event-cf-box .wpcf7-list-item-label a, .contact-section-event-page .event-cf-box .wpcf7-list-item-label a, .prof-material-hero .event-cf-box .wpcf7-list-item-label a, .contact-us-hero .event-cf-box .wpcf7-list-item-label a {
+.event-cf-box .wpcf7-list-item-label a {
   font-size: 14px;
 }
 @media (max-width: 1199.5px) {
-  .contact-section-white-bg .event-cf-box .wpcf7-list-item-label, .contact-section-event-page .event-cf-box .wpcf7-list-item-label, .prof-material-hero .event-cf-box .wpcf7-list-item-label, .contact-us-hero .event-cf-box .wpcf7-list-item-label {
+  .event-cf-box .wpcf7-list-item-label {
     width: unset !important;
     height: unset !important;
     background: none !important;
