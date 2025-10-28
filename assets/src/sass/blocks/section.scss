@@ -805,3 +805,191 @@
     }
   }
 }
+
+.old-event-hero-section {
+  @include mob-only {
+    display: flex;
+    height: 100vh;
+    padding-top: 0 !important;
+    padding-bottom: 35px !important;
+  }
+  @include limbo-max {
+    background: url('/wp-content/uploads/2024/12/Group-2442-1.jpg');
+    background-size: cover;
+    background-position: top left;
+    background-repeat: no-repeat;
+  }
+  @include desk-min {
+    background: linear-gradient(to right, transparent 45%, #021B48 45%);
+  }
+  .il_section_inner {
+    @include mob-only {
+      margin-top: auto;
+      margin-bottom: 0;
+    }
+    justify-content: center;
+    @include desk-min {
+      justify-content: flex-end;
+    }
+    .il_block_bg {
+      overflow: visible;
+      img {
+        animation: rotate 35s linear infinite;
+        @keyframes rotate {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
+    .il_block_intro {
+      @include limbo-max {
+        text-align: center;
+        .hide-on-mobile {
+          display: none;
+        }
+        .intro_title {
+          font-size: 55px;
+          font-weight: 300;
+          span:not(.hide-on-mobile) {
+            display: block;
+            margin-top: 8px;
+            font-size: 30px;
+            line-height: 36px;
+            color: var(--color-1);
+            font-weight: 700;
+          }
+        }
+        .intro_subtitle {
+          color:#fff !important;
+          font-weight: 700;
+        }
+        .hide-on-desktop {
+          p {
+            font-weight: 500;
+          }
+          .hp-hero-mobile-event-date {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--color-1);
+            margin-bottom: 0;
+          }
+        }
+      }
+      @include mob-only {
+        .buttons {
+          display: flex;
+          flex-direction: column;
+          .il_btn {
+            margin-right: 0;
+            justify-content: center;
+            font-size: 16px !important;
+            &:nth-child(1) {
+              margin-bottom: 15px;
+              background: transparent;
+              border: 1px solid #fff;
+              color: #fff;
+              &:hover {
+                background: #fff;
+                color: var(--color-1);
+              }
+            }
+          }
+        }
+      }
+      .intro_text {
+        @include desk-min {
+          max-width: 78.5rem;
+          margin-left: auto;
+          .hide-on-desktop {
+            display: none;
+          }
+        }
+        .hp-hero-three-images-container {
+          display: flex;
+          gap: 1.5rem;
+          align-items: center;
+          margin-top: 5rem;
+          @include mob-only {
+            img {
+              width: 40%;
+              margin-left: 10%;
+            }
+            .flickity-slider {
+              display: flex;
+              align-items: center;
+            }
+            &:after {
+              content: 'flickity';
+              display: none;
+            }
+          }
+          @include tab-only {
+            justify-content: center;
+          }
+          @include limbo-only {
+            justify-content: center;
+          }
+          @include limbo-max {
+            margin-bottom: 10rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+html:not(.interface-interface-skeleton__html-container) .old-event-about-mobile-section {
+  .il_block_bg {
+    .bg_element {
+      animation: pulsate 10s ease-in-out infinite;
+      @keyframes pulsate {
+        0% { transform: scale(0.75); }
+        18% { transform: scale(1); }
+        36% { transform: scale(0.9); }
+        54% { transform: scale(1); }
+        70% { transform: scale(0.75); }
+        84% { transform: scale(0.8); }
+        100% { transform: scale(0.75); }
+      }
+    }
+  }
+  @include limbo-min {
+    display: none;
+  }
+}
+
+.old-event-our-vision-section {
+  .il_block_intro {
+    .intro_text {
+      @include desk-min {
+        max-width: 69.7rem;
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+.old-event-bottom-big-logo-group {
+  @include limbo-min {
+    background: url('/wp-content/uploads/2024/12/Vector-18-1.png');
+    background-size: auto;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+  }
+}
+
+.old-event-bottom-big-logo-section {
+  .il_block_intro {
+    p {
+      margin-bottom: 0;
+    }
+    box-shadow: 20px 20px 25px rgba(0, 0, 0, 0.35);
+    @include tab-max {
+      margin-top: 5rem;
+    }
+  }
+}

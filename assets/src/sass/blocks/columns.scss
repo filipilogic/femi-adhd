@@ -313,3 +313,111 @@
     }
   }
 }
+
+.old-event-bottom-columns {
+  .il_columns_container {
+    .il_block_bg {
+      overflow: visible;
+      .bg_element {
+        animation: pulsate 10s ease-in-out infinite;
+        @keyframes pulsate {
+          0% { transform: scale(0.75); }
+          18% { transform: scale(1); }
+          36% { transform: scale(0.9); }
+          54% { transform: scale(1); }
+          70% { transform: scale(0.75); }
+          84% { transform: scale(0.8); }
+          100% { transform: scale(0.75); }
+        }
+        @include limbo-min {
+          display: block;
+        }
+      }
+      @include tab-max {
+        display: none;
+      }
+    }
+    p {
+      margin-bottom: 0;
+    }
+    .column:nth-child(1) {
+      @include limbo-max {
+        order: 1;
+      }
+      .intro_title {
+        display: none;
+      }
+      .il_col_text {
+        @include limbo-max {
+          display: flex;
+          flex-direction: column;
+        }
+        .p-b-cont {
+          b {
+            font-size: 2.4rem;
+            @include limbo-max {
+              font-size: 22px;
+            }
+          }
+          @include limbo-max {
+            order: 2;
+          }
+        }
+        ol {
+          margin-top: 5px;
+          padding-right: 20px;
+          li {
+            color: #D7DADD;
+            @include tab-max {
+              font-size: 16px;
+            }
+          }
+          @include limbo-max {
+            order: 3;
+          }
+        }
+        .hp-bottom-columns-two-logo-div {
+          display: flex;
+          align-items: center;
+          gap: 5rem;
+          margin-top: 4.6rem;
+          @include mob-only {
+            flex-wrap: wrap;
+            text-align: center;
+            justify-content: center;
+            gap: 4rem;
+          }
+          @include limbo-max {
+            order: 1;
+            margin-bottom: 6rem;
+          }
+          span {
+            font-size: 18px;
+            @include mob-only {
+              min-width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .column:nth-child(2) {
+      @include limbo-max {
+        margin-bottom: 2rem;
+      }
+      .hp-bottom-columns-c2pf {
+        @include limbo-max {
+          font-size: 20px;
+          font-weight: 700;
+        }
+        @include desk-min {
+          display: none;
+        }
+      }
+      .hp-bottom-columns-c2pl {
+        @include mob-only {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
