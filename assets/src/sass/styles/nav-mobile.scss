@@ -1,6 +1,12 @@
 // File location: assets\src\sass\styles
 
 @include limbo-max {
+    body:not(.home) {
+        padding-top: 15rem;
+        .header-main {
+            background: #021B48;
+        }
+    }
     .header-top {
         display: none;
     }

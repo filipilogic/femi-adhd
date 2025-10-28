@@ -1,4 +1,4 @@
-.intro_title, .intro_subtitle, .intro_text, .il_btn, ul li a, .column, input:not(.wpcf7-submit), select, textarea, input:not(.wpcf7-submit)::placeholder, select::placeholder, textarea::placeholder {
+.intro_title, .intro_subtitle, .intro_text, .il_btn, ul li a, .column, input:not(.wpcf7-submit), select, textarea, input:not(.wpcf7-submit)::placeholder, select::placeholder, textarea::placeholder, .wpcf7 input[type="url"], .wpcf7 input[type="email"], .wpcf7 input[type="tel"] {
   direction: rtl;
 }
 

@@ -85,6 +85,11 @@ if ( ! empty( $padding ) ) {
 			<?php } ?>
 		</div>
 		</div>
+		<div class="footer_bottom_above">
+			<?php if ( is_active_sidebar( 'footer-bottom-above' ) ) { ?>
+				<?php dynamic_sidebar('footer-bottom-above'); ?>
+			<?php } ?>
+		</div>
 		<div class="footer_bottom">
 			<?php if ( is_active_sidebar( 'footer-bottom' ) ) { ?>
 				<?php dynamic_sidebar('footer-bottom'); ?>

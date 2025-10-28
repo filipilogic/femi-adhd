@@ -31,6 +31,7 @@
       .il_accordion-header {
         &::before {
           transform: rotate(45deg);
+          filter: brightness(0) invert(1);
         }
       }
     }
@@ -41,36 +42,36 @@
         margin-bottom: 15px;
       }
       cursor: pointer;
-      padding: 1.25rem 3rem 1rem 6rem;
+      padding: 1.25rem 4rem 1rem 6rem;
       @include tab-max {
-        padding: 1.5rem 3rem 2rem 6rem;
+        padding: 1.5rem 4rem 2rem 6rem;
       }
       position: relative;
       display: flex;
       align-items: center;
       &::before {
         content: "";
-        background-image: url('/wp-content/uploads/2023/10/Expend_icon.png');
+        background-image: url('/wp-content/uploads/2025/04/plus-1-2.png');
         background-repeat: no-repeat;
         background-size: contain;
-        width: 3rem;
-        height: 3rem;
+        width: 2rem;
+        height: 2rem;
         position: absolute;
-        left: 0;
+        right: 0;
         transition: var(--theme-transition);
       }
     }
     .il_accordion-body {
       flex-wrap: wrap;
       justify-content: space-between;
-      padding: 1.25rem 3rem 0.5rem 6rem;
+      padding: 1.25rem 4rem 0.5rem 6rem;
       @include tab-max {
-        padding: 1.5rem 3rem 1rem 6rem;
+        padding: 1.5rem 4rem 1rem 6rem;
       }
       p {
         font-size: 2rem;
         @include limbo-max {
-          font-size: 16px;
+          font-size: 15px;
         }
         @include lg-desk-min {
           font-size: 1.8rem;
@@ -88,8 +89,8 @@
         li {
           max-width: 42.8rem;
           font-size: 2rem;
-          @include tab-max {
-            font-size: 16px;
+          @include limbo-max {
+            font-size: 15px;
           }
           @include lg-desk-min {
             font-size: 1.8rem;
@@ -100,9 +101,6 @@
         }
       }
       .il_accordion-body-left {
-        @include limbo-only {
-          width: 95%;
-        }
         @include desk-min {
           max-width: 110rem;
         }
@@ -162,4 +160,59 @@
       }
     }
   }  
+}
+
+.hp-accordion {
+  .il_accordion-item {
+    @include limbo-only {
+      width: 70%;
+    }
+    @include desk-min {
+      width: 50%;
+    }
+    margin-left: auto;
+    border-bottom: none !important;
+    &:nth-child(odd) {
+      .il_accordion-header {
+        padding: 2rem 4rem 2rem 6rem;
+      }
+      &.open {
+        .il_accordion-header {
+          padding: 2rem 4rem 1rem 6rem;
+        }
+      }
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: -9999px;
+        top: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.10);
+        z-index: -1;
+      }
+    }
+    .il_accordion-header {
+      justify-content: flex-end;
+    }
+    .il_accordion-body {
+      justify-content: flex-end;
+      text-align: right;
+      p {
+        margin-bottom: 1rem !important;
+      }
+      ul {
+        direction: rtl;
+        padding-left: 0;
+        padding-right: 20px;
+        @include limbo-max {
+          padding-right: 10px;
+        }
+        li {
+          max-width: unset;
+        }
+      }
+    }
+  }
 }

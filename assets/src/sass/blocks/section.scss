@@ -190,7 +190,8 @@
       }
     }
   }
-  &.ib-left,  &.ib-right {
+  &.ib-left,
+  &.ib-right {
     &.stack-mobile {
       @include tab-max {
         .il_block_intro {
@@ -388,12 +389,15 @@
   }
   @include limbo-max {
     background: url('/wp-content/uploads/2024/12/Group-2442-1.jpg');
-    background-size: cover;
     background-position: top left;
+    background-size: cover;
     background-repeat: no-repeat;
   }
   @include desk-min {
-    background: linear-gradient(to right, transparent 45%, #021B48 45%);
+    background: url('/wp-content/uploads/2025/04/Group-2491-1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   .il_section_inner {
     @include mob-only {
@@ -419,95 +423,57 @@
       }
     }
     .il_block_intro {
+      display: flex;
+      flex-direction: column;
       @include limbo-max {
         text-align: center;
-        .hide-on-mobile {
-          display: none;
-        }
-        .intro_title {
-          font-size: 55px;
-          font-weight: 300;
-          span:not(.hide-on-mobile) {
-            display: block;
-            margin-top: 8px;
-            font-size: 30px;
-            line-height: 36px;
-            color: var(--color-1);
-            font-weight: 700;
-          }
-        }
-        .intro_subtitle {
-          color:#fff !important;
-          font-weight: 700;
-        }
-        .hide-on-desktop {
-          p {
-            font-weight: 500;
-          }
-          .hp-hero-mobile-event-date {
-            font-size: 22px;
-            font-weight: 700;
-            color: var(--color-1);
-            margin-bottom: 0;
-          }
-        }
       }
-      @include mob-only {
-        .buttons {
-          display: flex;
-          flex-direction: column;
-          .il_btn {
-            margin-right: 0;
-            justify-content: center;
-            font-size: 16px !important;
-            &:nth-child(1) {
-              margin-bottom: 15px;
-              background: transparent;
-              border: 1px solid #fff;
-              color: #fff;
-              &:hover {
-                background: #fff;
-                color: var(--color-1);
-              }
-            }
+      .intro_subtitle {
+        @include limbo-max {
+          line-height: 22px;
+        }
+        @include desk-min {
+          max-width: 55rem;
+          margin-left: auto;
+          p {
+            line-height: 3rem;
           }
         }
       }
       .intro_text {
-        @include desk-min {
-          max-width: 78.5rem;
-          margin-left: auto;
-          .hide-on-desktop {
-            display: none;
+        margin-top: 10rem;
+        order: 1;
+        p {
+          line-height: 0;
+          @include limbo-max {
+            dotlottie-player {
+              margin: 0 auto;
+            }
           }
         }
-        .hp-hero-three-images-container {
+      }
+      .buttons {
+        .il_btn {
           display: flex;
-          gap: 1.5rem;
           align-items: center;
-          margin-top: 5rem;
-          @include mob-only {
-            img {
-              width: 40%;
-              margin-left: 10%;
-            }
-            .flickity-slider {
-              display: flex;
-              align-items: center;
-            }
-            &:after {
-              content: 'flickity';
-              display: none;
-            }
-          }
-          @include tab-only {
-            justify-content: center;
-          }
-          @include limbo-only {
-            justify-content: center;
-          }
+          width: fit-content;
           @include limbo-max {
-            margin-bottom: 10rem;
+            margin: 0 auto;
+          }
+          @include desk-min {
+            margin-left: auto;
+          }
+          &:before {
+            content: '';
+            background: url('/wp-content/uploads/2025/04/users-two-plus.png');
+            background-size: cover;
+            width: 2.6rem;
+            height: 2.1rem;
+            margin-left: 14px;
+            @include limbo-max {
+              width: 21px;
+              height: 16px;
+            }
           }
         }
       }
@@ -515,35 +481,227 @@
   }
 }
 
-.hp-our-vision-section {
+.hp-second-section {
+  .buttons {
+    @include mob-only {
+      .il_btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+
+.hp-four-boxes-section {
+  .il_section_inner {
+    .il_block_bg {
+      overflow: visible;
+    }
+  }
   .il_block_intro {
     .intro_text {
-      @include desk-min {
-        max-width: 69.7rem;
+      .hp-fbs-first-p {
+        @include desk-min {
+          max-width: 54.4rem;
+          
+        }
+      }
+      .blue-line {
+        width: 40.9rem;
+        height: 3px;
+        background-color: var(--color-1);
+        @include limbo-max {
+         height: 2.5px;
+        }
+      } 
+      svg {
+        max-width: 40.9rem;
+      }
+      .hp-fbs-4-boxes-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 6.4rem 1.8rem;
+        margin-top: 5.2rem;
+        @include limbo-max {
+          margin-top: 36px;
+        }
+        .hp-section-4-single {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+          width: calc(50% - 2rem);
+          gap: 22px;
+          @include tab-max {
+            width: 100%;
+          }
+          .hp-section-4-single-content {
+            width: calc(100% - 22px - 6.2rem);
+            h3 {
+              font-size: 2.8rem;
+              color: var(--color-1);
+              margin-bottom: 10px;
+              @include limbo-max {
+                font-size: 22px;
+              }
+            }
+            p {
+              margin-bottom: 0;
+            }
+          }
+          .hp-section-4-single-img {
+            width: 6.2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.il_block.hp-blue-section {
+  box-shadow: -15px 15px 30px 0px rgba(0, 0, 0, 0.25);
+  .intro_text {
+    h3 {
+      font-size: 2.4rem;
+      color: #18f1b4;
+      margin: 5.2rem 0 1.6rem 0;
+      @include limbo-max {
+        font-size: 22px;
+        margin: 30px 0 18px 0;
+      }
+    }
+    ul {
+      li {
+        &::marker {
+          color: #fff;
+          font-size: 16px;
+        }
+      }
+      @include limbo-max {
+        padding-inline-start: 18px;
+      }
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 5rem;
+    height: 100%;
+    background-color: var(--color-1);
+    @include limbo-max {
+      width: 5px;
+    }
+  }
+}
+
+.about-hero {
+  .il_block_intro {
+    @include desk-min {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h2 {
+        max-width: 55rem;
         margin-left: auto;
       }
     }
-  }
-}
-
-html:not(.interface-interface-skeleton__html-container) .hp-about-mobile-section {
-  .il_block_bg {
-    .bg_element {
-      animation: pulsate 10s ease-in-out infinite;
-      @keyframes pulsate {
-        0% { transform: scale(0.75); }
-        18% { transform: scale(1); }
-        36% { transform: scale(0.9); }
-        54% { transform: scale(1); }
-        70% { transform: scale(0.75); }
-        84% { transform: scale(0.8); }
-        100% { transform: scale(0.75); }
+    .intro_text {
+      .blue-line {
+        width: 52.4rem;
+        height: 5px;
+        background-color: var(--color-1);
+        margin-bottom: 2.1rem;
+        @include limbo-max {
+         width: 80%;
+         height: 2.5px;
+        }
       }
     }
   }
-  @include limbo-min {
-    display: none;
+}
+
+.about-third-section {
+  .il_block_intro {
+    @include desk-min {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h2 {
+        max-width: 55rem;
+        margin-left: auto;
+      }
+    }
+    .intro_title {
+      &::before {
+        content: "";
+        width: auto;
+        height: 13px;
+        background-image: url("/wp-content/uploads/2025/04/Group-2464.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: block;
+        margin-bottom: 5rem;
+        @include limbo-max {
+          margin-bottom: 30px;
+        }
+      }
+    }
   }
+}
+
+.contact-section-white-bg, .contact-section-event-page, .prof-material-hero, .contact-us-hero {
+  .wpcf7-form input:not(.wpcf7-submit), .wpcf7-form select, .wpcf7-form textarea {
+    background: #fff;
+  }
+}
+
+.event-cf-box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  @include limbo-max {
+    flex-direction: column;
+    p {
+      width: 100%;
+    }
+  }
+  .wpcf7-list-item, .wpcf7-list-item label {
+    direction: rtl;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-left: 0;
+    [type="checkbox"] {
+      margin-top: 4px;
+    }
+    @include limbo-max {
+      width: unset !important;
+      height: unset !important;
+      background: none !important;
+      flex-direction: row !important;
+    }
+  }
+  .wpcf7-list-item-label {
+    font-size: 14px;
+    a {
+      font-size: 14px;
+    }
+    @include limbo-max {
+      width: unset !important;
+      height: unset !important;
+      background: none !important;
+    }
+  }
+}
+
+.contact-section-white-bg {
+  background: rgba(255, 255, 255, 0.50);
 }
 
 .hp-bottom-big-logo-group {
@@ -567,389 +725,83 @@ html:not(.interface-interface-skeleton__html-container) .hp-about-mobile-section
   }
 }
 
-.page-id-1006 {
-  .header-main {
-    background-color: var(--color-2);
-    position: relative;
-  }
-}
-.il_block.tranzila-payment-section {
-  .il_section_inner {
-    height: 65rem;
-    align-items: center;
-    @include limbo-max {
-      height: 580px;
+.event-hero {
+  .il_block_intro {
+    @include desk-min {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 68.3rem;
+      margin-left: auto;
+    }
+    .intro_text {
+      .blue-line {
+        width: 64rem;
+        height: 2px;
+        background-color: var(--color-1);
+        margin-bottom: 2.1rem;
+        @include limbo-max {
+         width: 80%;
+         height: 2.5px;
+        }
+      }
     }
   }
-  display: flex;
-  @include mob-only {
-    height: calc(100vh - 15rem - 80px);
+}
+
+.prof-material-hero {
+  .il_block_intro {
+    .prof-material-hfp {
+      margin-bottom: 2.9rem;
+      @include limbo-max {
+        margin-bottom: 35px;
+      }
+    }
+    ul {
+      li {
+        &::marker {
+          color: #fff;
+          font-size: 16px;
+        }
+      }
+      margin-bottom: 4.5rem;
+      @include limbo-max {
+        padding-inline-start: 18px;
+        margin-bottom: 45px;
+      }
+    }
+    .wpcf7-form {
+      margin-top: 0;
+    }
   }
-  @include tab-only {
-    height: calc(100vh - 15rem - 59px);
-  }
-  @include limbo-only {
-    height: calc(100vh - 15rem - 59px);
-  }
+}
+
+.contact-us-hero {
   @include desk-min {
-    height: calc(100vh - 11.6rem - 59px);
-  }
-  p {
-    text-align: center;
-    margin-bottom: 0;
+    .il_section_inner {
+      max-width: var(--custom-max-width-ld);
+    }
+    .il_block_bg {
+      .bg_element {
+        &:nth-child(3) {
+          object-fit: fill;
+        }
+      }
+    }
   }
   .il_block_intro {
-    iframe {
-      width: 400px;
-      max-width: 100%;
-      height: 450px;
-      border: 0;
-      @include desk-min {
-        height: 410px;
-      }
-    }
-  }
-}
-
-.ty-hero-section {
-  @include mob-only {
-    display: flex;
-    height: 100vh;
-    padding-top: 0 !important;
-    background-position: center;
-  }
-  @include limbo-max {
-    background: url('/wp-content/uploads/2024/12/Group-2446-1.jpg');
-    background-size: cover;
-    background-position: top left;
-    background-repeat: no-repeat;
-  }
-  .il_section_inner {
-    @include mob-only {
-      margin-top: auto;
-      margin-bottom: 0;
-    }
-    justify-content: center;
     @include limbo-max {
-      width: 100%;
-    }
-    .il_block_intro {
-      @include desk-min {
-        background: #021B48;
-      }
-      @include limbo-max {
-        .intro_title {
-          font-size: 55px;
-          font-weight: 300;
-          order: 1;
-        }
-        .intro_subtitle {
-          color:#fff !important;
-          font-weight: 700;
-          order: 2;
-        }
-        .ty-body-text {
-          order: 3;
-        }
-      }
-      .buttons {
-        @include mob-only {
-          display: flex;
-          flex-direction: column;
-        }
-        .il_btn {
-          align-items: center;
-          @include mob-only {
-            margin-right: 0;
-            justify-content: center;
-            font-size: 16px !important;
-          }
-          &:nth-child(1) {
-            &:before {
-              content: url('/wp-content/uploads/2024/12/Group-2443-1.png');
-              line-height: 0;
-              margin-left: 12px;
-            }
-            @include mob-only {
-              margin-bottom: 15px;
-            }
-          }
-          &:nth-child(2) {
-            &:before {
-              content: url('/wp-content/uploads/2024/12/Group-23-1.png');
-              line-height: 0;
-              margin-left: 12px;
-            }
-          }
-        }
-        @include limbo-max {
-          order: 5;
-        }
+      .intro_title {
+        color: var(--color-1) !important;
       }
       .intro_text {
-        .ty-page-intro-text-first-cont {
-          @include limbo-max {
-            display: flex;
-            flex-direction: column;
-            padding: 0 25px 35px 25px;
-          }
-          @include desk-min {
-            padding: 8rem 9.3rem 6rem 9.3rem;
-          }
-        }
-        .ty-hero-three-images-container {
-          display: flex;
-          gap: 1.5rem;
-          align-items: center;
-          margin-bottom: 3.4rem;
-          @include mob-only {
-            img {
-              width: 40%;
-              margin-left: 10%;
-            }
-            .flickity-slider {
-              display: flex;
-              align-items: center;
-            }
-            &:after {
-              content: 'flickity';
-              display: none;
-            }
-          }
-          @include limbo-max {
-            margin: 1rem 0 10rem 0;
-            order: 4;
-          }
-        }
-        .buttons {
-          display: flex;
-          direction: ltr;
-          justify-content: flex-end;
-        }
-      }
-      .ty-page-last-p {
-        margin-bottom: 0;
-        line-height: 0;
-        border-top: 12px solid #186BF1;
-        @include limbo-max {
-          border-top: 10px solid #186BF1;
-        }
+        color: var(--color-2) !important;
       }
     }
-  }
-  &.failed-hero-section {
-    @include mob-only {
-      height: auto;
-    }
-    .il_section_inner {
-      @include mob-only {
-        padding: 30% 0 5% 0;
-        margin: 0;
-      }
-    }
-    .il_btn {
-      &:nth-child(1) {
-        &:before {
-          display: none;
-        }
-      }
-    }
-  }
-}
-
-.car-form-hero-section {
-  @include mob-only {
-    display: flex;
-    padding-top: 0 !important;
-  }
-  @include limbo-max {
-    background: url('/wp-content/uploads/2024/12/Group-2446-1.jpg');
-    background-size: cover;
-    background-position: top left;
-    background-repeat: no-repeat;
-  }
-  @include desk-min {
-    background: linear-gradient(to right, transparent 45%, #021B48 45%);
-  }
-  .right {
-    @include limbo-max {
-      display: none;
-    }
-  }
-  .il_section_inner {
-    @include mob-only {
-      margin-top: auto;
-      margin-bottom: 0;
-    }
-    justify-content: center;
-    @include limbo-max {
-      width: 100%;
-    }
-    .il_block_intro {
-      .ty-body-text {
-        max-width: 65.4rem;
-        @include limbo-only {
-          max-width: 650px;
-        }
-        p {
-          margin-bottom: 15px;
-        }
-      }
-      @include limbo-max {
-        flex-basis: 100% !important;
-        .intro_title {
-          font-size: 55px;
-          font-weight: 300;
-          order: 1;
-        }
-        .intro_subtitle {
-          color:#fff !important;
-          font-weight: 700;
-          order: 2;
-        }
-        .ty-body-text {
-          order: 3;
-        }
-      }
-      .buttons {
-        @include mob-only {
-          display: flex;
-          flex-direction: column;
-        }
-        .il_btn {
-          align-items: center;
-          @include mob-only {
-            margin-right: 0;
-            justify-content: center;
-            font-size: 16px !important;
-          }
-          &:nth-child(1) {
-            &:before {
-              content: url('/wp-content/uploads/2024/12/Group-2443-1.png');
-              line-height: 0;
-              margin-left: 12px;
-            }
-            @include mob-only {
-              margin-bottom: 15px;
-            }
-          }
-          &:nth-child(2) {
-            &:before {
-              content: url('/wp-content/uploads/2024/12/Group-23-1.png');
-              line-height: 0;
-              margin-left: 12px;
-            }
-          }
-        }
-        @include limbo-max {
-          order: 5;
-        }
-      }
-      .intro_text {
-        .ty-page-intro-text-first-cont {
-          @include limbo-max {
-            display: flex;
-            flex-direction: column;
-            padding: 30% 25px 0 25px;
-          }
-          @include desk-min {
-            padding: 8rem 9.3rem 6rem 9.3rem;
-          }
-        }
-        .ty-hero-three-images-container {
-          display: flex;
-          gap: 1.5rem;
-          align-items: center;
-          margin-bottom: 3.4rem;
-          @include mob-only {
-            img {
-              width: 40%;
-              margin-left: 10%;
-            }
-            .flickity-slider {
-              display: flex;
-              align-items: center;
-            }
-            &:after {
-              content: 'flickity';
-              display: none;
-            }
-          }
-          @include limbo-max {
-            margin: 1rem 0 10rem 0;
-            order: 4;
-          }
-        }
-      }
-    }
-  }
-}
-
-.survey-hero-section {
-  .intro_title, .intro_subtitle, p {
-    order: unset !important;
-  }
-  .frm_fields_container {
-    display: flex;
-    flex-direction: column;
-  }
-  .form-field {
-    direction: rtl;
-    text-align: right;
-  }
-  .frm_primary_label {
-    text-align: right;
-    color: #fff;
-    margin-bottom: 9px;
-    font-size: 16px;
-    font-weight: 500;
-  }
-  #frm_field_119_container {
-    .frm_opt_container {
+    @include desk-min {
       display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
-  }
-  .frm_opt_container {
-    text-align: right;
-    width: fit-content;
-    margin-left: auto;
-    direction: rtl;
-    label {
-      color: #fff;
-      input[type=radio] {
-        margin-right: 0;
-        margin-left: 4px;
-      }
-    }
-    .frm_scale {
-      margin-left: 15px;
-      margin-right: 0;
-      input[type=radio] {
-        margin-left: 0;
-        margin-bottom: 5px;
-      }
-      label {
-        color: #fff;
-        flex-wrap: wrap;
-        align-items: center;
-        width: fit-content;
-    
-      }
-    }
-  }
-  .frm_description {
-    text-align: right !important;
-  }
-  textarea {
-    max-width: 650px;
-  }
-  .frm_date {
-    max-width: 140px !important;
-  }
-  .with_frm_style .frm_required {
-    background: transparent;
-  }
-  @include limbo-max {
-    background: var(--color-2);
   }
 }

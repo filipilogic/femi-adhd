@@ -72,7 +72,6 @@
     .header-main {
       background-color: #021B48;
       padding: 2.7rem 0;
-      border-bottom: 1px solid #e9ecef;
       &-inner {
         display: flex;
         width: 90%;
@@ -159,14 +158,25 @@
         }
         .nav-button.il_btn {
           flex-shrink: 0;
-          margin-right: 5rem;
+          margin-right: auto;
           color: #fff;
           text-decoration: none;
           text-transform: uppercase;
           background-color: var(--color-1);
           z-index: 3;
           font-size: 18px;
-          font-weight: 700;
+          font-weight: 500;
+          padding: 1.2rem 3.6rem;
+          display: flex;
+          align-items: center;
+          &:before {
+            content: '';
+            background: url("/wp-content/uploads/2025/04/users-two-plus.png");
+            background-size: cover;
+            width: 2.6rem;
+            height: 2.1rem;
+            margin-left: 14px;
+          }
         }
       }
     }

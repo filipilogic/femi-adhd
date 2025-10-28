@@ -107,6 +107,39 @@
             "preview_size": "medium"
         },
         {
+            "key": "field_6602db211d619",
+            "label": "Media Mobile",
+            "name": "media_mobile",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63448568cb704",
+                        "operator": "!=",
+                        "value": "ib-fullwidth"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
             "key": "field_651d6f8000ea8",
             "label": "Laptop & Desktop",
             "name": "",
