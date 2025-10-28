@@ -23,7 +23,7 @@
             margin-bottom: 0;
         }
     }
-    input:not(.wpcf7-submit), select, textarea {
+    input:not(.wpcf7-submit):not([type="checkbox"]), select, textarea {
         border: 0px;
         border-radius: 10px;
         width: 100%;
