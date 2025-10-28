@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 5.2rem;
+    margin-top: 3.6rem;
     p {
         width: 100%;
         @include limbo-min {
@@ -25,6 +25,7 @@
     }
     input:not(.wpcf7-submit), select, textarea {
         border: 0px;
+        border-radius: 10px;
         width: 100%;
         appearance: none;
         background-color: #F1F2F2;
@@ -62,28 +63,28 @@
     }
     .cf7-submit-btn {
         text-align: center;
-        width: 100%;
         @include limbo-min {
             text-align: left;
         }
     }
     input.wpcf7-submit {
         margin-top: 5px;
-        padding: 1.5rem 2.4rem;
+        padding: 1.2rem 2.4rem;
         cursor: pointer;
         color: #fff;
         text-decoration: none;
-        border-radius: 7px;
+        border-radius: 13px;
         border: none;
         transition: var(--theme-transition);
         font-size: 18px;
         font-weight: 600;
-        min-width: 100%;
-        background-color: var(--color-1);
+        min-width: 14.4rem;
+        background-color: var(--color-2);
         line-height: 1.2;
         @include limbo-max {
             line-height: 20px;
-            padding: 2.2rem 4.8rem;
+            padding: 1.8rem 3.8rem;
+            min-width: 144px;
         }
     }
     input.wpcf7-submit:hover {

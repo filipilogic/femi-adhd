@@ -9,15 +9,12 @@ html {
   }
   @include limbo-only {
     font-size: 6px;
-    scroll-padding-top: 90px;
   }
   @include tab-only {
     font-size: 6px;
-    scroll-padding-top: 90px;
   }
   @include mob-only {
     font-size: 5px;
-    scroll-padding-top: 75px;
   }
   :where(.wp-block) {
     max-width: 90%;

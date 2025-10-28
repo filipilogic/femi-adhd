@@ -302,19 +302,10 @@ function theme_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
     register_sidebar( array(
-		'name'          => __( 'Footer Bottom Above', 'ilogic' ),
-		'id'            => 'footer-bottom-above',
-		'description'   => __( 'Footer Bottom Above', 'ilogic' ),
-		'before_widget' => '<div class="footer_bottom_above_inner">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="widgettitle">',
-		'after_title'   => '</h2>',
-	) );
-    register_sidebar( array(
 		'name'          => __( 'Footer Bottom', 'ilogic' ),
 		'id'            => 'footer-bottom',
 		'description'   => __( 'Footer Bottom', 'ilogic' ),
-		'before_widget' => '<div class="footer_bottom_inner">',
+		'before_widget' => '<div class="footer_bottom_inner container">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="widgettitle">',
 		'after_title'   => '</h2>',

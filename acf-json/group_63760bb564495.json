@@ -17,8 +17,7 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0,
-            "selected": 0
+            "endpoint": 0
         },
         {
             "key": "field_637615ef54187",
@@ -43,104 +42,6 @@
             "prefix_name": 0
         },
         {
-            "key": "field_67f50493d0883",
-            "label": "Buttons after Columns",
-            "name": "buttons_after_columns",
-            "aria-label": "",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "table",
-            "pagination": 0,
-            "min": 0,
-            "max": 0,
-            "collapsed": "",
-            "button_label": "Add Button",
-            "rows_per_page": 20,
-            "sub_fields": [
-                {
-                    "key": "field_67f50493d0884",
-                    "label": "Button",
-                    "name": "button",
-                    "aria-label": "",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "allow_in_bindings": 1,
-                    "parent_repeater": "field_67f50493d0883"
-                },
-                {
-                    "key": "field_67f50493d0885",
-                    "label": "Button Color",
-                    "name": "button_color",
-                    "aria-label": "",
-                    "type": "select",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "button-color-green": "Green",
-                        "button-color-pink": "Pink"
-                    },
-                    "default_value": "button-color-green",
-                    "return_format": "value",
-                    "multiple": 0,
-                    "allow_null": 0,
-                    "allow_in_bindings": 1,
-                    "ui": 0,
-                    "ajax": 0,
-                    "placeholder": "",
-                    "parent_repeater": "field_67f50493d0883"
-                },
-                {
-                    "key": "field_67f50493d0886",
-                    "label": "Button Hover Color",
-                    "name": "button_hover_color",
-                    "aria-label": "",
-                    "type": "select",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "button-hover-color-green": "Green",
-                        "button-hover-color-pink": "Pink"
-                    },
-                    "default_value": "button-hover-color-green",
-                    "return_format": "value",
-                    "multiple": 0,
-                    "allow_null": 0,
-                    "allow_in_bindings": 1,
-                    "ui": 0,
-                    "ajax": 0,
-                    "placeholder": "",
-                    "parent_repeater": "field_67f50493d0883"
-                }
-            ]
-        },
-        {
             "key": "field_6376173435164",
             "label": "Content",
             "name": "",
@@ -155,8 +56,7 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0,
-            "selected": 0
+            "endpoint": 0
         },
         {
             "key": "field_63760bb52814b",
@@ -313,8 +213,7 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0,
-            "selected": 0
+            "endpoint": 0
         },
         {
             "key": "field_63762da5cb5a9",
@@ -510,8 +409,7 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0,
-            "selected": 0
+            "endpoint": 0
         },
         {
             "key": "field_637616cf54189",
@@ -590,8 +488,7 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0,
-            "selected": 0
+            "endpoint": 0
         },
         {
             "key": "field_637616f65418a",
@@ -670,8 +567,7 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0,
-            "selected": 0
+            "endpoint": 0
         },
         {
             "key": "field_650d6b44bde29",
@@ -798,5 +694,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1744110778
+    "modified": 1699533698
 }
