@@ -1303,6 +1303,13 @@ div.margin-xl {
 .hp-visitor-form .frm-submit-container {
   margin-bottom: 0 !important;
 }
+.hp-visitor-form #frm_field_97_container label {
+  text-align: right;
+}
+.hp-visitor-form #frm_field_97_container label input {
+  margin-left: 4px;
+  margin-right: 0;
+}
 
 .car-registration-form .frm_fields_container input::-moz-placeholder {
   color: #021B48 !important;
@@ -6236,6 +6243,7 @@ textarea {
 }
 
 .old-event-bottom-columns .il_columns_container .il_block_bg {
+  border-radius: 50px 50px 0 0;
   overflow: visible;
 }
 .old-event-bottom-columns .il_columns_container .il_block_bg .bg_element {
@@ -9119,6 +9127,8 @@ html:not(.interface-interface-skeleton__html-container) .old-event-about-mobile-
 
 .old-event-bottom-big-logo-section .il_block_intro {
   box-shadow: 20px 20px 25px rgba(0, 0, 0, 0.35);
+  border-radius: 50px;
+  overflow: hidden;
 }
 .old-event-bottom-big-logo-section .il_block_intro p {
   margin-bottom: 0;

@@ -2003,6 +2003,7 @@ div.margin-xl {
 }
 
 .old-event-bottom-columns .il_columns_container .il_block_bg {
+  border-radius: 50px 50px 0 0;
   overflow: visible;
 }
 .old-event-bottom-columns .il_columns_container .il_block_bg .bg_element {
@@ -4886,6 +4887,8 @@ html:not(.interface-interface-skeleton__html-container) .old-event-about-mobile-
 
 .old-event-bottom-big-logo-section .il_block_intro {
   box-shadow: 20px 20px 25px rgba(0, 0, 0, 0.35);
+  border-radius: 50px;
+  overflow: hidden;
 }
 .old-event-bottom-big-logo-section .il_block_intro p {
   margin-bottom: 0;

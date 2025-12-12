@@ -39,6 +39,16 @@
     .frm-submit-container {
         margin-bottom: 0 !important;
     }
+
+    #frm_field_97_container {
+        label {
+            text-align: right;
+            input {
+                margin-left: 4px;
+                margin-right: 0;
+            }
+        }
+    }
 }
 
 .car-registration-form {
@@ -67,3 +77,4 @@
         margin-bottom: 0 !important;
     }
 }
+
