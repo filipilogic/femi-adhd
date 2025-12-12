@@ -315,10 +315,13 @@
 }
 
 .old-event-bottom-columns {
+  .il_block_bg {
+    border-radius: 50px 50px 0 0;
+  }
   .il_columns_container {
     .il_block_bg {
-      border-radius: 50px 50px 0 0;
       overflow: visible;
+      border-radius: 0;
       .bg_element {
         animation: pulsate 10s ease-in-out infinite;
         @keyframes pulsate {
