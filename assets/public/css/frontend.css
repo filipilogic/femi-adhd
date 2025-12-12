@@ -1295,7 +1295,6 @@ div.margin-xl {
   color: #fff;
 }
 .hp-visitor-form .price_field span {
-  color: #fff;
   font-size: 18px;
 }
 .hp-visitor-form .frm_final_submit {
@@ -1306,6 +1305,7 @@ div.margin-xl {
 }
 .hp-visitor-form #frm_field_97_container label {
   text-align: right;
+  color: #fff;
 }
 .hp-visitor-form #frm_field_97_container label input {
   margin-left: 4px;
