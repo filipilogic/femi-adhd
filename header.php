@@ -83,13 +83,37 @@
 	<header id="masthead" class="header-main">
 		<div class="container header-main-inner">
 			<?php
-			$nav_btn = get_field('button_after_nav', 'option');
-			if( $nav_btn ):
-				$nav_btn_url = $nav_btn['url'];
-				$nav_btn_title = $nav_btn['title'];
-				$nav_btn_target = $nav_btn['target'] ? $nav_btn['target'] : '_self';
-				?>
-				<a class="nav-button il_btn" href="<?php echo esc_url( $nav_btn_url ); ?>" target="<?php echo esc_attr( $nav_btn_target ); ?>"><?php echo esc_html( $nav_btn_title ); ?></a>
+			$nav_btn_1 = get_field('button_1_after_nav', 'option');
+			$nav_btn_2 = get_field('button_2_after_nav', 'option');
+			$nav_btn_3 = get_field('button_3_after_nav', 'option');
+			
+			if( $nav_btn_1 || $nav_btn_2 || $nav_btn_3 ): ?>
+				<div class="header-cta-buttons">
+					<?php
+					if( $nav_btn_1 ):
+						$nav_btn_1_url = $nav_btn_1['url'];
+						$nav_btn_1_title = $nav_btn_1['title'];
+						$nav_btn_1_target = $nav_btn_1['target'] ? $nav_btn_1['target'] : '_self';
+						?>
+						<a class="nav-button il_btn" href="<?php echo esc_url( $nav_btn_1_url ); ?>" target="<?php echo esc_attr( $nav_btn_1_target ); ?>"><?php echo esc_html( $nav_btn_1_title ); ?></a>
+					<?php endif;
+					
+					if( $nav_btn_2 ):
+						$nav_btn_2_url = $nav_btn_2['url'];
+						$nav_btn_2_title = $nav_btn_2['title'];
+						$nav_btn_2_target = $nav_btn_2['target'] ? $nav_btn_2['target'] : '_self';
+						?>
+						<a class="nav-button-2 il_btn" href="<?php echo esc_url( $nav_btn_2_url ); ?>" target="<?php echo esc_attr( $nav_btn_2_target ); ?>"><?php echo esc_html( $nav_btn_2_title ); ?></a>
+					<?php endif;
+					
+					if( $nav_btn_3 ):
+						$nav_btn_3_url = $nav_btn_3['url'];
+						$nav_btn_3_title = $nav_btn_3['title'];
+						$nav_btn_3_target = $nav_btn_3['target'] ? $nav_btn_3['target'] : '_self';
+						?>
+						<a class="nav-button-3 il_btn" href="<?php echo esc_url( $nav_btn_3_url ); ?>" target="<?php echo esc_attr( $nav_btn_3_target ); ?>"><span><?php echo esc_html( $nav_btn_3_title ); ?></span></a>
+					<?php endif; ?>
+				</div>
 			<?php endif; ?>
 			<nav id="site-navigation" class="main-navigation">
 			<!-- Mobile Nav Button -->

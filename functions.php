@@ -167,6 +167,8 @@ function register_acf_blocks() {
 	register_block_type( __DIR__ . '/blocks/logos' );
 	register_block_type( __DIR__ . '/blocks/related-posts' );
 	register_block_type( __DIR__ . '/blocks/content-and-sidebar' );
+	register_block_type( __DIR__ . '/blocks/post-header' );
+	register_block_type( __DIR__ . '/blocks/featured-post' );
 }
 
 
@@ -269,36 +271,77 @@ function custom_post_navigation_shortcode() {
 add_shortcode('post_navigation_shortcode', 'custom_post_navigation_shortcode');
 
 function load_more_posts_blog_block() {
-    $page = $_POST['page'];
-    $posts_per_page = $_POST['posts_per_page'];
-    $categories = $_POST['categories'];
+    $page = isset($_POST['page']) ? (int) $_POST['page'] : 1;
+    $posts_per_page = isset($_POST['posts_per_page']) ? max(1, (int) $_POST['posts_per_page']) : 3;
+    $raw_categories = isset($_POST['categories']) ? $_POST['categories'] : array();
+    $filter_category = isset($_POST['filter_category']) ? (int) $_POST['filter_category'] : 0;
     $show_date = filter_var($_POST['show_date'], FILTER_VALIDATE_BOOLEAN);
-    $learn_more_text = $_POST['learn_more_text'];
+    $learn_more_text = isset($_POST['learn_more_text']) ? $_POST['learn_more_text'] : '';
     $carousel = filter_var($_POST['carousel'], FILTER_VALIDATE_BOOLEAN);
     $show_homepage_image = filter_var($_POST['show_homepage_image'], FILTER_VALIDATE_BOOLEAN);
+    $show_category_badge = isset($_POST['show_category_badge']) ? filter_var($_POST['show_category_badge'], FILTER_VALIDATE_BOOLEAN) : false;
+    $show_learn_more = isset($_POST['show_learn_more']) ? filter_var($_POST['show_learn_more'], FILTER_VALIDATE_BOOLEAN) : true;
+
+    // Normalize categories: array of positive integer term IDs only
+    if ( is_string($raw_categories) ) {
+        $decoded = json_decode($raw_categories, true);
+        $raw_categories = is_array($decoded) ? $decoded : array();
+    }
+    if ( ! is_array($raw_categories) ) {
+        $raw_categories = array();
+    }
+    $categories = array_values(array_filter(array_map('intval', $raw_categories), function ($id) {
+        return $id > 0;
+    }));
 
     $args = array(
         'post_type'      => 'post',
         'post_status'    => 'publish',
         'posts_per_page' => $posts_per_page,
         'paged'          => $page,
-        'tax_query'      => array(
+    );
+
+    // Category filter: filter_category (from filter bar) overrides "Pick a Category" when set
+    if ( $filter_category > 0 ) {
+        $args['tax_query'] = array(
+            array(
+                'taxonomy' => 'category',
+                'field'    => 'term_id',
+                'terms'    => array( $filter_category ),
+            ),
+        );
+    } elseif ( ! empty( $categories ) ) {
+        $args['tax_query'] = array(
             array(
                 'taxonomy' => 'category',
                 'field'    => 'term_id',
                 'terms'    => $categories,
             ),
-        ),
-    );
+        );
+    }
 
     $posts = new WP_Query($args);
 
-    if ($posts->have_posts()) :
-        while ($posts->have_posts()) : $posts->the_post();
-			include(locate_template('template-parts/content-blog-post.php', false));
+    ob_start();
+    if ( $posts->have_posts() ) :
+        while ( $posts->have_posts() ) : $posts->the_post();
+            include(locate_template('template-parts/content-blog-post.php', false));
         endwhile;
     endif;
+    $html = ob_get_clean();
 
+    // Filter request (page 1 + filter_category + client asked for JSON): return JSON with totals so frontend can update pagination
+    if ( $filter_category > 0 && $page === 1 && ! empty( $_POST['return_json'] ) ) {
+        $total_posts = (int) $posts->found_posts;
+        $total_pages = $posts_per_page > 0 ? (int) ceil($total_posts / $posts_per_page) : 0;
+        wp_send_json_success(array(
+            'html'        => $html,
+            'totalPosts'  => $total_posts,
+            'totalPages'  => $total_pages,
+        ));
+    }
+
+    echo $html;
     wp_die();
 }
 add_action('wp_ajax_load_more_posts_blog_block', 'load_more_posts_blog_block');
@@ -340,3 +383,8 @@ function load_more_posts_related_block() {
 }
 add_action('wp_ajax_load_more_posts_related_block', 'load_more_posts_related_block');
 add_action('wp_ajax_nopriv_load_more_posts_related_block', 'load_more_posts_related_block');
+
+add_filter('acf/format_value/name=text', function($value, $post_id, $field) {
+    remove_filter('acf_the_content', 'wpautop');
+    return $value;
+}, 1, 3);

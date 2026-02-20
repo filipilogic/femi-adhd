@@ -1,0 +1,160 @@
+{
+  "key": "group_category_archive",
+  "title": "Category Archive Settings",
+  "fields": [
+    {
+      "key": "field_cat_archive_header_tab",
+      "label": "Header",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_cat_archive_before_title",
+      "label": "Before Title",
+      "name": "category_before_title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "Override the default \"before title\" text for this category. Leave empty to use the default from Theme Options.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "Leave empty for default",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_cat_archive_header_image",
+      "label": "Header Background Image",
+      "name": "category_header_image",
+      "aria-label": "",
+      "type": "image",
+      "instructions": "Optional background image for the category header section.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "return_format": "array",
+      "library": "all",
+      "min_width": "",
+      "min_height": "",
+      "min_size": "",
+      "max_width": "",
+      "max_height": "",
+      "max_size": "",
+      "mime_types": "jpg,jpeg,png,webp",
+      "preview_size": "medium"
+    },
+    {
+      "key": "field_cat_archive_header_content",
+      "label": "Header Content",
+      "name": "category_header_content",
+      "aria-label": "",
+      "type": "wysiwyg",
+      "instructions": "Optional introductory content displayed below the category title.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "tabs": "all",
+      "toolbar": "full",
+      "media_upload": 1,
+      "delay": 0
+    },
+    {
+      "key": "field_cat_archive_footer_tab",
+      "label": "Footer",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_cat_archive_bottom_content",
+      "label": "Bottom Content",
+      "name": "category_bottom_content",
+      "aria-label": "",
+      "type": "wysiwyg",
+      "instructions": "Optional content displayed after the posts grid and before the CTA section.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "tabs": "all",
+      "toolbar": "full",
+      "media_upload": 1,
+      "delay": 0
+    },
+    {
+      "key": "field_cat_archive_cta_button",
+      "label": "CTA Button",
+      "name": "category_cta_button",
+      "aria-label": "",
+      "type": "link",
+      "instructions": "Override the default CTA button for this category. Leave empty to use the default from Theme Options.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "return_format": "array"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "taxonomy",
+        "operator": "==",
+        "value": "category"
+      }
+    ]
+  ],
+  "menu_order": 1,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "Customize the archive page display for each category. Fields left empty will use Theme Options defaults.",
+  "show_in_rest": 0,
+  "modified": 1738540800
+}

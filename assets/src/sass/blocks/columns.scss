@@ -3,49 +3,61 @@
   padding-bottom: var(--b-columns-space-bottom-ld);
   padding-left: var(--b-columns-space-left-ld);
   padding-right: var(--b-columns-space-right-ld);
+
   @include limbo-max {
     padding-top: var(--b-columns-space-top-mt);
     padding-bottom: var(--b-columns-space-bottom-mt);
     padding-left: var(--b-columns-space-left-mt);
     padding-right: var(--b-columns-space-right-mt);
   }
+
   .il_columns_inner {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
     &.align-left {
-        text-align: left;
+      text-align: left;
     }
+
     &.align-center {
-        text-align: center;
+      text-align: center;
     }
+
     &.align-right {
-        text-align: right;
+      text-align: right;
     }
+
     &.text-400 {
       .il_col_text {
         font-weight: 400;
       }
     }
+
     &.text-600 {
       .il_col_text {
         font-weight: 600;
       }
     }
+
     &.text-700 {
       .il_col_text {
         font-weight: 700;
       }
     }
+
     .column {
       // insert code for columns here
     }
   }
+
   &.flickity-on-smaller {
     overflow: hidden;
+
     .container {
       @include limbo-max {
         width: 100%;
+
         .il_block_intro {
           width: 90%;
           margin-left: auto;
@@ -53,6 +65,7 @@
         }
       }
     }
+
     .il_columns_inner {
       .column {
         @include limbo-max {
@@ -60,22 +73,25 @@
           margin: 0 25px 25px 0;
           min-height: calc(100% - 20px);
         }
+
         @include limbo-max {
           width: 40%;
         }
+
         @include mob-only {
           width: 80%;
         }
       }
+
       // enable flickity on limbo-max
       @include limbo-max {
-          &:after {
-              content: 'flickity';
-              display: none;
-          }
+        &:after {
+          content: 'flickity';
+          display: none;
+        }
       }
     }
-    }
+  }
 }
 
 .il_columns_container {
@@ -83,40 +99,50 @@
   padding-bottom: var(--b-col-inner-cont-space-bottom-ld);
   padding-left: var(--b-col-inner-cont-space-left-ld);
   padding-right: var(--b-col-inner-cont-space-right-ld);
+
   @include limbo-max {
     padding-top: var(--b-col-inner-cont-space-top-mt);
     padding-bottom: var(--b-col-inner-cont-space-bottom-mt);
     padding-left: var(--b-col-inner-cont-space-left-mt);
     padding-right: var(--b-col-inner-cont-space-right-mt);
   }
+
   position: relative;
+
   @include desk-min {
     width: var(--custom-max-width-ld);
   }
+
   .il_block_bg {
     z-index: -1;
     overflow: hidden;
     @include ab-bg;
+
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       position: absolute;
     }
+
     .desk_bg {
       z-index: -1;
+
       @include tab-max {
         &.hide_desk_bg_mob {
           display: none;
         }
       }
     }
+
     .mob_bg {
       z-index: -1;
+
       @include limbo-min {
         display: none;
       }
     }
+
     .bg_element {
       position: absolute;
       z-index: -1;
@@ -130,6 +156,7 @@
       margin-right: var(--bg-e-right-lg);
       margin-top: var(--bg-e-top-lg);
       margin-bottom: var(--bg-e-bottom-lg);
+
       @include limbo-max {
         width: var(--bg-e-width-mt);
         height: var(--bg-e-height-mt);
@@ -139,6 +166,7 @@
         margin-bottom: var(--bg-e-bottom-mt);
         display: var(--bg-e-display-mobile);
       }
+
       @include desk-min {
         display: var(--bg-e-display-desktop);
       }
@@ -149,278 +177,651 @@
 .buttons-after-columns {
   text-align: center;
   margin-top: 5rem;
+
   @include limbo-max {
     margin-top: 60px;
   }
 }
 
-.hp-logos-columns {
-  .il_columns_inner {
-    .column {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      img {
-        max-width: 250px;
+.hp-second-section {
+  background: linear-gradient(91deg, #2A9AEA 0.62%, #2E5AF8 99.49%);
+  overflow: hidden;
+
+  .il_col {
+    .il_col_text {
+      >div {
+        @include desk-min {
+          position: relative;
+          width: fit-content;
+          margin-left: auto;
+          margin-right: auto;
+
+          // Line extending to the right of each image
+          &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%);
+            width: 100vw;
+            height: 2px;
+            background-color: white;
+            pointer-events: none;
+          }
+        }
+      }
+
+      p {
+        margin-top: 2.6rem;
+
+        @include limbo-max {
+          margin-top: 20px;
+        }
+
+        @include desk-min {
+          max-width: 30rem;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+
+  // Only first column gets line to the left
+  .il_col:first-child {
+    .il_col_text {
+      >div {
+        @include desk-min {
+          &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            transform: translateY(-50%);
+            width: 100vw;
+            height: 2px;
+            background-color: white;
+            pointer-events: none;
+          }
+        }
       }
     }
   }
 }
 
-.il_block.hp-participants-carousel {
-  overflow: hidden;
+// Advantages Section - Cards with shadow and border
+.advantages-section {
+
+  // Gradient title
+  .il_block_intro {
+    margin-bottom: 5.3rem;
+
+    @include limbo-max {
+      margin-bottom: 4rem;
+    }
+
+    .intro_title {
+      background: linear-gradient(115.55deg, #1F9DD0 0.62%, #3E65F1 99.49%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .intro_subtitle {
+      color: #1d2d53;
+      line-height: 1.4;
+    }
+  }
+
   .il_columns_inner {
-    .column {
-      @include desk-min {
-        width: 100%;
-        left: 0% !important;
-        margin: 0 25px 25px 0;
-        min-height: calc(100% - 20px);
+    gap: 3.8rem;
+    justify-content: center !important;
+
+    @include limbo-max {
+      gap: 2.4rem;
+    }
+  }
+
+  .il_col.column {
+    background: white;
+    border-radius: 1.6rem;
+    box-shadow: 0px 0px 16.1px 0px #dbebf3;
+    padding: 3rem 1.4rem;
+    flex: 0 0 calc(33.333% - 2.6rem);
+    max-width: 44.5rem;
+
+    @include limbo-max {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding: 5rem !important;
+    }
+
+    // Inner card content wrapper
+    >img,
+    >.before_title,
+    >.intro_title,
+    >.il_col_text,
+    >.buttons {
+      display: block;
+      position: relative;
+      z-index: 1;
+    }
+
+    // Create inner card visual with pseudo-element
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 1.5rem 1.4rem;
+      border: 1px solid rgba(162, 187, 226, 0.5);
+      border-radius: 1.6rem;
+      z-index: 0;
+    }
+
+    // Center all content
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 34.3rem;
+    text-align: center;
+
+    @include limbo-max {
+      min-height: auto;
+      padding: 2rem;
+    }
+
+    img {
+      width: 13.8rem;
+      height: 13.8rem;
+      margin-bottom: 1.5rem;
+      object-fit: contain;
+
+      @include limbo-max {
+        width: 10rem;
+        height: 10rem;
       }
     }
-    &:after {
-      content: 'flickity';
+
+    .intro_title {
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+
+    .il_col_text {
+      p {
+        font-size: 1.8rem;
+        line-height: 1.4;
+        color: #1d2d53;
+        margin: 0;
+
+        @include limbo-max {
+          font-size: 16px;
+        }
+
+        @include desk-min {
+          max-width: 36rem;
+        }
+      }
+    }
+
+    .buttons {
+      margin-top: 3.2rem;
+      margin-bottom: 2rem;
+
+      @include limbo-max {
+        margin-top: 20px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &.adv-sec-2 {
+    .intro_subtitle {
+      @include desk-min {
+        max-width: 81rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  &.adv-tdp-sec {
+    @include desk-min {
+      .intro_subtitle {
+        max-width: 64rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+// Hero Connection Section - Two Column Layout
+.hero-connection-section {
+  overflow: hidden;
+
+  @include limbo-max {
+    background: url('/wp-content/uploads/2026/01/Group-2325-1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .il_block_bg {
+    @include limbo-max {
       display: none;
     }
   }
-  &.flickity-on-smaller {
-    @include limbo-max {
-      .il_columns_inner {
-        width: 80%;
-        margin: 0 auto;
-        .column {
-            left: 0% !important;
-            margin: 0 25px 25px 0;
-            min-height: calc(100% - 20px);
-            width: 100% !important;
-        }
-      }
-    }
-  }
-  @include desk-min {
-    &:before {
-      content: '';
-      position: absolute;
-      background-image: url('/wp-content/uploads/2025/04/quote-2-1.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-      width: 12.8rem;
-      height: 9.3rem;
-      left: calc(50% - 50rem - 12.8rem);
-      top: auto;
-      bottom: 18rem;
-    }
-    &:after {
-      content: '';
-      position: absolute; 
-      background-image: url('/wp-content/uploads/2025/04/quote-1-1.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-      width: 12.8rem;
-      height: 9.3rem;
-      right: calc(50% - 50rem - 12.8rem);
-      top: auto;
-      bottom: 18rem;
-    }
-  }
-}
 
-.about-three-columns {
   .il_columns_inner {
-    .column {
-      img {
-        margin-bottom: 14px;
-      }
-    }
-  }
-  .intro_text {
-    p {
-      @include desk-min {
-        font-size: 2rem;
-      }
-      span {
-        font-size: 2.4rem;
-        @include limbo-max {
-          font-size: 20px;
-        }
-      }
-    }
-  }
-  .buttons-after-columns {
-    margin-top: 35px;
+    gap: 0;
+    align-items: stretch;
+
     @include limbo-max {
-      margin-top: 32px;
-    }
-    .il_btn {
-      color: var(--color-1);
-      &:hover {
-        color: #fff;
-      }
+      flex-direction: column-reverse;
     }
   }
-}
 
-.event-page-columns {
-  .il_block_intro {
-    .intro_title {
-      @include tab-min {
-        br {
-          display: none;
-        }
-      }
-      @include tab-only {
-        text-align: center;
-      }
-      @include limbo-only {
-        text-align: center;
-      }
+  // Column 1 - Visual/Cards side
+  .il_col.column:first-child {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 60rem;
+    justify-content: flex-end;
+
+    .il_col_text {
+      width: 100%;
     }
-  }
-  .il_columns_container {
-    .il_block_bg {
-      @include limbo-max {
-        border-top-left-radius: 0 !important;
-        border-top-right-radius: 0 !important;
-      }
+
+    @include limbo-max {
+      min-height: auto;
+      flex-direction: column;
     }
+
     @include desk-min {
-      margin-top: -3rem;
+      flex: 0 0 51%;
     }
-    .il_columns_inner {
-      .column {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        justify-content: flex-end;
-        gap: 0px 2rem;
-  
-        img {
-          width: 3.9rem;
-          height: auto;
-          @include limbo-max {
-            width: 33px;
-          }
+  }
+
+  // Column 2 - Content side
+  .il_col.column:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .intro_title,
+    .il_col_text,
+    .buttons {
+      max-width: 41.1rem;
+      width: 100%;
+    }
+
+    @include limbo-max {
+      align-items: center;
+      margin-bottom: 8rem;
+      overflow: hidden;
+
+      .intro_title,
+      .il_col_text,
+      .buttons {
+        max-width: 100%;
+      }
+    }
+
+    .intro_title {
+      color: white;
+      font-size: 4.2rem;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 1.6rem;
+
+      @include limbo-max {
+        font-size: 30px;
+      }
+    }
+
+    .il_col_text {
+      p {
+        color: white;
+        font-size: 1.8rem;
+        line-height: 1.4;
+        margin-bottom: 2.6rem;
+
+        @include limbo-max {
+          font-size: 16px;
+          margin-bottom: 20px;
         }
-  
-        .intro_title,
-        .il_col_text {
-          width: calc(100% - 6rem);
-          @include limbo-max {
-            width: calc(100% - 3rem - 33px);
-          }
+      }
+    }
+
+    .buttons {
+      .il_btn.button-color-white {
+        background: white;
+        color: #1d2d53;
+        padding: 1rem 2.2rem;
+        border-radius: 0.8rem;
+        font-weight: 500;
+        font-size: 2.4rem;
+        box-shadow: 0px 4px 4px 0px rgba(58, 62, 134, 0.38),
+          6px 5px 20.3px 0px rgba(25, 106, 157, 0.3);
+
+        @include limbo-max {
+          font-size: 18px;
+          padding: 10px 20px;
+        }
+
+        &:hover {
+          background: #2e5af8;
+          color: white;
+        }
+      }
+    }
+  }
+
+  // Hero visual container styles
+  .hero-visual-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 55rem;
+
+    @include limbo-max {
+      flex-direction: column;
+      min-height: auto;
+    }
+  }
+
+  // Phones composite image
+  .phones-composite {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 33.5rem;
+    z-index: 1;
+
+    @include limbo-max {
+      position: relative;
+      right: auto;
+      top: 0;
+      transform: none;
+      width: 100%;
+      max-width: 30rem;
+      margin: 0 auto 3rem;
+    }
+
+    .phones-image {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  // Info cards container
+  .info-cards {
+    position: relative;
+    margin: auto auto auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3.4rem;
+    z-index: 2;
+    align-items: flex-end;
+
+    // Enable flickity on limbo-max
+    @include limbo-max {
+      width: 100%;
+      gap: 0;
+      margin-right: 0;
+
+      .flickity-viewport {
+        overflow: visible;
+      }
+
+      &:after {
+        content: 'flickity';
+        display: none;
+      }
+    }
+
+  }
+
+  // Individual info card
+  .info-card {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 1.6rem;
+    text-align: right;
+    position: relative;
+
+    @include limbo-max {
+      padding: 16px 12px;
+      gap: 12px;
+      width: 80% !important;
+      margin: 0 10px;
+      flex-direction: column-reverse;
+      flex-shrink: 0;
+    }
+
+    .card-content {
+      flex: 1;
+      background: white;
+      border-radius: 0.8rem;
+      box-shadow: 4px 6px 10.3px 0px rgba(199, 217, 244, 0.3);
+      padding: 1.6rem 0.8rem;
+
+      @include limbo-max {
+        padding: 46px 15px 15px 15px;
+      }
+    }
+
+    .card-title {
+      font-weight: 500;
+      font-size: 2.4rem;
+      line-height: 1.1;
+      margin: 0 0 0.4rem 0;
+
+      @include limbo-max {
+        font-size: 18px;
+      }
+    }
+
+    .card-text {
+      font-weight: 400;
+      font-size: 1.8rem;
+      line-height: 1.4;
+      color: #1d2d53;
+      margin: 0;
+
+      @include limbo-max {
+        font-size: 14px;
+      }
+    }
+
+    .card-icon {
+
+      @include limbo-max {
+        position: absolute;
+        left: auto;
+        top: 0;
+        right: 0;
+        transform: none;
+      }
+
+      img {
+        width: 8.6rem;
+        height: auto;
+        object-fit: contain;
+
+        @include limbo-max {
+          width: 56px;
+        }
+      }
+    }
+
+    // Card accent colors
+    &.card-teacher .card-title {
+      color: #2e5af8;
+    }
+
+    &.card-doctor .card-title {
+      color: #00cbcd;
+    }
+
+    &.card-parent .card-title {
+      color: #5f5ffe;
+    }
+
+    // Card widths from Figma
+    &:nth-child(1) {
+      width: 54.4rem;
+    }
+
+    &:nth-child(2) {
+      width: 44.5rem;
+    }
+
+    &:nth-child(3) {
+      width: 55rem;
+    }
+  }
+}
+
+.il_block.blublu-columns {
+
+  @include limbo-max {
+    background: url("/wp-content/uploads/2026/01/Group-2325-1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .il_block_bg {
+      display: none;
+    }
+
+    .intro_title,
+    .il_col_text,
+    .il_col_text span {
+      color: #fff !important;
+    }
+  }
+
+  .column:first-child {
+    @include desk-min {
+      width: 82rem;
+    }
+  }
+
+  .column:last-child {
+    @include desk-min {
+      width: 410px;
+    }
+
+    @include limbo-max {
+      margin-top: 0;
+      margin-bottom: 35px;
+    }
+
+    .il_col_text {
+      margin-bottom: 30px;
+
+      @include limbo-max {
+        font-size: 16px;
+      }
+    }
+  }
+
+  @include limbo-max {
+    .il_columns_inner {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .blublu-columns-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+    align-items: flex-end;
+    text-align: right;
+    direction: rtl;
+
+
+    .blublu-card {
+      background: white;
+      border-radius: 1.6rem;
+      padding: 2.4rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+      position: relative;
+      overflow: hidden;
+
+      @include limbo-max {
+        padding: 20px;
+        gap: 10px;
+      }
+
+      // Left gradient border
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 0.6rem;
+        border-radius: 1.6rem 0 0 1.6rem;
+      }
+
+
+      &__title {
+        font-weight: 700;
+        font-size: 2.4rem;
+        line-height: 1.1;
+        color: #e37d9c;
+        margin: 0;
+
+        @include limbo-max {
+          font-size: 18px;
+        }
+      }
+
+      &__text {
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 1.4;
+        color: #1d2d53;
+        margin: 0;
+
+        @include limbo-max {
+          font-size: 14px;
         }
       }
     }
   }
 }
 
-.old-event-bottom-columns {
-  .il_block_bg {
-    border-radius: 50px 50px 0 0;
+.il_block.cols-adult {
+  .il_block_intro {
+    margin-bottom: 35px;
+
+    @include desk-min {
+      max-width: 53rem;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 5rem;
+    }
   }
-  .il_columns_container {
-    .il_block_bg {
-      overflow: visible;
-      border-radius: 0;
-      .bg_element {
-        animation: pulsate 10s ease-in-out infinite;
-        @keyframes pulsate {
-          0% { transform: scale(0.75); }
-          18% { transform: scale(1); }
-          36% { transform: scale(0.9); }
-          54% { transform: scale(1); }
-          70% { transform: scale(0.75); }
-          84% { transform: scale(0.8); }
-          100% { transform: scale(0.75); }
-        }
-        @include limbo-min {
-          display: block;
-        }
-      }
-      @include tab-max {
-        display: none;
-      }
-    }
-    p {
-      margin-bottom: 0;
-    }
-    .column:nth-child(1) {
-      @include limbo-max {
-        order: 1;
-      }
-      .intro_title {
-        display: none;
-      }
-      .il_col_text {
-        @include limbo-max {
-          display: flex;
-          flex-direction: column;
-        }
-        .p-b-cont {
-          b {
-            font-size: 2.4rem;
-            @include limbo-max {
-              font-size: 22px;
-            }
-          }
-          @include limbo-max {
-            order: 2;
-          }
-        }
-        ol {
-          margin-top: 5px;
-          padding-right: 20px;
-          li {
-            color: #D7DADD;
-            @include tab-max {
-              font-size: 16px;
-            }
-          }
-          @include limbo-max {
-            order: 3;
-          }
-        }
-        .hp-bottom-columns-two-logo-div {
-          display: flex;
-          align-items: center;
-          gap: 5rem;
-          margin-top: 4.6rem;
-          @include mob-only {
-            flex-wrap: wrap;
-            text-align: center;
-            justify-content: center;
-            gap: 4rem;
-          }
-          @include limbo-max {
-            order: 1;
-            margin-bottom: 6rem;
-          }
-          span {
-            font-size: 18px;
-            @include mob-only {
-              min-width: 100%;
-            }
-          }
-        }
-      }
-    }
-    .column:nth-child(2) {
-      @include limbo-max {
-        margin-bottom: 2rem;
-      }
-      .hp-bottom-columns-c2pf {
-        @include limbo-max {
-          font-size: 20px;
-          font-weight: 700;
-        }
-        @include desk-min {
-          display: none;
-        }
-      }
-      .hp-bottom-columns-c2pl {
-        @include mob-only {
-          text-align: center;
-        }
+
+  @include mob-only {
+    .il_columns_inner {
+      .il_col.column {
+        margin: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
       }
     }
   }

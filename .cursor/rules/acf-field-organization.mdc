@@ -1,0 +1,123 @@
+---
+description: ACF field group organization standards for blocks
+globs: acf-json/**/*.json
+alwaysApply: false
+---
+
+# ACF Field Organization
+
+## Tab Structure
+
+### Required Tabs
+
+1. **Content** tab (first)
+   - Main content fields
+   - Intro component (clone field)
+   - Block-specific content
+
+2. **Settings** tab
+   - Layout options
+   - Spacing (margin/padding)
+   - Display options
+
+3. **Styling** tab (optional)
+   - Colors
+   - Typography overrides
+   - Custom styling
+
+## Clone Fields
+
+### Use Clone Fields For
+
+- **Intro component**: `group_6346f6d3b3fa8`
+  - Includes: title, subtitle, text, buttons, images
+  - Use display: seamless
+
+- **Title component**: `group_633cae39110d7`
+  - Standalone title with styling
+
+- **Subtitle component**: `group_64ae7b8e5d8d2`
+  - Standalone subtitle
+
+- **Before title**: `group_65358ae4a7a00`
+  - Content before title
+
+### Clone Field Pattern
+
+```json
+{
+  "type": "clone",
+  "clone": ["group_6346f6d3b3fa8"],
+  "display": "seamless",
+  "layout": "block",
+  "prefix_label": 0,
+  "prefix_name": 0
+}
+```
+
+## Field Naming
+
+### Naming Convention
+
+- **Field names**: lowercase with underscores
+  - ✅ `intro_text`
+  - ✅ `background_image`
+  - ❌ `IntroText`
+  - ❌ `background-image`
+
+- **Field labels**: Title Case
+  - ✅ "Intro Text"
+  - ✅ "Background Image"
+
+## Field Organization
+
+### Content Tab Fields
+
+1. Clone field for intro (if needed)
+2. Block-specific content fields
+3. Repeater fields (if needed)
+4. Media fields
+
+### Settings Tab Fields
+
+1. Layout select/radio fields
+2. Margin field object
+3. Padding field object
+4. Custom padding toggle
+5. Display options
+
+### Spacing Fields
+
+```json
+{
+  "type": "select",
+  "name": "margin",
+  "choices": {
+    "margin-none": "None",
+    "margin-small": "Small",
+    "margin-medium": "Medium",
+    "margin-large": "Large"
+  }
+}
+```
+
+## Location Rules
+
+### Block Location
+
+```json
+{
+  "param": "block",
+  "operator": "==",
+  "value": "acf/block-name"
+}
+```
+
+## Best Practices
+
+1. **Use tabs** - Organize fields into logical groups
+2. **Clone components** - Reuse intro, title, subtitle
+3. **Consistent naming** - Follow naming conventions
+4. **Field objects** - Use for select/radio to get value + label
+5. **Conditional logic** - Show/hide fields based on selections
+6. **Instructions** - Add helpful instructions for content editors

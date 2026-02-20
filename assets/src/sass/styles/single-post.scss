@@ -1,0 +1,269 @@
+// Single Post Content Styles
+// Styles for Gutenberg blocks inside single post content
+
+.single-post {
+    .type-post {
+        background: linear-gradient(182deg, #FFF 1.35%, #FFF 30.62%, #C7D9F4 103.98%);
+    }
+
+    .post_container {
+
+        // Paragraphs
+        >p,
+        .wp-block-paragraph {
+            max-width: 1114px;
+            width: var(--site-width);
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: right;
+            margin-top: 0;
+            margin-bottom: 3.2rem;
+            font-size: 1.8rem;
+            line-height: 1.4;
+            color: #1d2d53;
+
+            @include limbo-max {
+                max-width: 100%;
+                margin-bottom: 28px;
+            }
+
+            @include md-desk-max {
+                font-size: 16px;
+            }
+
+            // Bold text styling
+            strong,
+            b {
+                font-weight: 700;
+            }
+        }
+
+        // H3 Headings (subheadings in content)
+        >h3,
+        .wp-block-heading[data-type="core/heading"] h3,
+        h3.wp-block-heading {
+            max-width: 1114px;
+            width: var(--site-width);
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: right;
+            margin-top: 0;
+            margin-bottom: 0.8rem; // 8px gap to following paragraph
+            font-size: 2.4rem;
+            font-weight: 700;
+            line-height: 1.1;
+            color: #5cb3d8;
+
+            @include limbo-max {
+                max-width: 100%;
+                margin-bottom: 12px;
+            }
+
+            @include md-desk-max {
+                font-size: 24px;
+            }
+        }
+
+        // H2 Headings
+        >h2,
+        h2.wp-block-heading {
+            max-width: 1114px;
+            width: var(--site-width);
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: right;
+            margin-top: 0;
+            margin-bottom: 0.8rem; // 8px gap to following paragraph
+            font-size: 2.4rem;
+            font-weight: 700;
+            line-height: 1.1;
+            color: #5cb3d8;
+
+            @include limbo-max {
+                max-width: 100%;
+                margin-bottom: 12px;
+            }
+
+            @include md-desk-max {
+                font-size: 24px;
+            }
+        }
+
+        // Images
+        >.wp-block-image,
+        >figure.wp-block-image {
+            max-width: 1111px;
+            width: var(--site-width);
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0;
+            margin-bottom: 3.2rem;
+
+            @include limbo-max {
+                max-width: 100%;
+                margin-bottom: 28px;
+            }
+
+            img {
+                border-radius: 16px;
+                width: 100%;
+                height: auto;
+                display: block;
+
+                @include limbo-max {
+                    border-radius: 12px;
+                }
+            }
+
+            figcaption {
+                text-align: center;
+                color: #a2a9b0;
+                font-size: 1.4rem;
+                margin-top: 1rem;
+            }
+        }
+
+        // Blockquotes
+        >blockquote,
+        >.wp-block-quote {
+            max-width: 1114px;
+            width: var(--site-width);
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: right;
+            margin-top: 0;
+            margin-bottom: 3.2rem;
+            padding: 2.4rem;
+            border: 1px solid #c1c7cd;
+            border-radius: 16px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            @include limbo-max {
+                max-width: 100%;
+                padding: 20px;
+                margin-bottom: 28px;
+            }
+
+            @include mob-only {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            // Quote vector icon
+            &::before {
+                content: '';
+                flex-shrink: 0;
+                width: 116px;
+                height: 116px;
+                background-image: url('/wp-content/uploads/2026/02/quotes-vector-1.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+
+                @include limbo-max {
+                    width: 80px;
+                    height: 80px;
+                }
+
+                @include mob-only {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+
+            p {
+                flex: 1;
+                font-size: 2.4rem;
+                font-weight: 700;
+                line-height: 1.2;
+                color: #1d2d53;
+                margin-bottom: 0;
+                // Gradient text effect
+                background: linear-gradient(101deg, #1f9dd0 0.62%, #3e65f1 99.49%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                padding-right: 2rem;
+
+                @include limbo-max {
+                    font-size: 20px;
+                }
+
+                @include mob-only {
+                    font-size: 18px;
+                }
+            }
+
+            cite {
+                display: block;
+                margin-top: 1.6rem;
+                font-size: 1.6rem;
+                font-style: normal;
+                color: #a2a9b0;
+            }
+        }
+
+        // Lists
+        >ul,
+        >ol {
+            max-width: 1114px;
+            width: var(--site-width);
+            margin-left: auto;
+            margin-right: auto;
+
+            direction: rtl;
+            text-align: right;
+            margin-bottom: 3.2rem;
+            padding-right: 2rem;
+            font-size: 1.8rem;
+            line-height: 1.4;
+            color: #1d2d53;
+
+            @include limbo-max {
+                max-width: 100%;
+                margin-bottom: 28px;
+            }
+
+            @include md-desk-max {
+                font-size: 16px;
+            }
+
+            li {
+                margin-bottom: 0.8rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        // Separator/Divider
+        >hr,
+        >.wp-block-separator {
+            max-width: 1114px;
+            width: var(--site-width);
+            margin: 3.2rem auto;
+            border: none;
+            border-top: 1px solid #e0e0e0;
+
+            @include limbo-max {
+                max-width: 100%;
+                margin: 24px auto;
+            }
+        }
+
+        // Spacer block
+        >.wp-block-spacer {
+            max-width: 1114px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

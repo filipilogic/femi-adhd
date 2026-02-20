@@ -1,11 +1,31 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <a href="<?php the_permalink(); ?>">
         <?php
-        the_post_thumbnail( array(508, 250) );
         $event_time = get_field('event_time', get_the_ID());
         $event_location = get_field('event_location', get_the_ID());
         $event_date = get_field('event_date', get_the_ID());
+        
+        // Get post category and color
+        $post_categories = get_the_category();
+        $cat_color = '#1F9DD0'; // Default color
+        $cat_name = '';
+        if ( $post_categories ) {
+            $first_category = $post_categories[0];
+            $cat_name = $first_category->name;
+            $cat_color_field = get_field('category_color', 'category_' . $first_category->term_id);
+            if ( $cat_color_field ) {
+                $cat_color = $cat_color_field;
+            }
+        }
         ?>
+        <div class="image-wrapper">
+            <?php the_post_thumbnail( array(508, 280) ); ?>
+            <?php if ( $cat_name ) : ?>
+                <span class="category-badge" style="background-color: <?php echo esc_attr($cat_color); ?>">
+                    <?php echo esc_html($cat_name); ?>
+                </span>
+            <?php endif; ?>
+        </div>
         <div class="article-container">
             <?php 
 			if( $show_date ) { ?>
@@ -30,11 +50,14 @@
             <?php if ( empty( $carousel) ) { ?>
                 <div class="entry-content">
                     <p>
-                        <?php if (get_the_excerpt()) {
-                            echo get_the_excerpt();
+                        <?php 
+                        if ( has_excerpt() ) {
+                            echo esc_html(get_the_excerpt());
                         } else {
-                            echo wp_trim_words(get_the_content(), 25);
-                        } ?>
+                            $content = wp_strip_all_tags(get_the_content());
+                            echo esc_html(mb_strimwidth($content, 0, 126, '...'));
+                        }
+                        ?>
                     </p> 
                 </div>
             <?php } ?>

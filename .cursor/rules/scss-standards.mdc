@@ -1,0 +1,138 @@
+---
+description: SCSS coding standards for iLogic theme blocks and components
+globs: assets/src/sass/**/*.scss
+alwaysApply: false
+---
+
+# SCSS Standards
+
+## Block SCSS Structure
+
+### Required Pattern
+
+```scss
+// ✅ GOOD
+.il_block.il_block-name {
+  padding-top: var(--b-space-top-ld);
+  padding-bottom: var(--b-space-bottom-ld);
+  padding-left: var(--b-space-left-ld);
+  padding-right: var(--b-space-right-ld);
+  
+  @include limbo-max {
+    padding-top: var(--b-space-top-mt);
+    padding-bottom: var(--b-space-bottom-mt);
+    padding-left: var(--b-space-left-mt);
+    padding-right: var(--b-space-right-mt);
+  }
+  
+  .il_block-name_inner {
+    // Inner container styles
+  }
+}
+
+// ❌ BAD - Missing responsive breakpoints
+.il_block.il_block-name {
+  padding: 2rem;
+}
+```
+
+## CSS Variables Pattern
+
+### Spacing Variables
+
+```scss
+// ✅ GOOD - Use CSS variables for ACF-controlled values
+padding-top: var(--b-block-space-top-ld);
+@include limbo-max {
+  padding-top: var(--b-block-space-top-mt);
+}
+
+// ❌ BAD - Hardcoded values
+padding-top: 4rem;
+```
+
+### Naming Convention
+
+- Block spacing: `--b-block-name-space-{side}-{breakpoint}`
+- Inner section: `--b-inner-sec-space-{side}-{breakpoint}`
+- Intro spacing: `--b-intro-space-{side}-{breakpoint}`
+- Background elements: `--bg-e-{property}-{breakpoint}`
+
+## Responsive Breakpoints
+
+```scss
+// ✅ GOOD - Always include mobile styles
+.il_block.il_block-name {
+  // Desktop styles (ld)
+  font-size: 2rem;
+  
+  @include limbo-max {
+    // Mobile/tablet styles (mt)
+    font-size: 1.5rem;
+  }
+}
+
+// ❌ BAD - Missing mobile breakpoint
+.il_block.il_block-name {
+  font-size: 2rem;
+}
+```
+
+## Class Naming
+
+```scss
+// ✅ GOOD - Consistent BEM-like pattern
+.il_block.il_block-name {
+  &_inner {
+    // Inner container
+  }
+  &_element {
+    // Block element
+  }
+}
+
+// ❌ BAD - Inconsistent naming
+.block {
+  .inner {}
+  .element {}
+}
+```
+
+## Image Responsive Pattern
+
+```scss
+// ✅ GOOD - Hide/show desktop/mobile images
+.desk_img {
+  display: block;
+  @include limbo-max {
+    display: none;
+  }
+}
+
+.mob_img {
+  display: none;
+  @include limbo-max {
+    display: block;
+  }
+}
+
+.hide_desk_img_mob {
+  @include limbo-max {
+    display: none;
+  }
+}
+
+// ❌ BAD - Single image without responsive handling
+.block-image {
+  width: 100%;
+}
+```
+
+## Import Structure
+
+```scss
+// ✅ GOOD - Import in frontend.scss
+@import 'blocks/your-block-name';
+
+// ❌ BAD - Importing in wrong file or missing import
+```

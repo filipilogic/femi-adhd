@@ -1,0 +1,63 @@
+---
+description: Core iLogic WordPress theme conventions and patterns
+alwaysApply: true
+---
+
+# iLogic Theme Conventions
+
+## Theme Architecture
+
+This theme uses:
+- **ACF Blocks** for custom Gutenberg blocks
+- **Component-based** PHP templates
+- **Webpack** for asset compilation (SCSS → CSS, JS bundling)
+- **ACF JSON** for version-controlled field groups
+
+## Key Directories
+
+- `blocks/` - ACF block templates
+- `components/` - Reusable PHP components
+- `acf-json/` - ACF field group definitions
+- `assets/src/sass/` - Source SCSS files
+- `assets/public/` - Compiled CSS/JS (gitignored)
+
+## Block Naming
+
+- Block directories: `kebab-case` (e.g., `blog-block`)
+- Block classes: `il_block il_block-name`
+- Block names in ACF: `acf/block-name`
+
+## Component Usage
+
+Always use `get_template_part()` for reusable components:
+- `components/intro` - Title, subtitle, text, buttons
+- `components/background` - Background system
+- `components/title` - Standalone title
+- `components/buttons` - Button groups
+
+## Spacing System
+
+- Use field objects: `get_field_object('margin')`, `get_field_object('padding')`
+- Custom padding uses CSS variables: `--b-block-space-{side}-{breakpoint}`
+- Responsive: `-ld` (desktop), `-mt` (mobile/tablet)
+
+## Build Process
+
+- Development: `npm run dev:watch`
+- Production: `npm run prod`
+- BrowserSync: Auto-reloads on file changes
+
+## ACF Patterns
+
+- Use clone fields for reusable components
+- Organize with tabs: Content, Settings, Styling
+- Field names: `snake_case`
+- Location rules: Block is equal to "iLogic Block Title"
+
+## Best Practices
+
+1. **Reuse before creating** - Check existing blocks/components
+2. **Component-first** - Use components instead of duplicating code
+3. **Responsive always** - Include both `-ld` and `-mt` breakpoints
+4. **CSS variables** - Use for ACF-controlled dynamic values
+5. **Escape output** - Always use `esc_attr()`, `esc_html()`

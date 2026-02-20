@@ -1,0 +1,117 @@
+---
+description: WordPress block coding standards and patterns for iLogic theme
+globs: blocks/**/*.php
+alwaysApply: false
+---
+
+# WordPress Block Standards
+
+## PHP Template Structure
+
+### Required Elements
+
+1. **Field objects** - Use `get_field_object()` for select/radio fields
+2. **Class building** - Always build `$class` variable
+3. **Anchor support** - Include anchor ID if block supports it
+4. **Component usage** - Use `get_template_part()` for reusable components
+
+### Class Naming
+
+```php
+// ✅ GOOD
+$class = 'il_block il_block-name';
+
+// ❌ BAD
+$class = 'block';
+$class = 'my-block';
+```
+
+### Spacing Pattern
+
+```php
+// ✅ GOOD - Use field objects
+$margin = get_field_object('margin');
+$padding = get_field_object('padding');
+if ( ! empty( $margin ) ) {
+    $class .= ' ' . $margin['value'];
+}
+
+// ❌ BAD - Hardcoded classes
+$class .= ' margin-large';
+```
+
+### Custom Padding Pattern
+
+```php
+// ✅ GOOD - CSS variables with responsive breakpoints
+$paddings .= ' --b-block-space-top-ld: ' . $padding_top . ';';
+$paddings .= ' --b-block-space-top-mt: ' . $padding_top . ';';
+
+// ❌ BAD - Inline styles without variables
+$style = 'padding-top: ' . $padding_top . ';';
+```
+
+## Component Usage
+
+### Always Use Components
+
+```php
+// ✅ GOOD
+<?php get_template_part('components/intro'); ?>
+<?php get_template_part('components/background'); ?>
+
+// ❌ BAD - Duplicating component code
+<div class="intro_title"><?php echo get_field('title'); ?></div>
+```
+
+## Output Escaping
+
+```php
+// ✅ GOOD
+echo esc_attr( $block['anchor'] );
+echo esc_html( $title );
+echo wp_get_attachment_image( $image['id'], $size, false, $atts );
+
+// ❌ BAD
+echo $block['anchor'];
+echo $title;
+echo '<img src="' . $image['url'] . '">';
+```
+
+## Image Handling
+
+```php
+// ✅ GOOD - Responsive images with mobile fallback
+$image = get_field('media');
+$image_mobile = get_field('media_mobile');
+if ( $image ) {
+    $img_class = 'desk_img';
+    if( $image_mobile ) {
+        $img_class .= ' hide_desk_img_mob';
+    }
+    echo wp_get_attachment_image( $image['id'], 'full', false, [ 'class' => $img_class ] );
+}
+if ( $image_mobile ) {
+    echo wp_get_attachment_image( $image_mobile['id'], 'full', false, [ 'class' => 'mob_img' ] );
+}
+
+// ❌ BAD - Single image without responsive handling
+echo wp_get_attachment_image( $image['id'] );
+```
+
+## Container Structure
+
+```php
+// ✅ GOOD - Consistent inner container
+<div class="il_block il_block-name">
+    <?php get_template_part('components/background'); ?>
+    <div class="il_block-name_inner container">
+        <!-- Content -->
+    </div>
+</div>
+
+// ❌ BAD - Missing container or inconsistent naming
+<div class="block">
+    <!-- Content -->
+</div>
+```

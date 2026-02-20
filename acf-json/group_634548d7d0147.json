@@ -124,10 +124,40 @@
         },
         {
             "key": "field_6372299782efa",
-            "label": "Button After Nav",
-            "name": "button_after_nav",
+            "label": "Button 1 After Nav",
+            "name": "button_1_after_nav",
             "type": "link",
-            "instructions": "If left empty, button will not show",
+            "instructions": "First CTA button (with icon). If left empty, button will not show",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_6372299782efb",
+            "label": "Button 2 After Nav",
+            "name": "button_2_after_nav",
+            "type": "link",
+            "instructions": "Second CTA button. If left empty, button will not show",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_6372299782efc",
+            "label": "Button 3 After Nav",
+            "name": "button_3_after_nav",
+            "type": "link",
+            "instructions": "Third CTA button. If left empty, button will not show",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {

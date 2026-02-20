@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Build artifacts
+webpack/
+assets/public/
+package-lock.json
+
+# PHP files
+**/*.php
+
+# WordPress core files (if any)
+wp-admin/
+wp-includes/
+
+# Build and config files
+*.min.js
+*.min.css
+webpack.config.js
+
+# Other
+.DS_Store
+*.log

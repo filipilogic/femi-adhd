@@ -15,6 +15,16 @@ jQuery(document).ready(function ($) {
 		watchCSS: true
 		});
 
+	// Init Info Cards Carousel (hero-connection-section)
+	$('.info-cards').flickity({
+		cellAlign: 'right',
+		contain: true,
+		pageDots: true,
+		prevNextButtons: false,
+		watchCSS: true,
+		rightToLeft: true
+	});
+
 });
 
 function animateCounter(element, targetValue, duration) {

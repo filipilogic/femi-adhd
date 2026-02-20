@@ -11,11 +11,6 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-
-<?php //get_template_part('components/title'); ?>
-		<?php //get_template_part('components/subtitle'); ?>
-		<?php //get_template_part('components/background'); ?>
-
 	<div class="entry-content post_container">
 		<?php
 		the_content(
@@ -42,5 +37,5 @@
 		?>
 	</div><!-- .entry-content -->
 
-<button id="backToTopButton"><img src="/wp-content/uploads/2024/12/Group-2755.png"></button>
+<button id="backToTopButton"><img src="/wp-content/uploads/2026/02/Group-2755-1.png"></button>
 </article><!-- #post-<?php the_ID(); ?> -->

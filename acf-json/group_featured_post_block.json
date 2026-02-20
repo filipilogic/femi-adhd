@@ -1,0 +1,218 @@
+{
+  "key": "group_featured_post_block",
+  "title": "Block: Featured Post",
+  "fields": [
+    {
+      "key": "field_featured_post_tab_content",
+      "label": "Content",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0,
+      "selected": 0
+    },
+    {
+      "key": "field_featured_post_intro",
+      "label": "Intro",
+      "name": "featured_post_intro",
+      "aria-label": "",
+      "type": "clone",
+      "instructions": "Optional intro section above the filters",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "clone": ["group_6346f6d3b3fa8"],
+      "display": "seamless",
+      "layout": "block",
+      "prefix_label": 0,
+      "prefix_name": 0
+    },
+    {
+      "key": "field_featured_post_tab_settings",
+      "label": "Settings",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0,
+      "selected": 0
+    },
+    {
+      "key": "field_featured_post_show_category_badge",
+      "label": "Show Category Badge",
+      "name": "show_category_badge",
+      "aria-label": "",
+      "type": "true_false",
+      "instructions": "Display the category badge on the post card",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "33.33",
+        "class": "",
+        "id": ""
+      },
+      "message": "",
+      "default_value": 1,
+      "ui_on_text": "",
+      "ui_off_text": "",
+      "ui": 1
+    },
+    {
+      "key": "field_featured_post_show_read_time",
+      "label": "Show Read Time",
+      "name": "show_read_time",
+      "aria-label": "",
+      "type": "true_false",
+      "instructions": "Display the reading time on the post card",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "33.33",
+        "class": "",
+        "id": ""
+      },
+      "message": "",
+      "default_value": 1,
+      "ui_on_text": "",
+      "ui_off_text": "",
+      "ui": 1
+    },
+    {
+      "key": "field_featured_post_read_more_text",
+      "label": "Read More Text",
+      "name": "read_more_text",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "Text for the read more link",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "קרא עוד >",
+      "maxlength": "",
+      "placeholder": "קרא עוד >",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_featured_post_tab_background",
+      "label": "Background",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0,
+      "selected": 0
+    },
+    {
+      "key": "field_featured_post_background",
+      "label": "Background",
+      "name": "background",
+      "aria-label": "",
+      "type": "clone",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "clone": ["group_634949d802e36"],
+      "display": "seamless",
+      "layout": "block",
+      "prefix_label": 0,
+      "prefix_name": 0
+    },
+    {
+      "key": "field_featured_post_tab_spacing",
+      "label": "Spacing",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placement": "top",
+      "endpoint": 0,
+      "selected": 0
+    },
+    {
+      "key": "field_featured_post_spacing",
+      "label": "Spacing",
+      "name": "spacing",
+      "aria-label": "",
+      "type": "clone",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "clone": ["group_63494c81e30ef"],
+      "display": "seamless",
+      "layout": "block",
+      "prefix_label": 0,
+      "prefix_name": 0
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "acf/featured-post"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "Settings for the Featured Post block with category filters",
+  "show_in_rest": 0,
+  "display_title": "",
+  "modified": 1738597200
+}

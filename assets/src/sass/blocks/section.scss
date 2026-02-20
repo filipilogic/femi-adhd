@@ -3,87 +3,104 @@
   padding-bottom: var(--b-space-bottom-ld);
   padding-left: var(--b-space-left-ld);
   padding-right: var(--b-space-right-ld);
+
   @include limbo-max {
     padding-top: var(--b-space-top-mt);
     padding-bottom: var(--b-space-bottom-mt);
     padding-left: var(--b-space-left-mt);
     padding-right: var(--b-space-right-mt);
   }
+
   &.info-box-width-75 {
     @include limbo-min {
       .il_block_intro {
         flex: 73% 0 0;
       }
+
       .right {
         flex: 23% 0 0;
       }
     }
   }
+
   &.info-box-width-70 {
     @include limbo-min {
       .il_block_intro {
         flex: 68% 0 0;
       }
+
       .right {
         flex: 28% 0 0;
       }
     }
   }
+
   &.info-box-width-65 {
     @include limbo-min {
       .il_block_intro {
         flex: 63% 0 0;
       }
+
       .right {
         flex: 33% 0 0;
       }
     }
   }
+
   &.info-box-width-60 {
     @include limbo-min {
       .il_block_intro {
         flex: 58% 0 0;
       }
+
       .right {
         flex: 38% 0 0;
       }
     }
   }
+
   &.info-box-width-55 {
     @include limbo-min {
       .il_block_intro {
         flex: 53% 0 0;
       }
+
       .right {
         flex: 43% 0 0;
       }
     }
   }
+
   &.info-box-width-50 {
     @include limbo-min {
       .il_block_intro {
         flex: 48% 0 0;
       }
+
       .right {
         flex: 48% 0 0;
       }
     }
   }
+
   &.info-box-width-45 {
     @include limbo-min {
       .il_block_intro {
         flex: 43% 0 0;
       }
+
       .right {
         flex: 53% 0 0;
       }
     }
   }
+
   &.info-box-width-40 {
     @include limbo-min {
       .il_block_intro {
         flex: 38% 0 0;
       }
+
       .right {
         flex: 58% 0 0;
       }
@@ -96,43 +113,53 @@
   padding-bottom: var(--b-inner-sec-space-bottom-ld);
   padding-left: var(--b-inner-sec-space-left-ld);
   padding-right: var(--b-inner-sec-space-right-ld);
+
   @include limbo-max {
     padding-top: var(--b-inner-sec-space-top-mt);
     padding-bottom: var(--b-inner-sec-space-bottom-mt);
     padding-left: var(--b-inner-sec-space-left-mt);
     padding-right: var(--b-inner-sec-space-right-mt);
   }
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   position: relative;
+
   @include desk-min {
     width: var(--custom-max-width-ld);
   }
+
   .il_block_bg {
     z-index: -1;
     overflow: hidden;
     @include ab-bg;
+
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       position: absolute;
     }
+
     .desk_bg {
       z-index: -1;
+
       @include tab-max {
         &.hide_desk_bg_mob {
           display: none;
         }
       }
     }
+
     .mob_bg {
       z-index: -1;
+
       @include limbo-min {
         display: none;
       }
     }
+
     .bg_element {
       position: absolute;
       z-index: -1;
@@ -146,6 +173,7 @@
       margin-right: var(--bg-e-right-lg);
       margin-top: var(--bg-e-top-lg);
       margin-bottom: var(--bg-e-bottom-lg);
+
       @include limbo-max {
         width: var(--bg-e-width-mt);
         height: var(--bg-e-height-mt);
@@ -155,41 +183,50 @@
         margin-bottom: var(--bg-e-bottom-mt);
         display: var(--bg-e-display-mobile);
       }
+
       @include desk-min {
         display: var(--bg-e-display-desktop);
       }
     }
   }
-  > div {
+
+  >div {
     flex: 48% 0 0;
     position: relative;
   }
+
   &.ib-fullwidth {
-    > div {
+    >div {
       flex-basis: 100%;
     }
+
     &.il_section_inner {
       justify-content: center;
     }
   }
+
   &.ib-custom-width {
     @include limbo-max {
-      > div {
+      >div {
         flex-basis: 100% !important;
       }
     }
+
     @include desk-min {
       &.content-align-left {
         justify-content: flex-start;
       }
+
       &.content-align-center {
         justify-content: center;
       }
+
       &.content-align-right {
         justify-content: flex-end;
       }
     }
   }
+
   &.ib-left,
   &.ib-right {
     &.stack-mobile {
@@ -197,8 +234,10 @@
         .il_block_intro {
           flex-basis: 100%;
         }
+
         .right {
           flex-basis: 100%;
+
           img {
             &.hide_sec_desk_img_mob {
               display: none;
@@ -206,6 +245,7 @@
           }
         }
       }
+
       @include limbo-min {
         .right {
           img {
@@ -216,13 +256,16 @@
         }
       }
     }
+
     &.stack-tablet {
       @include limbo-max {
         .il_block_intro {
           flex-basis: 100%;
         }
+
         .right {
           flex-basis: 100%;
+
           img {
             &.hide_sec_desk_img_mob {
               display: none;
@@ -230,6 +273,7 @@
           }
         }
       }
+
       @include desk-min {
         .right {
           img {
@@ -241,6 +285,7 @@
       }
     }
   }
+
   &.ib-left {
     &.stack-mobile-reverse {
       @include tab-max {
@@ -248,9 +293,11 @@
           order: 2;
           flex-basis: 100%;
         }
+
         .right {
           order: 1;
           flex-basis: 100%;
+
           img {
             &.hide_sec_desk_img_mob {
               display: none;
@@ -258,6 +305,7 @@
           }
         }
       }
+
       @include limbo-min {
         .right {
           img {
@@ -268,15 +316,18 @@
         }
       }
     }
+
     &.stack-tablet-reverse {
       @include limbo-max {
         .il_block_intro {
           order: 2;
           flex-basis: 100%;
         }
+
         .right {
           order: 1;
           flex-basis: 100%;
+
           img {
             &.hide_sec_desk_img_mob {
               display: none;
@@ -284,6 +335,7 @@
           }
         }
       }
+
       @include desk-min {
         .right {
           img {
@@ -295,22 +347,27 @@
       }
     }
   }
+
   &.ib-right {
     .il_block_intro {
       order: 2;
     }
+
     .right {
       order: 1;
     }
+
     &.stack-mobile-reverse {
       @include tab-max {
         .il_block_intro {
           order: 1;
           flex-basis: 100%;
         }
+
         .right {
           order: 2;
           flex-basis: 100%;
+
           img {
             &.hide_sec_desk_img_mob {
               display: none;
@@ -318,6 +375,7 @@
           }
         }
       }
+
       @include limbo-min {
         .right {
           img {
@@ -328,15 +386,18 @@
         }
       }
     }
+
     &.stack-tablet-reverse {
       @include limbo-max {
         .il_block_intro {
           order: 1;
           flex-basis: 100%;
         }
+
         .right {
           order: 2;
           flex-basis: 100%;
+
           img {
             &.hide_sec_desk_img_mob {
               display: none;
@@ -344,6 +405,7 @@
           }
         }
       }
+
       @include desk-min {
         .right {
           img {
@@ -355,8 +417,10 @@
       }
     }
   }
+
   .right {
     display: flex;
+
     img {
       width: var(--bg-e-width-lg);
       height: var(--bg-e-height-lg);
@@ -368,6 +432,7 @@
       margin-right: var(--bg-e-right-lg);
       margin-top: var(--bg-e-top-lg);
       margin-bottom: var(--bg-e-bottom-lg);
+
       @include limbo-max {
         width: var(--bg-e-width-mt);
         height: var(--bg-e-height-mt);
@@ -381,800 +446,842 @@
 }
 
 .hp-hero-section {
-  @include mob-only {
+  background: linear-gradient(63deg, #FFF 1.22%, #F3FAFF 48.28%, #E8EFFF 92.27%);
+
+  .il_block_intro {
     display: flex;
-    height: 100vh;
-    padding-top: 0 !important;
-    padding-bottom: 35px !important;
-  }
-  @include limbo-max {
-    background: url('/wp-content/uploads/2024/12/Group-2442-1.jpg');
-    background-position: top left;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  @include desk-min {
-    background: url('/wp-content/uploads/2025/04/Group-2491-1.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  .il_section_inner {
-    @include mob-only {
-      margin-top: auto;
-      margin-bottom: 0;
-    }
-    justify-content: center;
-    @include desk-min {
-      justify-content: flex-end;
-    }
-    .il_block_bg {
-      overflow: visible;
-      img {
-        animation: rotate 35s linear infinite;
-        @keyframes rotate {
-          from {
-            transform: rotate(0deg);
-          }
-          to {
-            transform: rotate(360deg);
-          }
-        }
-      }
-    }
-    .il_block_intro {
-      display: flex;
-      flex-direction: column;
-      @include limbo-max {
-        text-align: center;
-      }
-      .intro_subtitle {
-        @include limbo-max {
-          line-height: 22px;
-        }
-        @include desk-min {
-          max-width: 55rem;
-          margin-left: auto;
-          p {
-            line-height: 3rem;
-          }
-        }
-      }
-      .intro_text {
-        margin-top: 10rem;
-        order: 1;
-        p {
-          line-height: 0;
-          @include limbo-max {
-            dotlottie-player {
-              margin: 0 auto;
-            }
-          }
-        }
-      }
-      .buttons {
-        .il_btn {
-          display: flex;
-          align-items: center;
-          width: fit-content;
-          @include limbo-max {
-            margin: 0 auto;
-          }
-          @include desk-min {
-            margin-left: auto;
-          }
-          &:before {
-            content: '';
-            background: url('/wp-content/uploads/2025/04/users-two-plus.png');
-            background-size: cover;
-            width: 2.6rem;
-            height: 2.1rem;
-            margin-left: 14px;
-            @include limbo-max {
-              width: 21px;
-              height: 16px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-.hp-second-section {
-  .buttons {
-    @include mob-only {
-      .il_btn {
-        width: 100%;
-        justify-content: center;
-      }
-    }
-  }
-}
-
-
-.hp-four-boxes-section {
-  .il_section_inner {
-    .il_block_bg {
-      overflow: visible;
-    }
-  }
-  .il_block_intro {
-    .intro_text {
-      .hp-fbs-first-p {
-        @include desk-min {
-          max-width: 54.4rem;
-          
-        }
-      }
-      .blue-line {
-        width: 40.9rem;
-        height: 3px;
-        background-color: var(--color-1);
-        @include limbo-max {
-         height: 2.5px;
-        }
-      } 
-      svg {
-        max-width: 40.9rem;
-      }
-      .hp-fbs-4-boxes-container {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 6.4rem 1.8rem;
-        margin-top: 5.2rem;
-        @include limbo-max {
-          margin-top: 36px;
-        }
-        .hp-section-4-single {
-          display: flex;
-          flex-wrap: wrap;
-          flex-direction: row-reverse;
-          justify-content: space-between;
-          width: calc(50% - 2rem);
-          gap: 22px;
-          @include tab-max {
-            width: 100%;
-          }
-          .hp-section-4-single-content {
-            width: calc(100% - 22px - 6.2rem);
-            h3 {
-              font-size: 2.8rem;
-              color: var(--color-1);
-              margin-bottom: 10px;
-              @include limbo-max {
-                font-size: 22px;
-              }
-            }
-            p {
-              margin-bottom: 0;
-            }
-          }
-          .hp-section-4-single-img {
-            width: 6.2rem;
-          }
-        }
-      }
-    }
-  }
-}
-
-.il_block.hp-blue-section {
-  box-shadow: -15px 15px 30px 0px rgba(0, 0, 0, 0.25);
-  .intro_text {
-    h3 {
-      font-size: 2.4rem;
-      color: #18f1b4;
-      margin: 5.2rem 0 1.6rem 0;
-      @include limbo-max {
-        font-size: 22px;
-        margin: 30px 0 18px 0;
-      }
-    }
-    ul {
-      li {
-        &::marker {
-          color: #fff;
-          font-size: 16px;
-        }
-      }
-      @include limbo-max {
-        padding-inline-start: 18px;
-      }
-    }
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 5rem;
-    height: 100%;
-    background-color: var(--color-1);
-    @include limbo-max {
-      width: 5px;
-    }
-  }
-}
-
-.about-hero {
-  .il_block_intro {
-    @include desk-min {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      h2 {
-        max-width: 55rem;
-        margin-left: auto;
-      }
-    }
-    .intro_text {
-      .blue-line {
-        width: 52.4rem;
-        height: 5px;
-        background-color: var(--color-1);
-        margin-bottom: 2.1rem;
-        @include limbo-max {
-         width: 80%;
-         height: 2.5px;
-        }
-      }
-    }
-  }
-}
-
-.about-third-section {
-  .il_block_intro {
-    @include desk-min {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      h2 {
-        max-width: 55rem;
-        margin-left: auto;
-      }
-    }
-    .intro_title {
-      &::before {
-        content: "";
-        width: auto;
-        height: 13px;
-        background-image: url("/wp-content/uploads/2025/04/Group-2464.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        display: block;
-        margin-bottom: 5rem;
-        @include limbo-max {
-          margin-bottom: 30px;
-        }
-      }
-    }
-  }
-}
-
-.contact-section-white-bg, .contact-section-event-page, .prof-material-hero, .contact-us-hero {
-  .wpcf7-form input:not(.wpcf7-submit), .wpcf7-form select, .wpcf7-form textarea {
-    background: #fff;
-  }
-}
-
-.event-cf-box {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  @include limbo-max {
     flex-direction: column;
-    p {
-      width: 100%;
-    }
-  }
-  .wpcf7-list-item, .wpcf7-list-item label {
-    direction: rtl;
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    margin-left: 0;
-    [type="checkbox"] {
-      margin-top: 4px;
-    }
-    @include limbo-max {
-      width: unset !important;
-      height: unset !important;
-      background: none !important;
-      flex-direction: row !important;
-    }
-  }
-  .wpcf7-list-item-label {
-    font-size: 14px;
-    a {
-      font-size: 14px;
-    }
-    @include limbo-max {
-      width: unset !important;
-      height: unset !important;
-      background: none !important;
-    }
-  }
-}
 
-.contact-section-white-bg {
-  background: rgba(255, 255, 255, 0.50);
-}
+    .intro_title {
+      span {
+        display: block;
+        background: linear-gradient(91deg, #00ABF3 0.62%, #3E65F1 99.49%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+    }
 
-.hp-bottom-big-logo-group {
-  @include limbo-min {
-    background: url('/wp-content/uploads/2024/12/Vector-18-1.png');
-    background-size: auto;
-    background-position: bottom right;
-    background-repeat: no-repeat;
-  }
-}
-
-.hp-bottom-big-logo-section {
-  .il_block_intro {
-    p {
+    .intro_text {
+      order: 1;
+      margin-top: 6.8rem;
       margin-bottom: 0;
-    }
-    box-shadow: 20px 20px 25px rgba(0, 0, 0, 0.35);
-    @include tab-max {
-      margin-top: 5rem;
+      position: relative;
+      width: fit-content;
+      margin-left: auto;
+
+      p {
+        margin-bottom: 0;
+      }
+
+      img {
+        width: 28px;
+        display: block;
+      }
+
+      // Animated vertical line in the middle of the image
+      &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 10px;
+        transform: translateX(-50%);
+        width: 3px;
+        height: 10px;
+        border-radius: 20px;
+        background-color: #00ABF3;
+        animation: moveVertical 2s ease-in-out infinite;
+        pointer-events: none;
+        z-index: 1;
+      }
     }
   }
-}
 
-.event-hero {
-  .il_block_intro {
-    @include desk-min {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      max-width: 68.3rem;
+  @include desk-min {
+    .il_block_bg {
+      max-width: 2400px;
       margin-left: auto;
     }
-    .intro_text {
-      .blue-line {
-        width: 64rem;
-        height: 2px;
-        background-color: var(--color-1);
-        margin-bottom: 2.1rem;
-        @include limbo-max {
-         width: 80%;
-         height: 2.5px;
-        }
+
+    .intro_subtitle {
+      max-width: 47.5rem;
+      margin-left: auto;
+    }
+  }
+
+  @include mob-only {
+    .buttons .il_btn:not(:last-child) {
+      margin-right: 0 !important;
+      margin-bottom: 20px;
+    }
+  }
+
+  &.tdp-lp-hero {
+    .il_block_bg {
+      max-width: unset;
+    }
+  }
+}
+
+@keyframes moveVertical {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(100%);
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.digital-section {
+  .il_block_intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .intro_title {
+      background: linear-gradient(94.32deg, #1f9dd0 0.62%, #3e65f1 99.49%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+
+  // Feature list styling
+  .il_block__text {
+    p {
+      font-size: 1.8rem;
+      line-height: 1.4;
+
+      strong {
+        font-weight: 700;
       }
     }
   }
 }
 
-.prof-material-hero {
-  .il_block_intro {
-    .prof-material-hfp {
-      margin-bottom: 2.9rem;
-      @include limbo-max {
-        margin-bottom: 35px;
-      }
+// Doctor Quote Section
+.doctor-quote-section {
+  .il_section_inner {
+    border-radius: 1.6rem;
+    box-shadow: 4px -5px 10.3px 0px rgba(199, 217, 244, 0.3);
+
+    .il_block_bg {
+      overflow: visible;
     }
-    ul {
-      li {
-        &::marker {
-          color: #fff;
+  }
+
+  .il_block_intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    // Gradient title
+    .intro_title {
+      background: linear-gradient(100.8deg, #1f9dd0 0.62%, #3e65f1 99.49%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .intro_text {
+
+      // Quote styling
+      .doctor-quote {
+        font-style: italic;
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 1.4;
+        color: #1d2d53;
+        border-top: 1px solid #c1c7cd;
+        border-bottom: 1px solid #c1c7cd;
+        padding: 1.3rem 0;
+        margin-bottom: 4.8rem;
+
+        @include limbo-max {
+          font-size: 18px;
+          margin-bottom: 3.2rem;
+        }
+      }
+
+      // Author name
+      .doctor-name {
+        font-weight: 700;
+        font-size: 2.4rem;
+        line-height: 1.2;
+        color: #e37d9c;
+        margin-bottom: 0.8rem;
+
+        @include limbo-max {
+          font-size: 20px;
+        }
+      }
+
+      // Author role
+      .doctor-role {
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 1.4;
+        color: #1d2d53;
+        margin-bottom: 0;
+
+        @include limbo-max {
           font-size: 16px;
         }
       }
-      margin-bottom: 4.5rem;
-      @include limbo-max {
-        padding-inline-start: 18px;
-        margin-bottom: 45px;
-      }
-    }
-    .wpcf7-form {
-      margin-top: 0;
     }
   }
-}
 
-.contact-us-hero {
-  @include desk-min {
-    .il_section_inner {
-      max-width: var(--custom-max-width-ld);
-    }
-    .il_block_bg {
-      .bg_element {
-        &:nth-child(3) {
-          object-fit: fill;
-        }
-      }
-    }
-  }
-  .il_block_intro {
-    @include limbo-max {
-      .intro_title {
-        color: var(--color-1) !important;
-      }
-      .intro_text {
-        color: var(--color-2) !important;
-      }
-    }
-    @include desk-min {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-  }
-}
-
-.old-event-hero-section {
-  @include mob-only {
+  // Image container styling
+  .right {
     display: flex;
-    height: 100vh;
-    padding-top: 0 !important;
-    padding-bottom: 35px !important;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   }
-  @include limbo-max {
-    background: url('/wp-content/uploads/2024/12/Group-2442-1.jpg');
-    background-size: cover;
-    background-position: top left;
-    background-repeat: no-repeat;
-  }
-  @include desk-min {
-    background: linear-gradient(to right, transparent 45%, #021B48 45%);
-  }
-  .il_section_inner {
-    @include mob-only {
-      margin-top: auto;
+}
+
+// Femi Medical Credentials Section
+.femi-section {
+  .il_block_intro {
+    text-align: center;
+    max-width: 83.4rem;
+    margin: 0 auto;
+
+    .intro_title {
+      color: #1d2d53;
       margin-bottom: 0;
     }
-    justify-content: center;
-    @include desk-min {
-      justify-content: flex-end;
+
+    // Gradient subtitle (second line of heading)
+    .intro_subtitle {
+      background: linear-gradient(93.6567deg, #1f9dd0 0.62%, #3e65f1 99.49%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
-    .il_block_bg {
-      overflow: visible;
-      img {
-        animation: rotate 35s linear infinite;
-        @keyframes rotate {
-          from {
-            transform: rotate(0deg);
-          }
-          to {
-            transform: rotate(360deg);
-          }
+
+    .intro_text {
+      color: #1d2d53;
+      font-size: 1.8rem;
+      line-height: 1.4;
+      max-width: 71.6rem;
+      margin: 0 auto;
+
+      p {
+        margin-bottom: 0;
+
+        &:first-child {
+          margin-bottom: 1.6rem;
         }
       }
-    }
-    .il_block_intro {
+
+      strong {
+        font-weight: 700;
+      }
+
       @include limbo-max {
-        text-align: center;
-        .hide-on-mobile {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.final-cta-section {
+  background: linear-gradient(180deg, #fff 1.35%, #fff 30.62%, #c7d9f4 100%);
+
+  .il_block_intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .intro_title {
+      background: linear-gradient(100.32deg, #1f9dd0 0.62%, #3e65f1 99.49%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .intro_text {
+      color: #1d2d53;
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 1.4;
+
+      @include limbo-max {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &.final-cta-span-fix {
+    .intro_title {
+      background: none;
+      -webkit-background-clip: unset;
+      -webkit-text-fill-color: unset;
+      background-clip: unset;
+
+      span {
+        display: block;
+        background: linear-gradient(100.32deg, #1f9dd0 0.62%, #3e65f1 99.49%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+    }
+  }
+}
+
+// ADHD Hero Section
+.adhd-hero-section {
+  .il_section_inner {
+    max-width: 1500px;
+  }
+
+  .il_block_intro {
+    @include desk-min {
+      max-width: 58.5rem;
+    }
+  }
+
+  // Override blue_gradient with Figma's lighter blue gradient
+  .il_block_bg {
+    background: linear-gradient(92.798deg, #2a9aea 0.62%, #2e5af8 99.49%) !important;
+  }
+
+}
+
+.why-section {
+  background: #F3FAFF;
+
+  .intro_title {
+    background: linear-gradient(93.6567deg, #1f9dd0 0.62%, #3e65f1 99.49%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+// Digital Section - Gradient Title + Feature Cards Grid
+.digital-section {
+  .il_block_intro {
+    .intro_title {
+      background: linear-gradient(94.32deg, #1f9dd0 0.62%, #3e65f1 99.49%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .intro_text {
+      .feature-cards-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3.1rem;
+        margin-bottom: 4.8rem;
+
+        @include limbo-max {
+          grid-template-columns: 1fr;
+          gap: 4rem;
+        }
+      }
+
+      .feature-card {
+        background: white;
+        border-radius: 1.6rem;
+        box-shadow: 6px 5px 20.3px 0px rgba(25, 106, 157, 0.3);
+        padding: 1.6rem 2.4rem;
+        text-align: right;
+
+        br {
           display: none;
         }
-        .intro_title {
-          font-size: 55px;
-          font-weight: 300;
-          span:not(.hide-on-mobile) {
-            display: block;
-            margin-top: 8px;
-            font-size: 30px;
-            line-height: 36px;
-            color: var(--color-1);
-            font-weight: 700;
-          }
-        }
-        .intro_subtitle {
-          color:#fff !important;
-          font-weight: 700;
-        }
-        .hide-on-desktop {
-          p {
-            font-weight: 500;
-          }
-          .hp-hero-mobile-event-date {
-            font-size: 22px;
-            font-weight: 700;
-            color: var(--color-1);
-            margin-bottom: 0;
-          }
-        }
-      }
-      @include mob-only {
-        .buttons {
-          display: flex;
-          flex-direction: column;
-          .il_btn {
-            margin-right: 0;
-            justify-content: center;
-            font-size: 16px !important;
-            &:nth-child(1) {
-              margin-bottom: 15px;
-              background: transparent;
-              border: 1px solid #fff;
-              color: #fff;
-              &:hover {
-                background: #fff;
-                color: var(--color-1);
-              }
-            }
-          }
-        }
-      }
-      .intro_text {
-        @include desk-min {
-          max-width: 78.5rem;
-          margin-left: auto;
-          .hide-on-desktop {
-            display: none;
-          }
-        }
-        .hp-hero-three-images-container {
-          display: flex;
-          gap: 1.5rem;
-          align-items: center;
-          margin-top: 5rem;
-          @include mob-only {
-            img {
-              width: 40%;
-              margin-left: 10%;
-            }
-            .flickity-slider {
-              display: flex;
-              align-items: center;
-            }
-            &:after {
-              content: 'flickity';
-              display: none;
-            }
-          }
-          @include tab-only {
-            justify-content: center;
-          }
-          @include limbo-only {
-            justify-content: center;
-          }
+
+        p {
+          font-size: 1.8rem;
+          line-height: 1.4;
+          color: #1d2d53;
+          margin: 0;
+
           @include limbo-max {
-            margin-bottom: 10rem;
+            font-size: 16px;
           }
+        }
+
+        strong {
+          color: #288cda;
+          display: block;
+          margin-bottom: 0.5rem;
+
+          @include limbo-max {
+            margin-bottom: 9px;
+          }
+        }
+
+        &:first-child strong {
+          color: #4f87eb;
         }
       }
     }
   }
 }
 
-html:not(.interface-interface-skeleton__html-container) .old-event-about-mobile-section {
-  .il_block_bg {
-    .bg_element {
-      animation: pulsate 10s ease-in-out infinite;
-      @keyframes pulsate {
-        0% { transform: scale(0.75); }
-        18% { transform: scale(1); }
-        36% { transform: scale(0.9); }
-        54% { transform: scale(1); }
-        70% { transform: scale(0.75); }
-        84% { transform: scale(0.8); }
-        100% { transform: scale(0.75); }
-      }
-    }
-  }
-  @include limbo-min {
-    display: none;
-  }
-}
-
-.old-event-our-vision-section {
-  .il_block_intro {
-    .intro_text {
-      @include desk-min {
-        max-width: 69.7rem;
-        margin-left: auto;
-      }
-    }
-  }
-}
-
-.old-event-bottom-big-logo-group {
-  @include limbo-min {
-    background: url('/wp-content/uploads/2024/12/Vector-18-1.png');
-    background-size: auto;
-    background-position: bottom right;
-    background-repeat: no-repeat;
-  }
-}
-
-.old-event-bottom-big-logo-section {
-  .il_block_intro {
-    p {
-      margin-bottom: 0;
-    }
-    box-shadow: 20px 20px 25px rgba(0, 0, 0, 0.35);
-    border-radius: 50px;
-    overflow: hidden;
-    @include tab-max {
-      margin-top: 5rem;
-    }
-  }
-}
-
-.page-id-6358 {
-  .header-main {
-    background-color: var(--color-2);
-    position: relative;
-  }
-}
-.tranzila-payment-section {
-  display: flex;
-  @include mob-only {
-    height: calc(100vh - 15rem - 80px);
-  }
-  @include tab-only {
-    height: calc(100vh - 15rem - 59px);
-  }
-  @include limbo-only {
-    height: calc(100vh - 15rem - 59px);
-  }
-  @include desk-min {
-    height: calc(100vh - 11.6rem - 59px);
-  }
-  p {
-    text-align: center;
-  }
-  iframe {
-    width: 400px;
-    max-width: 100%;
-    height: 450px;
-  }
-}
-
-.old-event-ty-hero-section {
-  @include mob-only {
-    display: flex;
-    height: 100vh;
-    padding-top: 0 !important;
-  }
-  @include limbo-max {
-    background: url('/wp-content/uploads/2024/12/Group-2446-1.jpg');
-    background-size: cover;
-    background-position: top left;
-    background-repeat: no-repeat;
-  }
-  @include mob-only {
-    background-position: center;
-  }
+// Myths Section - ADHD Myths with boy studying image
+.myths-section {
   .il_section_inner {
-    @include mob-only {
-      margin-top: auto;
-      margin-bottom: 0;
+    box-shadow: 6px 5px 20.3px 0px rgba(25, 106, 157, 0.3);
+    overflow: hidden;
+    border-radius: 16px;
+
+    // Inner section background for the positioned image
+    .il_block_bg {
+      overflow: hidden;
+
+      .bg_element {
+        object-fit: cover;
+        border-radius: 0 1.6rem 1.6rem 0; // RTL: rounded on RIGHT side (physical left in code)
+      }
     }
+  }
+
+  .il_block_intro {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+
+    // Gradient title - second line gets the gradient
+    .intro_title {
+      color: #1D2D53;
+
+      span {
+        display: block;
+        background: linear-gradient(94.74deg, #1f9dd0 0.62%, #3e65f1 99.49%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        line-height: 1.1;
+      }
+    }
+
+    .intro_text {
+      font-size: 1.8rem;
+      line-height: 1.4;
+      color: #1d2d53;
+
+      @include limbo-max {
+        font-size: 16px;
+      }
+
+      // Myth group container
+      .myth-group {
+        margin-bottom: 1.6rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      // Individual myth/truth items
+      .myth-item {
+        margin-bottom: 0.4rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      // "המיתוס" label - dark blue
+      .myth-label {
+        font-weight: 700;
+        color: #1d2d53;
+      }
+
+      // "האמת" label - cyan blue
+      .truth-label {
+        font-weight: 700;
+        color: #5cb3d8;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+
+}
+
+.orchestrator-section {
+  .il_block_intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    // Gradient title - second line gets the gradient
+    .intro_title {
+      color: #1D2D53;
+
+      span {
+        display: block;
+        background: linear-gradient(94.74deg, #1f9dd0 0.62%, #3e65f1 99.49%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        line-height: 1.1;
+      }
+    }
+  }
+
+  // Styles for il_section_inner text content
+  .il_section_inner {
+    p {
+      margin-bottom: 7px;
+    }
+
+    .cyan-text {
+      color: #1F9DD0;
+      font-weight: 700;
+    }
+  }
+}
+
+.sec-5 {
+  .il_block_intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    // Gradient title - second line gets the gradient
+    .intro_title {
+
+      span {
+        background: linear-gradient(94.74deg, #1f9dd0 0.62%, #3e65f1 99.49%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        line-height: 1.1;
+      }
+    }
+  }
+
+  // Styles for il_section_inner text content
+  .il_section_inner {
+    p {
+      margin-bottom: 7px;
+    }
+
+    .cyan-text {
+      color: #1F9DD0;
+      font-weight: 700;
+    }
+  }
+}
+
+// ========================================
+// Medical Director Section
+// ========================================
+.medical-director-section {
+
+  // Gradient title styling
+  .il_block_intro {
+    box-shadow: 4px 6px 10.3px 0px rgba(199, 217, 244, 0.3);
+    border-radius: 16px;
+    overflow: hidden;
+
+    .intro_title {
+      background: linear-gradient(103.12deg, #1f9dd0 0.62%, #3e65f1 99.49%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+    }
+
+    .intro_subtitle {
+      color: #1d2d53;
+      line-height: 1.1;
+    }
+
     @include limbo-max {
+      margin-bottom: 30px;
+    }
+  }
+
+  // Inner section white card with shadow
+  .il_section_inner {
+
+    // Image shadow
+    .right img {
+      box-shadow: 4px 6px 10.3px -2px rgba(199, 217, 244, 0.3);
+    }
+  }
+
+  // Doctor info section
+  .doctor-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 2.8rem;
+
+    .doctor-name {
+      color: #e37d9c;
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 0;
+
+      @include limbo-max {
+        font-size: 20px;
+      }
+    }
+
+    .doctor-title {
+      color: #1d2d53;
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 1.4;
+      margin: 0;
+
+      @include limbo-max {
+        font-size: 16px;
+      }
+    }
+  }
+
+  // Doctor bio section
+  .doctor-bio {
+    margin-bottom: 2.8rem;
+
+    @include limbo-max {
+      margin-bottom: 25px;
+    }
+
+    p {
+      color: #1d2d53;
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 1.4;
+      margin: 0 0 1.6rem 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @include limbo-max {
+        font-size: 16px;
+      }
+    }
+  }
+
+  // Quote section with border and icon
+  .doctor-quote {
+    border-top: 1px solid #c1c7cd;
+    padding-top: 1.3rem;
+    display: flex;
+    gap: 2.8rem;
+    align-items: center;
+
+
+    @include limbo-max {
+      flex-direction: column;
+      gap: 12px;
+      padding-top: 15px;
+    }
+
+    p {
+      color: #1d2d53;
+      font-size: 1.8rem;
+      font-style: italic;
+      font-weight: 700;
+      line-height: 1.4;
+      margin: 0;
+      flex: 1;
+
+      @include limbo-max {
+        font-size: 16px;
+      }
+    }
+
+    .quote-icon {
+      flex-shrink: 0;
+      width: 4.6rem;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include limbo-max {
+        width: 30px;
+      }
+    }
+  }
+
+  // Intro text container adjustments
+  .intro_text {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    >div {
       width: 100%;
     }
-    @include desk-min {
-      justify-content: flex-end;
+
+    p:empty {
+      display: none;
     }
-    .il_block_bg {
-      overflow: visible;
-      @include desk-min {
-        z-index: 1;
-        width: 75.6rem;
-        height: 74.7rem;
-      }
-      img {
-        animation: rotate 35s linear infinite;
-        @keyframes rotate {
-          from {
-            transform: rotate(0deg);
-          }
-          to {
-            transform: rotate(360deg);
-          }
-        }
-      }
+  }
+}
+
+.cf-box-rounded {
+  .il_section_inner {
+    border-radius: 16px;
+    overflow: hidden;
+
+    .intro_title {
+      background: linear-gradient(94.74deg, #1f9dd0 0.62%, #3e65f1 99.49%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
-    .il_block_intro {
-      @include desk-min {
-        background: #021B48;
-      }
+  }
+}
+
+.blue-phones-section {
+  background: linear-gradient(91deg, #2A9AEA 0.62%, #2E5AF8 99.49%);
+
+  // Four Steps Component
+  .four-steps {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+
+    p:empty {
+      display: none;
+    }
+
+    @include limbo-max {
+      gap: 25px;
+    }
+
+    // Vertical connecting line (positioned through center of badges on right side)
+    &__line {
+      position: absolute;
+      right: 4.1rem;
+      top: 4.1rem;
+      height: 78%;
+      bottom: 0;
+      width: 0;
+      border-left: 2px dashed #fff;
+
       @include limbo-max {
-        flex-basis: 100% !important;
-        .intro_title {
-          font-size: 55px;
-          font-weight: 300;
-          order: 1;
-        }
-        .intro_subtitle {
-          color:#fff !important;
-          font-weight: 700;
-          order: 2;
-        }
-        .ty-body-text {
-          order: 3;
-        }
-      }
-      .buttons {
-        @include mob-only {
-          display: flex;
-          flex-direction: column;
-        }
-        .il_btn {
-          align-items: center;
-          @include mob-only {
-            margin-right: 0;
-            justify-content: center;
-            font-size: 16px !important;
-          }
-          &:nth-child(1) {
-            &:before {
-              content: url('/wp-content/uploads/2024/12/Group-2443-1.png');
-              line-height: 0;
-              margin-left: 12px;
-            }
-            @include mob-only {
-              margin-bottom: 15px;
-            }
-          }
-          &:nth-child(2) {
-            &:before {
-              content: url('/wp-content/uploads/2024/12/Group-23-1.png');
-              line-height: 0;
-              margin-left: 12px;
-            }
-          }
-        }
-        @include limbo-max {
-          order: 5;
-        }
-      }
-      .intro_text {
-        .ty-page-intro-text-first-cont {
-          @include limbo-max {
-            display: flex;
-            flex-direction: column;
-            padding: 0 25px 35px 25px;
-          }
-          @include desk-min {
-            padding: 8rem 9.3rem 6rem 9.3rem;
-          }
-        }
-        .ty-hero-three-images-container {
-          display: flex;
-          gap: 1.5rem;
-          align-items: center;
-          margin-bottom: 3.4rem;
-          @include mob-only {
-            img {
-              width: 40%;
-              margin-left: 10%;
-            }
-            .flickity-slider {
-              display: flex;
-              align-items: center;
-            }
-            &:after {
-              content: 'flickity';
-              display: none;
-            }
-          }
-          @include limbo-max {
-            margin: 1rem 0 10rem 0;
-            order: 4;
-          }
-        }
-        .buttons {
-          display: flex;
-          direction: ltr;
-          justify-content: flex-end;
-        }
-      }
-      .ty-page-last-p {
-        margin-bottom: 0;
-        line-height: 0;
-        border-top: 12px solid #186BF1;
-        @include limbo-max {
-          border-top: 10px solid #186BF1;
-        }
+        right: 5.9rem;
       }
     }
+
+    // Individual step item
+    &__item {
+      display: flex;
+      align-items: flex-start;
+      gap: 2.6rem;
+
+      @include limbo-max {
+        gap: 20px;
+      }
+    }
+
+    // Badge image
+    &__badge {
+      flex-shrink: 0;
+      width: 8.4rem;
+      height: auto;
+      position: relative;
+      z-index: 1;
+
+      @include limbo-max {
+        width: 60px;
+      }
+    }
+
+    // Content container
+    &__content {
+      flex: 1;
+      text-align: right;
+    }
+
+    // Step title
+    &__title {
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 1.1;
+      color: #fff;
+      margin: 0 0 2rem 0;
+
+      @include limbo-max {
+        font-size: 20px;
+        margin-bottom: 12px;
+      }
+    }
+
+    // Step description
+    &__desc {
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 1.4;
+      color: #fff;
+      margin: 0;
+      max-width: 62rem;
+
+      @include limbo-max {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.showing-to-kids-section {
+  background-color: #f3faff;
+
+  .il_block_bg {
+    @include desk-min {
+      max-width: 2150px;
+    }
+  }
+
+  .il_block_intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .intro_title {
+
+      span {
+        display: block;
+        background: linear-gradient(94.74deg, #1f9dd0 0.62%, #3e65f1 99.49%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        line-height: 1.1;
+      }
+    }
+  }
+}
+
+.group-linear-bg {
+  background: linear-gradient(182deg, #FFF 1.35%, #FFF 30.62%, #C7D9F4 103.98%);
+}
+
+.blog-block-title-linear-bg-text {
+  .intro_title {
+    background: linear-gradient(101.5deg, #1F9DD0 0.62%, #3E65F1 99.49%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }

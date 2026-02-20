@@ -1,0 +1,177 @@
+// Post Header Block Styles
+// Displays post header with breadcrumbs, title, date/reading time meta, and featured image
+
+.il_block.il_post-header {
+    padding-top: var(--b-space-top-ld, 4rem);
+    padding-bottom: var(--b-space-bottom-ld, 4rem);
+    padding-left: var(--b-space-left-ld, 0);
+    padding-right: var(--b-space-right-ld, 0);
+
+    @include limbo-max {
+        padding-top: var(--b-space-top-mt, 25px);
+        padding-bottom: var(--b-space-bottom-mt, 25px);
+        padding-left: var(--b-space-left-mt, 0);
+        padding-right: var(--b-space-right-mt, 0);
+    }
+
+    // Outer container (1394px max-width)
+    .il_post-header_outer {
+        max-width: 1394px;
+        width: var(--site-width);
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3.2rem; // 32px gap between content and image
+
+        @include limbo-max {
+            gap: 24px;
+        }
+    }
+
+    // Narrow content container (1114px) for breadcrumbs, title, meta
+    .il_post-header_content {
+        max-width: 1114px;
+        width: 100%;
+        direction: rtl;
+        text-align: right;
+
+        @include limbo-max {
+            max-width: 100%;
+        }
+    }
+
+    // Breadcrumbs
+    .il_post-header_breadcrumbs {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0;
+        margin-bottom: 4.8rem; // 48px gap to title per Figma
+        font-size: 1.6rem;
+        line-height: 1.4;
+
+        @include limbo-max {
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+    }
+
+    .il_post-header_breadcrumb-item {
+        color: #a2a9b0;
+        text-decoration: none;
+        transition: var(--theme-transition);
+
+        &:hover {
+            color: var(--color-1, #1d2d53);
+        }
+    }
+
+    .il_post-header_breadcrumb-current {
+        color: #a2a9b0;
+    }
+
+    .il_post-header_breadcrumb-separator {
+        color: #a2a9b0;
+        margin: 0 0.5rem;
+    }
+
+    // Title
+    .il_post-header_title {
+        color: var(--post-header-title-color, #1d2d53);
+        font-size: 4.2rem;
+        font-weight: 700;
+        line-height: 1.1;
+        margin: 0 0 0.7rem 0; // 7px gap to meta per Figma
+
+        @include limbo-max {
+            font-size: 28px;
+        }
+
+        @include mob-only {
+            font-size: 24px;
+        }
+    }
+
+    // Meta (date + reading time)
+    .il_post-header_meta {
+        display: inline-flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        color: var(--post-header-meta-color, #a2a9b0);
+        font-size: 1.8rem;
+        line-height: 1.4;
+        padding: 1rem;
+        border-bottom: 1px solid #c1c7cd;
+
+        @include limbo-max {
+            font-size: 16px;
+            padding: 8px;
+        }
+    }
+
+    .il_post-header_date {
+        // Date styling
+    }
+
+    .il_post-header_separator {
+        opacity: 0.6;
+    }
+
+    .il_post-header_reading-time {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .il_post-header_reading-time-icon {
+        font-size: 1.4rem;
+
+        @include limbo-max {
+            font-size: 12px;
+        }
+    }
+
+    // Featured Image (full width of outer container - 1394px)
+    .il_post-header_image {
+        width: 100%;
+        max-width: 1394px;
+        overflow: hidden;
+        border-radius: var(--post-header-image-radius, 16px);
+
+        @include limbo-max {
+            border-radius: calc(var(--post-header-image-radius, 16px) * 0.75);
+        }
+    }
+
+    .il_post-header_img {
+        width: 100%;
+        height: 385px;
+        object-fit: cover;
+        display: block;
+
+        @include limbo-max {
+            height: 280px;
+        }
+
+        @include mob-only {
+            height: 200px;
+        }
+    }
+}
+
+// Admin/Editor styles
+.editor-styles-wrapper .il_block.il_post-header,
+.block-editor-block-list__block .il_block.il_post-header {
+    .il_post-header_outer {
+        direction: rtl;
+        text-align: right;
+    }
+
+    .il_post-header_content {
+        direction: rtl;
+        text-align: right;
+    }
+}

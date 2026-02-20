@@ -1,0 +1,321 @@
+{
+    "key": "group_post_header_block",
+    "title": "Block: Post Header",
+    "fields": [
+        {
+            "key": "field_post_header_tab_settings",
+            "label": "Settings",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_post_header_show_breadcrumbs",
+            "label": "Show Breadcrumbs",
+            "name": "show_breadcrumbs",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Toggle breadcrumbs visibility",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_post_header_show_date",
+            "label": "Show Date",
+            "name": "show_date",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Toggle date visibility",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_post_header_show_reading_time",
+            "label": "Show Reading Time",
+            "name": "show_reading_time",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Toggle reading time visibility",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_post_header_date_format",
+            "label": "Date Format",
+            "name": "date_format",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "PHP date format string (e.g., d.m.y)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_post_header_show_date",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "d.m.y",
+            "maxlength": "",
+            "placeholder": "d.m.y",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_post_header_breadcrumb_home_text",
+            "label": "Breadcrumb Home Text",
+            "name": "breadcrumb_home_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Text for the home link in breadcrumbs",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_post_header_show_breadcrumbs",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "ראשי",
+            "maxlength": "",
+            "placeholder": "ראשי",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_post_header_breadcrumb_archive_text",
+            "label": "Breadcrumb Archive Text",
+            "name": "breadcrumb_archive_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Text for the archive\/knowledge center link",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_post_header_show_breadcrumbs",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "מרכז הידע",
+            "maxlength": "",
+            "placeholder": "מרכז הידע",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_post_header_breadcrumb_archive_url",
+            "label": "Breadcrumb Archive URL",
+            "name": "breadcrumb_archive_url",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "URL for the archive\/knowledge center page",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_post_header_show_breadcrumbs",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_post_header_tab_styling",
+            "label": "Styling",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_post_header_image_border_radius",
+            "label": "Image Border Radius",
+            "name": "image_border_radius",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Border radius for the featured image in pixels",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 16,
+            "min": 0,
+            "max": "",
+            "placeholder": "",
+            "step": 1,
+            "prepend": "",
+            "append": "px"
+        },
+        {
+            "key": "field_post_header_title_color",
+            "label": "Title Color",
+            "name": "title_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "Custom color for the post title",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
+        },
+        {
+            "key": "field_post_header_meta_color",
+            "label": "Meta Color",
+            "name": "meta_color",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "Custom color for date and reading time",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
+        },
+        {
+            "key": "field_post_header_spacing",
+            "label": "Spacing",
+            "name": "spacing",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_63494c81e30ef"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/post-header"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Settings for the Post Header block",
+    "show_in_rest": 0,
+    "display_title": "",
+    "modified": 1770064025
+}

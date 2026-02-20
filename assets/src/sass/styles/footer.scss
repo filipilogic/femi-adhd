@@ -1,35 +1,44 @@
 .footer_main {
     padding-top: var(--b-footer-space-top-ld);
     padding-bottom: var(--b-footer-space-bottom-ld);
+
     @include limbo-max {
-      padding-top: var(--b-footer-space-top-mt);
-      padding-bottom: var(--b-footer-space-bottom-mt);
+        padding-top: var(--b-footer-space-top-mt);
+        padding-bottom: var(--b-footer-space-bottom-mt);
     }
+
     img {
         width: fit-content;
     }
+
     * {
         color: #858585;
     }
+
     .wp-block-social-links svg path {
         fill: #2fb297;
     }
+
     .cols-3 .column {
         margin-top: 0;
+
         .footer-last-col-socials {
             .footer-last-col-single {
                 display: flex;
                 align-items: flex-start;
                 margin-bottom: 10px;
+
                 img {
                     width: 20px;
                     height: auto;
                     margin-right: 20px;
                 }
+
                 a {
                     text-decoration: none;
                     text-align: left;
                 }
+
                 @include mob-only {
                     max-width: 75%;
                     margin-left: auto;
@@ -38,55 +47,69 @@
             }
         }
     }
+
     h4 {
         font-size: 2rem;
         font-weight: 600;
         color: var(--color-1);
+
         @include limbo-max {
             font-size: 20px;
         }
     }
-    p, a {
+
+    p,
+    a {
         @include limbo-max {
             font-size: 16px;
         }
     }
+
     ul {
         list-style-type: none;
         padding-left: 0;
         line-height: 29px;
+
         li {
             a {
                 text-decoration: none;
             }
         }
+
         @include limbo-max {
             line-height: 26px;
         }
     }
+
     @include tab-only {
         .footer_col_1.column {
             width: 55%;
             margin-right: 10%;
         }
+
         .footer_col_2.column {
             width: 35%;
         }
     }
+
     @include limbo-min {
         .cols-3 .column.footer_col_1 {
             width: 46%;
+
             p {
                 max-width: 50rem;
             }
         }
+
         .cols-3 .column {
             width: 25%;
         }
+
         .footer_col_2 {
             padding-left: 2.4rem;
             height: fit-content;
             position: relative;
+
             &:before {
                 content: '';
                 width: 1px;
@@ -96,10 +119,12 @@
                 left: 0;
             }
         }
+
         .footer_col_3 {
             padding-left: 2.4rem;
             height: fit-content;
             position: relative;
+
             &:before {
                 content: '';
                 width: 1px;
@@ -110,12 +135,15 @@
             }
         }
     }
+
     @include mob-only {
         text-align: center;
         background: #fff;
+
         .wp-block-social-links {
             justify-content: center;
         }
+
         .footer_col_2 {
             &:before {
                 content: '';
@@ -128,6 +156,7 @@
                 margin-left: auto;
                 margin-right: auto;
             }
+
             &:after {
                 content: '';
                 width: 164px;
@@ -143,40 +172,147 @@
         }
     }
 }
+
 .footer_main_inner {
     display: flex;
     flex-wrap: wrap;
 }
 
 .footer_bottom_above {
-    p, a {
+
+    p,
+    a {
         margin-top: 0 !important;
         margin-bottom: 0 !important;
-        padding-top: 19px;
-        padding-bottom: 19px;
+        padding: 19px 0;
         color: #fff;
         font-size: 15px;
         text-decoration: none;
-        @include tab-max {
+
+        @include limbo-max {
             font-size: 14px;
+            padding: 0;
         }
     }
+
     background-color: var(--color-2);
     text-align: center;
+
+    @include limbo-max {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+}
+
+.footer_bottom_above_inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 168rem;
+    width: 90%;
+    margin: 0 auto;
+    background-color: #1d2d53;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.1;
+    color: #ffffff;
+
+    @include limbo-max {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+/* Column 1: Credits */
+.footer_bottom_credits {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    @include limbo-max {
+        order: 3;
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+.footer_designed_by {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.footer_lemon_logo {
+    width: 64.3px;
+    height: 14.926px;
+    display: block;
+}
+
+/* Column 2: Links */
+.footer_bottom_links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    a {
+        color: #ffffff;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    @include limbo-max {
+        order: 2;
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+.footer_link_separator {
+    color: #ffffff;
+
+    @include limbo-max {
+        display: none;
+    }
+}
+
+/* Column 3: Branding */
+.footer_bottom_branding {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    @include limbo-max {
+        order: 1;
+    }
+}
+
+.footer_femi_logo {
+    width: 65px;
+    height: 16.238px;
+    display: block;
 }
 
 .footer_bottom {
-    p, a {
+
+    p,
+    a {
         margin-top: 0 !important;
         margin-bottom: 0 !important;
         padding-top: 19px;
         padding-bottom: 19px;
         color: #151515;
         font-size: 15px;
-        @include tab-max {
+
+        @include limbo-max {
             font-size: 14px;
+            padding-top: 10px;
+            padding-bottom: 10px;
         }
     }
+
     background-color: #FFFFFF;
     text-align: center;
 }

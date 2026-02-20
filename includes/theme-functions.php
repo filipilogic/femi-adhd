@@ -346,3 +346,91 @@ function admin_variables() {
     </style>
     <?php
 }
+
+
+// Post Header Block Helper Functions
+
+/**
+ * Calculate estimated reading time for a post
+ * 
+ * @param int|null $post_id Post ID (defaults to current post)
+ * @return int Reading time in minutes
+ */
+function il_get_reading_time( $post_id = null ) {
+    if ( ! $post_id ) {
+        $post_id = get_the_ID();
+    }
+    
+    $content = get_post_field( 'post_content', $post_id );
+    $content = strip_tags( $content );
+    
+    // Check if content contains Hebrew characters
+    if ( preg_match( '/[\x{0590}-\x{05FF}]/u', $content ) ) {
+        // Hebrew text: estimate words by characters (avg 5 chars per word)
+        $word_count = mb_strlen( preg_replace( '/\s+/', '', $content ) ) / 5;
+    } else {
+        $word_count = str_word_count( $content );
+    }
+    
+    // Average reading speed: 200 words per minute
+    $reading_time = ceil( $word_count / 200 );
+    
+    return max( 1, $reading_time );
+}
+
+/**
+ * Get breadcrumbs array for post header
+ * 
+ * @param string $home_text Text for home link
+ * @param string $archive_text Text for archive/knowledge center link
+ * @param string $archive_url URL for archive page
+ * @return array Array of breadcrumb items with 'text' and 'url' keys
+ */
+function il_get_post_breadcrumbs( $home_text = 'ראשי', $archive_text = 'מרכז הידע', $archive_url = '' ) {
+    $breadcrumbs = array();
+    
+    // Home
+    $breadcrumbs[] = array(
+        'text' => $home_text,
+        'url'  => home_url( '/' )
+    );
+    
+    // Archive (Knowledge Center)
+    if ( $archive_url ) {
+        $breadcrumbs[] = array(
+            'text' => $archive_text,
+            'url'  => $archive_url
+        );
+    }
+    
+    // Categories (build hierarchy)
+    $categories = get_the_category();
+    if ( $categories ) {
+        $category = $categories[0]; // Primary category
+        
+        // Get parent categories
+        $parents = array();
+        $parent_id = $category->parent;
+        while ( $parent_id ) {
+            $parent = get_category( $parent_id );
+            if ( $parent && ! is_wp_error( $parent ) ) {
+                $parents[] = array(
+                    'text' => $parent->name,
+                    'url'  => get_category_link( $parent->term_id )
+                );
+            }
+            $parent_id = $parent->parent;
+        }
+        
+        // Add parents in reverse order (top-level first)
+        $breadcrumbs = array_merge( $breadcrumbs, array_reverse( $parents ) );
+        
+        // Add current category (no link - it's the current context)
+        $breadcrumbs[] = array(
+            'text' => $category->name,
+            'url'  => null
+        );
+    }
+    
+    return $breadcrumbs;
+}

@@ -1,0 +1,210 @@
+.il_block.il_featured-post {
+    padding-top: var(--b-featured-post-space-top-ld);
+    padding-bottom: var(--b-featured-post-space-bottom-ld);
+    padding-left: var(--b-featured-post-space-left-ld);
+    padding-right: var(--b-featured-post-space-right-ld);
+
+    @include limbo-max {
+        padding-top: var(--b-featured-post-space-top-mt);
+        padding-bottom: var(--b-featured-post-space-bottom-mt);
+        padding-left: var(--b-featured-post-space-left-mt);
+        padding-right: var(--b-featured-post-space-right-mt);
+    }
+
+    // Post Card Container
+    .featured-post-card-container {
+        position: relative;
+        transition: opacity 0.3s ease;
+
+        &.loading {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+    }
+
+    // Post Card
+    .featured-post-card {
+        display: flex;
+        text-decoration: none;
+        box-shadow: 6px 5px 20.3px 0px rgba(25, 106, 157, 0.3);
+        overflow: hidden;
+        border-radius: 16px;
+
+        @include limbo-max {
+            flex-direction: column-reverse;
+        }
+
+        &:hover {
+            .featured-post-link {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    // Content Side
+    .featured-post-content {
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        text-align: right;
+        direction: rtl;
+
+        @include desk-min {
+            width: 82.2rem;
+            max-width: 55%;
+            padding: 48px 45px 35px 61px;
+            min-height: 37.6rem;
+            border-radius: 16px 0 0 16px;
+        }
+
+        @include limbo-max {
+            width: 100%;
+            padding: 24px 20px 28px;
+        }
+    }
+
+    // Category Badge
+    .featured-post-badge {
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 16px;
+        color: #fff;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: auto;
+        margin-left: auto;
+
+        @include desk-min {
+            font-size: 2.4rem;
+        }
+
+        @include limbo-max {
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+    }
+
+    // Text Container
+    .featured-post-text {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+
+        @include limbo-max {
+            gap: 12px;
+        }
+    }
+
+    // Title
+    .featured-post-title {
+        color: #1F9DD0;
+        font-weight: 700;
+        line-height: 1.1;
+        margin: 0;
+
+        @include desk-min {
+            font-size: 3.2rem;
+        }
+
+        @include limbo-max {
+            font-size: 21px;
+        }
+    }
+
+    // Excerpt
+    .featured-post-excerpt {
+        color: #1D2D53;
+        font-weight: 400;
+        line-height: 1.4;
+
+        @include desk-min {
+            font-size: 1.8rem;
+        }
+
+        @include limbo-max {
+            font-size: 16px;
+        }
+    }
+
+    // Footer
+    .featured-post-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        width: 100%;
+        font-weight: 500;
+        line-height: 1.4;
+
+        @include desk-min {
+            font-size: 2rem;
+            margin-top: auto;
+        }
+
+        @include limbo-max {
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    }
+
+    // Read More Link
+    .featured-post-link {
+        color: #1F9DD0;
+        transition: text-decoration 0.2s ease;
+    }
+
+    // Read Time
+    .featured-post-read-time {
+        color: #A2A9B0;
+    }
+
+    // Image Side
+    .featured-post-image {
+        position: relative;
+        overflow: hidden;
+
+        @include desk-min {
+            flex: 1;
+            min-width: 45%;
+        }
+
+        @include limbo-max {
+            width: 100%;
+            height: 200px;
+        }
+
+        .featured-post-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            @include desk-min {
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 0 16px 16px 0;
+            }
+        }
+    }
+
+    // No Posts Message
+    .featured-post-no-posts {
+        text-align: center;
+        padding: 60px 20px;
+        background: #f5f5f5;
+        border-radius: 16px;
+
+        p {
+            color: #666;
+            font-size: 1.8rem;
+            margin: 0;
+
+            @include limbo-max {
+                font-size: 16px;
+            }
+        }
+    }
+}

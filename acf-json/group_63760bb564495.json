@@ -97,10 +97,11 @@
                         "id": ""
                     },
                     "choices": {
-                        "button-color-green": "Green",
-                        "button-color-pink": "Pink"
+                        "button-color-blue": "Blue",
+                        "button-color-purple": "Purple",
+                        "button-color-white": "White"
                     },
-                    "default_value": "button-color-green",
+                    "default_value": "button-color-blue",
                     "return_format": "value",
                     "multiple": 0,
                     "allow_null": 0,
@@ -108,6 +109,8 @@
                     "ui": 0,
                     "ajax": 0,
                     "placeholder": "",
+                    "create_options": 0,
+                    "save_options": 0,
                     "parent_repeater": "field_67f50493d0883"
                 },
                 {
@@ -125,10 +128,11 @@
                         "id": ""
                     },
                     "choices": {
-                        "button-hover-color-green": "Green",
-                        "button-hover-color-pink": "Pink"
+                        "button-hover-color-blue": "Blue",
+                        "button-hover-color-purple": "Purple",
+                        "button-hover-color-white": "White"
                     },
-                    "default_value": "button-hover-color-green",
+                    "default_value": "button-hover-color-blue",
                     "return_format": "value",
                     "multiple": 0,
                     "allow_null": 0,
@@ -136,6 +140,8 @@
                     "ui": 0,
                     "ajax": 0,
                     "placeholder": "",
+                    "create_options": 0,
+                    "save_options": 0,
                     "parent_repeater": "field_67f50493d0883"
                 }
             ]
@@ -439,7 +445,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_64afbf555793a",
@@ -466,7 +474,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_64afda28cbced",
@@ -493,7 +503,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_64d9f49163c7a",
@@ -798,5 +810,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1744110778
+    "display_title": "",
+    "modified": 1769554786
 }

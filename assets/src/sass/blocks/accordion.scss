@@ -3,216 +3,168 @@
   padding-bottom: var(--b-accordion-space-bottom-ld);
   padding-left: var(--b-accordion-space-left-ld);
   padding-right: var(--b-accordion-space-right-ld);
+
   @include tab-max {
     padding-top: var(--b-accordion-space-top-mt);
     padding-bottom: var(--b-accordion-space-bottom-mt);
     padding-left: var(--b-accordion-space-left-mt);
     padding-right: var(--b-accordion-space-right-mt);
   }
+
   overflow: hidden;
-  .intro_text {
-    max-width: 75.4rem;
+
+  .intro_title {
+    background: linear-gradient(115.55deg, #1F9DD0 0.62%, #3E65F1 99.49%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
-  
+
+  .intro_text {
+    @include limbo-max {
+      font-size: 16px;
+    }
+
+    @include desk-min {
+      max-width: 56.5rem;
+      margin-left: auto;
+    }
+  }
+
   .il_accordion-item {
     margin-bottom: 2rem;
+    padding: 2.5rem 6rem 2.5rem 6rem;
+
+    @include tab-max {
+      padding: 3rem 8.5rem 3rem 4rem;
+    }
+
+    background: #fff;
+    box-shadow: 4px 6px 10.3px -2px rgba(199, 217, 244, 0.30);
+    border-radius: 16px;
+
+    @include limbo-only {
+      width: 70%;
+    }
+
+    @include desk-min {
+      width: 50%;
+    }
+
+    margin-left: auto;
+
     &:not(:last-child) {
-      border-bottom: 1px solid rgb(255 255 255 / 20%);
+
       @include limbo-max {
         margin-bottom: 18px;
       }
     }
+
     &:not(.open) {
       .il_accordion-body {
         display: none;
       }
     }
+
     &.open {
       .il_accordion-header {
+
         &::before {
-          transform: rotate(45deg);
-          filter: brightness(0) invert(1);
+          background-image: url('/wp-content/uploads/2026/01/closeed.png');
         }
       }
     }
+
     .il_accordion-header {
-      font-size: 2rem;
+      font-size: 18px;
+      margin-bottom: 0px;
+      text-align: right;
+      justify-content: flex-end;
+
       @include limbo-max {
         font-size: 16px;
-        margin-bottom: 15px;
+        line-height: 22px;
       }
+
       cursor: pointer;
-      padding: 1.25rem 4rem 1rem 6rem;
-      @include tab-max {
-        padding: 1.5rem 4rem 2rem 6rem;
-      }
+
       position: relative;
       display: flex;
       align-items: center;
+
       &::before {
         content: "";
-        background-image: url('/wp-content/uploads/2025/04/plus-1-2.png');
+        background-image: url('/wp-content/uploads/2026/01/opeen.png');
         background-repeat: no-repeat;
         background-size: contain;
-        width: 2rem;
-        height: 2rem;
+        width: 2.7rem;
+        height: 2.7rem;
         position: absolute;
-        right: 0;
+        right: -4rem;
         transition: var(--theme-transition);
+
+        @include limbo-max {
+          width: 20px;
+          height: 20px;
+          right: -30px;
+        }
       }
     }
+
     .il_accordion-body {
       flex-wrap: wrap;
       justify-content: space-between;
-      padding: 1.25rem 4rem 0.5rem 6rem;
-      @include tab-max {
-        padding: 1.5rem 4rem 1rem 6rem;
+      font-size: 18px;
+      justify-content: flex-end;
+      text-align: right;
+      direction: rtl;
+
+      @include limbo-max {
+        font-size: 15px;
       }
-      p {
-        font-size: 2rem;
-        @include limbo-max {
-          font-size: 15px;
-        }
-        @include lg-desk-min {
-          font-size: 1.8rem;
-        }
-        &:last-of-type {
-          margin-bottom: 2rem;
-          @include tab-max {
-            margin-bottom: 20px;
-          }
-        }
-      }
-      ul {
-        padding-left: 25px;
-        margin-bottom: 0;
-        li {
-          max-width: 42.8rem;
-          font-size: 2rem;
-          @include limbo-max {
-            font-size: 15px;
-          }
-          @include lg-desk-min {
-            font-size: 1.8rem;
-          }
-          &::marker {
-            font-size: 14px;
-          }
-        }
-      }
-      .il_accordion-body-left {
-        @include desk-min {
-          max-width: 110rem;
-        }
-        .accordion-left-small-heading {
-          margin-bottom: 17px;
-          color: var(--color-1);
-          font-size: 2.2rem;
-          @include tab-max {
-            font-size: 18px;
-          }
-          @include lg-desk-min {
-            font-size: 2rem;
-          }
-          font-weight: 600;
-          display: flex;
-          align-items: center;
-        }
-      }
-      .il_accordion-body-right {
-        @include tab-max {
-          height: 30rem;
-        }
-        img {
-          width: auto;
-          height: 100%;
-          object-fit: cover;
-          @include tab-max {
-            width: 100%;
-            height: 100%;
-            border-radius: 0 0 1rem 1rem;
-            &.acc_desk_img {
-              display: none;
-            }
-          }
-          @include limbo-min {
-            border-radius: 0 0 1rem 0;
-            &.acc_mob_img {
-              display: none;
-            }
-          }
-        }
-        @include tab-max {
-          width: 100%;
-        }
-        @include limbo-min {
-          width: 35%;
-          text-align: right;
-        }
-      }
+
     }
+
     &.open {
       .il_accordion-header {
-        margin-bottom: 5px;
+        margin-bottom: 0px;
+        padding-bottom: 1.5rem;
+        transition: var(--theme-transition);
+
         &::after {
           transform: scaleY(-1);
         }
       }
     }
-  }  
+  }
 }
 
-.hp-accordion {
-  .il_accordion-item {
-    @include limbo-only {
-      width: 70%;
+.second-page-acc {
+  .il_accordion_inner {
+    background-image: url('/wp-content/uploads/2026/01/Group-24444303-1.png');
+    background-size: contain;
+    background-position: center left;
+    background-repeat: no-repeat;
+
+    @include limbo-max {
+      padding-bottom: 75rem;
+      background-position: bottom;
+      background-size: 60rem auto;
     }
-    @include desk-min {
-      width: 50%;
+  }
+
+  &.acc-small-child-bg {
+    .il_accordion_inner {
+      background-image: url('/wp-content/uploads/2026/01/123123124-1.png');
     }
-    margin-left: auto;
-    border-bottom: none !important;
-    &:nth-child(odd) {
-      .il_accordion-header {
-        padding: 2rem 4rem 2rem 6rem;
-      }
-      &.open {
-        .il_accordion-header {
-          padding: 2rem 4rem 1rem 6rem;
-        }
-      }
-      position: relative;
-      &:before {
-        content: '';
-        position: absolute;
-        left: 0;
-        right: -9999px;
-        top: 0;
-        bottom: 0;
-        background: rgba(255, 255, 255, 0.10);
-        z-index: -1;
-      }
-    }
-    .il_accordion-header {
-      justify-content: flex-end;
-    }
-    .il_accordion-body {
-      justify-content: flex-end;
-      text-align: right;
-      p {
-        margin-bottom: 1rem !important;
-      }
-      ul {
-        direction: rtl;
-        padding-left: 0;
-        padding-right: 20px;
-        @include limbo-max {
-          padding-right: 10px;
-        }
-        li {
-          max-width: unset;
-        }
-      }
-    }
+  }
+}
+
+.acc-normal-title {
+  .intro_title {
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    background-clip: unset;
   }
 }

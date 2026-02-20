@@ -1,0 +1,111 @@
+/**
+ * Blog Page Template Styles
+ * 
+ * Styles for the block-editable blog page template (page-blog.php)
+ * and category archive template (category.php)
+ */
+
+// Blog Page Template
+.blog-page-template {
+	// The page template outputs blocks directly via the_content()
+	// Most styling comes from the blocks themselves
+
+	// Ensure proper spacing for back to top button
+	position: relative;
+}
+
+// Category Archive Template
+.category-archive {
+	.archive-main-container {
+		padding-top: 6rem;
+
+		@include limbo-max {
+			padding-top: 4rem;
+		}
+	}
+
+	.archive-main-container-inner {
+		padding-bottom: 4rem;
+
+		@include limbo-max {
+			padding-bottom: 3rem;
+		}
+	}
+
+	// Category header content (WYSIWYG)
+	.category-header-content {
+		max-width: 80rem;
+
+		p {
+			margin-bottom: 1.5rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	// Category bottom content section
+	.category-bottom-content-section {
+		background-color: var(--color-bg-light, #f8f9fa);
+
+		.category-bottom-content {
+			max-width: 90rem;
+			margin: 0 auto;
+
+			p {
+				margin-bottom: 1.5rem;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			h2,
+			h3,
+			h4 {
+				margin-bottom: 1.5rem;
+				margin-top: 2rem;
+
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+
+	// No posts message
+	.no-posts-message {
+		padding: 4rem 2rem;
+		text-align: center;
+		font-size: 1.8rem;
+		color: var(--color-text-muted, #666);
+
+		@include limbo-max {
+			padding: 3rem 1.5rem;
+			font-size: 1.6rem;
+		}
+	}
+}
+
+// Fallback index.php archive styles
+.site-main {
+	.page-header {
+		margin-bottom: 4rem;
+
+		@include limbo-max {
+			margin-bottom: 3rem;
+		}
+
+		.archive-description {
+			margin-top: 1.5rem;
+			max-width: 70rem;
+
+			p {
+				font-size: 1.6rem;
+				line-height: 1.6;
+				color: var(--color-text-muted, #666);
+			}
+		}
+	}
+}

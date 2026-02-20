@@ -2,37 +2,44 @@
 .header-main {
   z-index: 9;
 }
+
 .sub-menu-trigger {
   svg {
     stroke: var(--color-1);
   }
 }
+
 .header-main {
   a {
     font-family: 'Font Primary';
   }
 }
+
 @include desk-min {
   .menu-toggle {
     display: none;
   }
+
   .main-navigation {
     ul {
       display: flex;
     }
   }
+
   .stick-top .header-version-1 {
     .header-top {
       position: sticky;
       top: 0;
     }
   }
+
   .stick-main .header-version-1 {
     .header-main {
       position: sticky;
       top: 0;
     }
   }
+
   .header-version-1 {
     .header-top {
       display: flex;
@@ -41,47 +48,61 @@
       padding: 1rem 2.5rem;
       color: #fff;
       z-index: 9;
+
       .il_btn {
         line-height: 1;
         padding-top: 1rem;
         padding-bottom: 1rem;
       }
+
       div {
         width: 100%;
         text-align: center;
       }
+
       .section_inner {
         display: flex;
       }
+
       &.left {
         .section_inner {
           justify-content: left;
         }
       }
+
       &.middle {
         .section_inner {
           justify-content: center;
         }
       }
+
       &.right {
         .section_inner {
           justify-content: right;
         }
       }
     }
+
     .header-main {
-      background-color: #021B48;
-      padding: 2.7rem 0;
+      background-color: #fff;
+      padding: 2.6rem 0;
+      background: #FFF;
+
+      /* Shadow */
+      box-shadow: 6px 5px 20.3px -5px rgba(25, 106, 157, 0.30);
+
       &-inner {
         display: flex;
-        width: 90%;
+        width: 95%;
         max-width: 1600px;
         margin: auto;
         align-items: center;
         justify-content: flex-end;
+
         #primary-menu {
           justify-content: flex-end;
           flex-wrap: wrap;
+
           ul {
             &.sub-menu {
               display: flex;
@@ -90,6 +111,7 @@
               padding: 2rem;
               opacity: 0;
               transition: var(--theme-transition);
+
               li:not(:last-child) {
                 a {
                   margin-bottom: 1.5rem;
@@ -97,13 +119,16 @@
               }
             }
           }
-          > li {
+
+          >li {
             display: flex;
             justify-content: center;
             align-items: center;
+
             &:not(:first-child) {
               padding-left: 2.5rem;
             }
+
             .sub-menu-trigger {
               top: 3px;
               position: relative;
@@ -111,44 +136,51 @@
               transform: rotate(45deg);
               cursor: pointer;
               transition: var(--theme-transition);
+
               svg {
                 stroke: var(--color-1);
               }
-              > .sub-menu {
+
+              >.sub-menu {
                 font-size: 17px;
               }
+            }
+
+            &.menu-li-hide-desktop {
+              display: none;
+            }
           }
-          &:last-child a {
-            margin-right: 5.7rem;
-          }
-          &.menu-li-hide-desktop {
-            display: none;
-          }
-          }
-          > li:hover {
-            .sub-menu-trigger{
+
+          >li:hover {
+            .sub-menu-trigger {
               transform: rotate(90deg);
               top: 1px;
               right: 17px;
             }
+
             .sub-menu {
               opacity: 1;
             }
           }
+
           a {
             margin-right: 2.5rem;
-            color: #fff;
+            color: #1D2D53;
             font-size: 1.8rem;
+            font-weight: 500;
           }
         }
+
         .logo-wrap {
-          flex: 13% 0 0;
+          flex: 9% 0 0;
           line-height: 0;
-          height: 6.1rem;
+          height: 4.2rem;
           display: flex;
           justify-content: flex-end;
+
           a {
             height: 100%;
+
             img {
               height: 100%;
               object-fit: contain;
@@ -156,26 +188,28 @@
             }
           }
         }
+
         .nav-button.il_btn {
           flex-shrink: 0;
           margin-right: auto;
-          color: #fff;
+          color: #1D2D53;
           text-decoration: none;
           text-transform: uppercase;
-          background-color: var(--color-1);
+          background-color: transparent;
           z-index: 3;
           font-size: 18px;
           font-weight: 500;
-          padding: 1.2rem 3.6rem;
           display: flex;
+          flex-direction: row-reverse;
           align-items: center;
+
           &:before {
             content: '';
-            background: url("/wp-content/uploads/2025/04/users-two-plus.png");
+            background: url("/wp-content/uploads/2026/01/Home-icon-1.png");
             background-size: cover;
-            width: 2.6rem;
-            height: 2.1rem;
-            margin-left: 14px;
+            width: 2.7rem;
+            height: 2.7rem;
+            margin-right: 14px;
           }
         }
       }
@@ -184,12 +218,60 @@
 }
 
 .admin-bar {
-  &.stick-top .header-version-1 .header-top, &.stick-main .header-version-1 .header-main {
+
+  &.stick-top .header-version-1 .header-top,
+  &.stick-main .header-version-1 .header-main {
     top: 32px;
   }
+
   @media (max-width: 782px) {
-    &.stick-top .header-version-1 .header-top, &.stick-main .header-version-1 .header-main {
+
+    &.stick-top .header-version-1 .header-top,
+    &.stick-main .header-version-1 .header-main {
       top: 46px;
+    }
+  }
+}
+
+.header-cta-buttons {
+  display: flex;
+  align-items: center;
+  gap: 3.4rem;
+  margin-right: auto;
+  flex-shrink: 0;
+  font-size: 16px;
+
+  .il_btn {
+    padding: 7px 8px;
+    min-width: 14.2rem;
+    justify-content: center;
+    margin-right: 0 !important;
+  }
+
+  .nav-button-2 {
+    border-radius: 4px;
+    background: linear-gradient(91deg, #2A9AEA 0.62%, #2E5AF8 99.49%);
+    font-weight: 700;
+
+    &:hover {
+      box-shadow: 6px 5px 20.3px -5px rgba(25, 106, 157, 0.30);
+    }
+  }
+
+  .nav-button-3 {
+    border-radius: 4px;
+    background: linear-gradient(182deg, #FFF 1.35%, #FFF 30.62%, #C7D9F4 103.98%);
+
+    span {
+      background: linear-gradient(91deg, #2A9AEA 0.62%, #2E5AF8 99.49%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+
+    &:hover {
+      box-shadow: 6px 5px 20.3px -5px rgba(25, 106, 157, 0.30);
     }
   }
 }

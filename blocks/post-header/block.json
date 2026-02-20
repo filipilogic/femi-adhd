@@ -1,0 +1,16 @@
+{
+  "name": "acf/post-header",
+  "title": "iLogic Post Header",
+  "description": "Displays post header with breadcrumbs, title, meta, and featured image",
+  "category": "ilogic-category",
+  "icon": "admin-post",
+  "keywords": ["post", "header", "blog", "single"],
+  "acf": {
+    "mode": "auto",
+    "renderTemplate": "post-header.php"
+  },
+  "supports": {
+    "align": false,
+    "anchor": true
+  }
+}

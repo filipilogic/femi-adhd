@@ -1,24 +1,30 @@
 html {
   font-size: 10px;
   scroll-behavior: smooth;
+
   @include md-desk-only {
     font-size: 8px;
   }
+
   @include sm-desk-only {
     font-size: 7px;
   }
+
   @include limbo-only {
     font-size: 6px;
     scroll-padding-top: 90px;
   }
+
   @include tab-only {
     font-size: 6px;
     scroll-padding-top: 90px;
   }
+
   @include mob-only {
     font-size: 5px;
     scroll-padding-top: 75px;
   }
+
   :where(.wp-block) {
     max-width: 90%;
   }
@@ -33,73 +39,104 @@ html {
     margin-block-end: 0;
     line-height: var(--title-line-height);
     margin-bottom: var(--title_margin_bottom_ld);
+
     @include limbo-max {
       margin-bottom: var(--title_margin_bottom_mt);
     }
   }
 }
+
 main {
   max-width: 2560px;
   margin-left: auto;
   margin-right: auto;
 }
-.site-main, .interface-interface-skeleton__content {
-  h1, h2, h3, h4, h5, h6 {
+
+.site-main,
+.interface-interface-skeleton__content {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Font Primary',
   }
-  div, p, a {
-      font-family: 'Font Primary';
+
+  div,
+  p,
+  a {
+    font-family: 'Font Primary';
   }
-  p, li {
+
+  p,
+  li {
     margin-top: 0;
     font-size: var(--body-size);
   }
+
   p {
     font-size: 2rem;
+
     @include lg-desk-min {
       font-size: 1.8rem;
     }
+
     @include limbo-max {
       font-size: 16px;
     }
- }
- a {
-  font-size: 14px;
-  @include limbo-max {
-    font-size: 16px;
   }
- }
-h2 {
-  font-size: var(--title-size-2-ld);
-  @include tab-max {
-    font-size: var(--title-size-2-mt);
+
+  a {
+    font-size: 14px;
+
+    @include limbo-max {
+      font-size: 16px;
+    }
+  }
+
+  h2 {
+    font-size: var(--title-size-2-ld);
+
+    @include tab-max {
+      font-size: var(--title-size-2-mt);
+    }
+  }
+
+  h3 {
+    font-size: var(--title-size-3-ld);
+
+    @include tab-max {
+      font-size: var(--title-size-3-mt);
+    }
+  }
+
+  h4 {
+    font-size: var(--title-size-4-ld);
+
+    @include tab-max {
+      font-size: var(--title-size-4-mt);
+    }
+  }
+
+  h5 {
+    font-size: var(--title-size-5-ld);
+
+    @include tab-max {
+      font-size: var(--title-size-5-mt);
+    }
+  }
+
+  h6 {
+    font-size: var(--title-size-5-ld);
+
+    @include tab-max {
+      font-size: var(--title-size-5-mt);
+    }
   }
 }
-h3 {
-  font-size: var(--title-size-3-ld);
-  @include tab-max {
-    font-size: var(--title-size-3-mt);
-  }
-}
-h4 {
-  font-size: var(--title-size-4-ld);
-  @include tab-max {
-    font-size: var(--title-size-4-mt);
-  }
-}
-h5 {
-  font-size: var(--title-size-5-ld);
-  @include tab-max {
-    font-size: var(--title-size-5-mt);
-  }
-}
-h6 {
-  font-size: var(--title-size-5-ld);
-  @include tab-max {
-    font-size: var(--title-size-5-mt);
-  }
-}
-}
+
 .container {
   width: var(--site-width);
   max-width: var(--site-max-width);
@@ -110,6 +147,7 @@ h6 {
   display: flex;
   align-items: center;
   margin-top: 4.8rem;
+
   a:not(:last-child) {
     margin-right: 15px;
   }
@@ -119,40 +157,48 @@ h6 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
   .contact-us-socials-single {
     width: 100%;
     display: flex;
     align-items: center;
+
     img {
       margin-right: 10px;
     }
+
     a {
       color: var(--color-1);
       font-weight: 400;
       text-decoration: none;
       text-align: left;
     }
+
     @include mob-only {
       margin-top: 15px;
       max-width: 60%;
       margin-left: auto;
       margin-right: auto;
     }
+
     @include tab-min {
       &:nth-child(1) {
         width: 46%;
         justify-content: flex-end;
       }
+
       &:nth-child(2) {
         width: 52%;
         justify-content: flex-start;
       }
+
       &:nth-child(3) {
         width: 100%;
         justify-content: center;
         margin-top: 15px;
       }
     }
+
     @include tab-only {
       &:nth-child(1) {
         width: 43%;
@@ -164,21 +210,26 @@ h6 {
 .meet-our-donors-hero-btns {
   display: flex;
   align-items: center;
+
   @include mob-only {
     align-items: flex-start;
     flex-direction: column;
   }
+
   a.il_btn:first-of-type {
     display: flex;
     align-items: center;
     padding: 0;
     margin-right: 7rem;
+
     @include mob-only {
       margin-bottom: 10px;
     }
+
     img {
       margin-right: 2.5rem;
     }
+
     span {
       border-top: 1px solid white;
       border-bottom: 1px solid white;
@@ -197,12 +248,12 @@ h6 {
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: rgb(57 57 55 / 42%);
-  color: white;
+  background: linear-gradient(91deg, #2A9AEA 0.62%, #2E5AF8 99.49%);
   cursor: pointer;
   padding: 10px;
-  border-radius: 0px;
+  border-radius: 100%;
   transition: var(--theme-transition);
+
   @include tab-max {
     img {
       width: 18px;

@@ -1,0 +1,16 @@
+{
+  "name": "acf/featured-post",
+  "title": "iLogic Featured Post",
+  "description": "Shows latest post by category with filter buttons",
+  "category": "ilogic-category",
+  "icon": "star-filled",
+  "keywords": ["featured", "post", "category", "filter"],
+  "acf": {
+    "mode": "auto",
+    "renderTemplate": "featured-post.php"
+  },
+  "supports": {
+    "align": false,
+    "anchor": true
+  }
+}

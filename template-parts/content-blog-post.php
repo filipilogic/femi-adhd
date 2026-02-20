@@ -5,13 +5,35 @@
         $event_time = get_field('event_time', get_the_ID());
         $event_location = get_field('event_location', get_the_ID());
         $event_date = get_field('event_date', get_the_ID());
-        if ( $show_homepage_image && $homepage_image ) {
-            $size = 'full';
-            echo wp_get_attachment_image( $homepage_image, $size, false );
-        } else {
-            the_post_thumbnail( array(508, 250) );
+        
+        // Get category and color for badge
+        $post_categories = get_the_category();
+        $cat_color = '#1F9DD0'; // Default color
+        $cat_name = '';
+        if ( $post_categories ) {
+            $first_category = $post_categories[0];
+            $cat_name = $first_category->name;
+            $cat_color_field = get_field('category_color', 'category_' . $first_category->term_id);
+            if ( $cat_color_field ) {
+                $cat_color = $cat_color_field;
+            }
         }
         ?>
+        <div class="image-wrapper">
+            <?php
+            if ( $show_homepage_image && $homepage_image ) {
+                $size = 'full';
+                echo wp_get_attachment_image( $homepage_image, $size, false );
+            } else {
+                the_post_thumbnail( array(508, 250) );
+            }
+            ?>
+            <?php if ( $show_category_badge && $cat_name ) : ?>
+                <span class="category-badge" style="background-color: <?php echo esc_attr($cat_color); ?>">
+                    <?php echo esc_html($cat_name); ?>
+                </span>
+            <?php endif; ?>
+        </div>
         <div class="article-container">
             <?php 
 			if( $show_date ) { ?>
@@ -36,16 +58,19 @@
             <?php if ( empty( $carousel) ) { ?>
                 <div class="entry-content">
                     <p>
-                        <?php if (get_the_excerpt()) {
-                            echo get_the_excerpt();
+                        <?php 
+                        if ( has_excerpt() ) {
+                            echo esc_html(get_the_excerpt());
                         } else {
-                            echo wp_trim_words(get_the_content(), 25);
-                        } ?>
+                            $content = wp_strip_all_tags(get_the_content());
+                            echo esc_html(mb_strimwidth($content, 0, 126, '...'));
+                        }
+                        ?>
                     </p> 
                 </div>
             <?php } ?>
-            <?php if ( $learn_more_text ) { ?>
-                <span class="entry_btn">
+            <?php if ( $show_learn_more && $learn_more_text ) { ?>
+                <span class="entry_btn" style="--blog-category-color: <?php echo esc_attr($cat_color); ?>">
                     <?php echo $learn_more_text; ?>
                     <?php if ( ! empty( $carousel) ) { ?>
                         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="14" fill="#2FB297"/><path fill-rule="evenodd" clip-rule="evenodd" d="M14.7053 6.70532C14.3158 6.31578 13.6842 6.31578 13.2947 6.70532C12.9054 7.0946 12.9051 7.72568 13.2941 8.11531L18.17 13H7C6.44771 13 6 13.4477 6 14C6 14.5523 6.44772 15 7 15H18.17L13.2941 19.8847C12.9051 20.2743 12.9054 20.9054 13.2947 21.2947C13.6842 21.6842 14.3158 21.6842 14.7053 21.2947L22 14L14.7053 6.70532Z" fill="white"/><mask id="mask0_276_1421" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="6" y="6" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.7053 6.70532C14.3158 6.31578 13.6842 6.31578 13.2947 6.70532C12.9054 7.0946 12.9051 7.72568 13.2941 8.11531L18.17 13H7C6.44771 13 6 13.4477 6 14C6 14.5523 6.44772 15 7 15H18.17L13.2941 19.8847C12.9051 20.2743 12.9054 20.9054 13.2947 21.2947C13.6842 21.6842 14.3158 21.6842 14.7053 21.2947L22 14L14.7053 6.70532Z" fill="white"/></mask><g mask="url(#mask0_276_1421)"><rect x="2" y="2" width="24" height="24" fill="white"/></g></svg>
