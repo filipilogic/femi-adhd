@@ -38,6 +38,34 @@
     color: #1D2D53;
   }
 
+  &.button-color-blue-radius-purple {
+    background:
+      linear-gradient(#fff, #fff) padding-box,
+      linear-gradient(90deg, #9556D5 0%, #AC80ED 34%, #AA72FF 61%, #B6A1F7 100%) border-box;
+    border: 3px solid transparent;
+    color: #1D2D53;
+
+    &:hover {
+      background: linear-gradient(90deg, #9556D5 0%, #AC80ED 34%, #AA72FF 61%, #B6A1F7 100%) border-box;
+      border: 3px solid transparent;
+      color: #fff;
+    }
+  }
+
+  &.button-color-blue-radius-blue {
+    background:
+      linear-gradient(#fff, #fff) padding-box,
+      linear-gradient(91deg, #1F9DD0 0.62%, #3E65F1 99.49%) border-box;
+    border: 3px solid transparent;
+    color: #1D2D53;
+
+    &:hover {
+      background: linear-gradient(91deg, #1F9DD0 0.62%, #3E65F1 99.49%) border-box;
+      border: 3px solid transparent;
+      color: #fff;
+    }
+  }
+
   &:not(:last-child),
   &:not(:last-child):not(:only-child) {
     margin-right: 3rem;

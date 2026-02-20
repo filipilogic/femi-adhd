@@ -1,0 +1,1 @@
+{"name":"acf/two-boxes","title":"iLogic Two Boxes","description":"Two content boxes with image, title, description and button each","category":"ilogic-category","icon":"grid-view","keywords":["two boxes","boxes","ilogic"],"acf":{"mode":"auto","renderTemplate":"two-boxes.php"},"supports":{"align":false,"anchor":true}}

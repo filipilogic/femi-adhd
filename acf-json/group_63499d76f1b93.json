@@ -58,7 +58,9 @@
                     "choices": {
                         "button-color-blue": "Blue",
                         "button-color-purple": "Purple",
-                        "button-color-white": "White"
+                        "button-color-white": "White",
+                        "button-color-blue-radius-purple": "Blue Text, Purple Radius",
+                        "button-color-blue-radius-blue": "Blue Text, Blue Radius"
                     },
                     "default_value": "button-color-blue",
                     "return_format": "value",
@@ -125,5 +127,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1769529679
+    "modified": 1771602087
 }
